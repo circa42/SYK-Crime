@@ -1,0 +1,50 @@
+{% extends '_layouts/base' %}
+
+{% block content %}
+<div class="max-w-5xl mx-auto border-blue-500 border-2 my-12">
+  <!-- Fetch first 50 entries from the books section -->
+    {% set entries = craft.entries()
+      .section('books')
+      .limit(10)
+      .all() 
+    %}
+
+    <!-- Loop through entries -->
+    {% for entry in entries %}
+        {% include "_includes/book" %}
+    {% else %}
+      <p>No books found.</p>
+    {% endfor %}
+</div>
+{% endblock %}
+
+
+{#
+
+{% extends '_layouts/base' %}
+
+{% block content %}
+<div class="max-w-5xl mx-auto border-blue-500 border-2 my-12">
+  <!-- Fetch entries with pagination support -->
+  {% set page = craft.app.request.getQueryParam('page', 1) %}
+  {% set entries = craft.entries()
+    .section('books')
+    .limit(10)
+    .offset((page - 1) * 10)
+    .all() 
+  %}
+
+  <!-- Loop through entries -->
+  <div id="entries">
+    {% for entry in entries %}
+      {% include "_includes/book" %}
+    {% else %}
+      <p>No books found.</p>
+    {% endfor %}
+  </div>
+  
+  <!-- Placeholder for more entries -->
+  <div id="loading" style="display: none;">Loading more entries...</div>
+</div>
+{% endblock %}
+#}

@@ -1,0 +1,50 @@
+defaultPlacement: end
+fieldLayouts:
+  444d20a9-c256-4df0-bd6c-3126bfc2895e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-09-09T22:05:59+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 0e4b30e7-0154-4dfe-89f4-d8373fd42c01
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: bcb81e88-ebfd-44e1-913f-feeb84e0fdfb
+        userCondition: null
+handle: store
+name: Store
+siteSettings:
+  86baf7e9-fa04-4917-bea7-e40ea7b944ba: # Stuff Your Kindle with Crime
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: ad16db03-4c1a-4aa9-afd8-23b9e67cb6d9

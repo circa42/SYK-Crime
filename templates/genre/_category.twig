@@ -1,0 +1,40 @@
+{% extends '_layouts/base' %}
+
+{% block content %}
+  <h1>{{ category.title }}</h1> <!-- Category Title -->
+
+  {% if category.description %}
+    <p>{{ category.description }}</p> <!-- Optional Category Description -->
+  {% endif %}
+
+  <!-- Fetch all entries in this category -->
+  {% set entries = craft.entries()
+      .section('books')   
+      .relatedTo(category)
+      .all() 
+  %}
+
+  {% if entries|length %}
+    <div class="entry-list">
+      {% for entry in entries %}
+        <div class="entry">
+          <h2><a href="{{ entry.url }}">{{ entry.title }}</a></h2>
+
+          <!-- Display book cover -->
+          {% if entry.bookCover|length %}
+            <img src="{{ entry.bookCover[0].url }}" alt="{{ entry.title }} cover" class="book-cover">
+          {% endif %}
+
+          <!-- Hook or description (truncate if long) -->
+          {% if entry.hook %}
+            <p>{{ entry.hook }}</p>
+          {% elseif entry.description %}
+            <p>{{ entry.description|slice(0, 150) }}...</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>No entries found in this category.</p>
+  {% endif %}
+{% endblock %}

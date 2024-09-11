@@ -1,0 +1,54 @@
+{% extends '_layouts/base' %}
+
+{% block content %}
+  <div class="book-entry">
+    <!-- ASIN -->
+    {% if entry.asin %}
+      <p><strong>ASIN:</strong> {{ entry.asin }}</p>
+    {% endif %}
+
+    <!-- Author Name -->
+    {% if entry.authorName %}
+      <p><strong>Author:</strong> {{ entry.authorName }}</p>
+    {% endif %}
+
+    <!-- Book Cover -->
+    {% if entry.bookCover|length %}
+      <div class="book-cover">
+        {% for cover in entry.bookCover %}
+          <img src="{{ cover.url }}" alt="Book cover of {{ entry.title }}" />
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <!-- Categories -->
+    {% if entry.categories|length %}
+      <p><strong>Categories:</strong></p>
+      <ul>
+        {% for category in entry.categories %}
+          <li>{{ category.title }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <!-- Description -->
+    {% if entry.description %}
+      <p><strong>Description:</strong> {{ entry.description }}</p>
+    {% endif %}
+
+    <!-- Hook -->
+    {% if entry.hook %}
+      <p><strong>Hook:</strong> {{ entry.hook }}</p>
+    {% endif %}
+
+    <!-- Keywords (Tags) -->
+    {% if entry.keywords|length %}
+      <p><strong>Keywords:</strong></p>
+      <ul>
+        {% for keyword in entry.keywords %}
+          <li>{{ keyword.title }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+{% endblock %}

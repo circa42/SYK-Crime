@@ -1,4 +1,48 @@
-# Craft 2 Storage (https://craftcms.com/support/craft-storage-gitignore)
-# not necessary for Craft 3 (https://github.com/craftcms/craft/issues/26)
-/craft/storage/*
-!/craft/storage/rebrand
+# Ignore Craft CMS storage folder (for Craft 3+)
+craft/storage/*
+!craft/storage/rebrand/
+
+# Ignore the compiled template caches
+craft/templates/cpresources/*
+
+# Ignore Craft's runtime folder
+craft/runtime/*
+
+# Ignore environment variable files
+.env
+.env.*
+
+# Ignore Composer vendor directory
+vendor/
+
+# Ignore Composer lock file (optional, some teams prefer to commit it)
+composer.lock
+
+# Ignore node_modules folder
+node_modules/
+
+# Ignore compiled assets (adjust based on your setup)
+web/cpresources/*
+web/assets/*
+web/js/*
+web/css/*
+
+# Ignore Craft CMS backups
+backups/
+
+# Ignore Craft CMS logs
+logs/
+craft.log
+web.log
+
+# Ignore Craft CMS cache
+craft/cache/*
+
+# Ignore database backups if you store them locally
+storage/backups/*
+
+# Ignore DS_Store and other macOS-specific files
+.DS_Store
+
+# Ignore DDEV local development configuration directory
+.ddev/

@@ -1,0 +1,50 @@
+dateModified: 1726018014
+email:
+  fromEmail: andrew@circa42.com
+  fromName: 'Stuff Your Kindle: Crime'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/images/covers'
+    type: craft\fs\Local
+    url: /images/covers
+meta:
+  __names__:
+    1c31696e-f556-4d1b-902c-6a1df93843bb: Genre # Genre
+    1de1c31f-1793-4a6c-ac70-1c5e7e2907a9: Thumb # Thumb
+    1e32e33a-2e30-4288-9032-6f6dd47f2bbd: 'Store Links' # Store Links
+    5ac2d28b-bcfe-4c01-84bd-7023c7f9fe3b: 'Book Entry' # Book Entry
+    5bfe5019-ad3d-44a8-8baf-d4d6cd7ade2e: Description # Description
+    17daa88c-2431-437f-8aad-f702d1cb5dd7: Hook # Hook
+    86baf7e9-fa04-4917-bea7-e40ea7b944ba: 'Stuff Your Kindle with Crime' # Stuff Your Kindle with Crime
+    690f8cf4-eb02-4552-a54b-d6bb5dcbd200: 'Store Link' # Store Link
+    794f428d-3f9f-4bb1-8fd7-6ca003d7c247: Store # Store
+    856fb59c-4d34-4d4c-a526-f84a2e67c8a2: Store # Store
+    24673a8b-9c61-4f80-bd44-eff6f28f3355: ASIN # ASIN
+    37614ce4-9525-41ed-ba51-8fb272adfda6: 'Stuff Your Kindle: Crime' # Stuff Your Kindle: Crime
+    789523c3-d71a-4be3-b0a0-5a0d2462abe1: Genre # Genre
+    922578ca-b0b6-48c0-aae1-c55cd66e3ffd: 'Book Covers' # Book Covers
+    18990190-5b61-459e-8e5c-7efd864289d0: 'Public Schema' # Public Schema
+    63314730-9463-4027-81c8-c8a5ee186f19: 'Book Cover' # Book Cover
+    aa93aced-56a4-4b94-8ffe-80e5cfe98f0a: Books # Books
+    ab9df739-9a0c-41b9-938d-e282b83861e4: Keywords # Keywords
+    bd08465f-6b04-4419-8b44-f53ed8fd4767: Keywords # Keywords
+    d2e5aeee-67eb-427b-b509-1392eb5ed1d1: 'Author Name' # Author Name
+    e6b43986-34b3-4dae-949d-8b28bbdf62fa: 'Includes Explicit Content?' # Includes Explicit Content?
+    e398798c-c71d-49fd-9a2a-9f9f5e96e0fa: 'Store Entry' # Store Entry
+system:
+  edition: solo
+  live: true
+  name: 'Stuff Your Kindle: Crime'
+  schemaVersion: 5.3.0.2
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

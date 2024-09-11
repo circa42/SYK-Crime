@@ -1,0 +1,39 @@
+{% set genre = craft.app.request.getQueryParam('genre') %}
+{% set spice = craft.app.request.getQueryParam('spice') %}
+{% set store = craft.app.request.getQueryParam('store') %}
+{% set keywords = craft.app.request.getQueryParam('keywords') %}
+{% set searchTerm = craft.app.request.getQueryParam('q') %}
+{% set explicit = craft.app.request.getQueryParam('explicit') %}
+
+{% set entriesQuery = craft.entries().section('books').search(searchTerm) %}
+
+{# Apply filters from query params #}
+{% if genre %}
+    {% set genreIds = craft.categories.group('genre').slug(genre).ids() %}
+    {% set entriesQuery = entriesQuery.relatedTo({ targetElement: genreIds }) %}
+{% endif %}
+
+{% if store %}
+    {% set storeIds = craft.categories.group('store').slug(store).ids() %}
+    {% set entriesQuery = entriesQuery.relatedTo({ targetElement: storeIds }) %}
+{% endif %}
+
+{% if keywords %}
+    {% set keywordIds = craft.tags.group('keywords').slug(keywords).ids() %}
+    {% set entriesQuery = entriesQuery.relatedTo({ targetElement: keywordIds }) %}
+{% endif %}
+
+{#
+{% if explicit == '0' %}
+    {% set entriesQuery = entriesQuery.where(['explicit' => false]) %}
+{% endif %}
+#}
+{% set entries = entriesQuery.all() %}
+
+<h1>Search Results</h1>
+
+{% if entries | length %}
+    {% include "_includes/book" %}
+{% else %}
+    <p>No results found based on your criteria.</p>
+{% endif %}

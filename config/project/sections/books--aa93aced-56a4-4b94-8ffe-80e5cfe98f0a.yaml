@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 5ac2d28b-bcfe-4c01-84bd-7023c7f9fe3b # Book Entry
+handle: books
+maxAuthors: 1
+name: Books
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  86baf7e9-fa04-4917-bea7-e40ea7b944ba: # Stuff Your Kindle with Crime
+    enabledByDefault: true
+    hasUrls: true
+    template: books/_entry.twig
+    uriFormat: 'books/{slug}'
+structure:
+  maxLevels: null
+  uid: f40a0530-07e0-41db-9f28-8b02bd063156
+type: structure

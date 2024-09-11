@@ -1,0 +1,98 @@
+columnSuffix: null
+handle: store
+instructions: null
+name: Store
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Apple Books'
+        -
+          - value
+          - appleBooks
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Barnes & Noble'
+        -
+          - value
+          - barnesNoble
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Kobo
+        -
+          - value
+          - kobo
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Google Play'
+        -
+          - value
+          - googlePlay
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Everand
+        -
+          - value
+          - everand
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '24 Symbols'
+        -
+          - value
+          - 24Symbols
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Smashwords
+        -
+          - value
+          - smashwords
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Thalia
+        -
+          - value
+          - thalia
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\RadioButtons

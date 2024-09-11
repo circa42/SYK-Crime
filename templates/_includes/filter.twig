@@ -1,0 +1,50 @@
+<form method="get" action="">
+    <h2>Store</h2>
+    <div>
+        {% for category in craft.categories.group('store').hasEntries().all() %}
+            <label>
+                <input type="checkbox" name="store[]" value="{{ category.slug }}"
+                    {% if craft.app.request.getQueryParam('store') and category.slug in craft.app.request.getQueryParam('store') %} checked {% endif %}>
+                {{ category.title }}
+            </label>
+        {% endfor %}
+    </div>
+    
+    <h2>Genre</h2>
+    <div>
+        {% for category in craft.categories.group('genre').hasEntries().all() %}
+            <label>
+                <input type="checkbox" name="genre[]" value="{{ category.slug }}"
+                    {% if craft.app.request.getQueryParam('genre') and category.slug in craft.app.request.getQueryParam('genre') %} checked {% endif %}>
+                {{ category.title }}
+            </label>
+        {% endfor %}
+    </div>
+    
+    <h2>Keywords</h2>
+    <div>
+        {% for tag in craft.tags.group('keywords').hasEntries().all() %}
+            <label>
+                <input type="checkbox" name="keywords[]" value="{{ tag.slug }}"
+                    {% if craft.app.request.getQueryParam('keywords') and tag.slug in craft.app.request.getQueryParam('keywords') %} checked {% endif %}>
+                {{ tag.title }}
+            </label>
+        {% endfor %}
+    </div>
+
+    <h2>Include Explicit Content</h2>
+    <div>
+        <label>
+            <input type="checkbox" name="explicit" value="1"
+                {% if not craft.app.request.getQueryParam('explicit') or craft.app.request.getQueryParam('explicit') == '1' %} checked {% endif %}>
+            Yes
+        </label>
+        <label>
+            <input type="checkbox" name="explicit" value="0"
+                {% if craft.app.request.getQueryParam('explicit') == '0' %} checked {% endif %}>
+            No
+        </label>
+    </div>
+
+    <button type="submit">Filter</button>
+</form>

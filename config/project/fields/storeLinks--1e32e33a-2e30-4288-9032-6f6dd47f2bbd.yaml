@@ -1,0 +1,20 @@
+columnSuffix: null
+handle: storeLinks
+instructions: null
+name: 'Store Links'
+searchable: true
+settings:
+  createButtonLabel: 'Add store link'
+  entryTypes:
+    - e398798c-c71d-49fd-9a2a-9f9f5e96e0fa # Store Entry
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
