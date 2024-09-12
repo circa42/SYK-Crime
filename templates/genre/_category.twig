@@ -1,8 +1,8 @@
 {% extends '_layouts/base' %}
 
 {% block content %}
-  <h1>{{ category.title }}</h1> <!-- Category Title -->
-
+<div class="max-w-5xl mx-auto border-blue-500 border-2 my-12">
+    <h1 class="text-bold font-black	text-center uppercase bg-yellow-300 px-4 py-2 inline-block mb-4">{{ category.title }}</h1> <!-- Category Title -->
   {% if category.description %}
     <p>{{ category.description }}</p> <!-- Optional Category Description -->
   {% endif %}
@@ -16,25 +16,13 @@
 
   {% if entries|length %}
     <div class="entry-list">
-      {% for entry in entries %}
-        <div class="entry">
-          <h2><a href="{{ entry.url }}">{{ entry.title }}</a></h2>
-
-          <!-- Display book cover -->
-          {% if entry.bookCover|length %}
-            <img src="{{ entry.bookCover[0].url }}" alt="{{ entry.title }} cover" class="book-cover">
-          {% endif %}
-
-          <!-- Hook or description (truncate if long) -->
-          {% if entry.hook %}
-            <p>{{ entry.hook }}</p>
-          {% elseif entry.description %}
-            <p>{{ entry.description|slice(0, 150) }}...</p>
-          {% endif %}
-        </div>
-      {% endfor %}
+        <!-- Loop through entries -->
+        {% for entry in entries %}
+          {% include "_includes/book" %}
+        {% endfor %}
     </div>
   {% else %}
     <p>No entries found in this category.</p>
   {% endif %}
+</div>
 {% endblock %}

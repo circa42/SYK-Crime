@@ -100,54 +100,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2024-09-10T23:09:28+00:00'
-            elementCondition: null
-            fieldUid: e6b43986-34b3-4dae-949d-8b28bbdf62fa # Includes Explicit Content?
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 5e87b773-2ddd-486a-8c5f-e4318bb6e850
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2024-09-10T22:23:43+00:00'
-            elementCondition: null
-            fieldUid: 1e32e33a-2e30-4288-9032-6f6dd47f2bbd # Store Links
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 54a247c4-7406-4b87-bf27-aef9e613c5b4
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2024-09-05T20:19:21+00:00'
-            elementCondition: null
-            fieldUid: 24673a8b-9c61-4f80-bd44-eff6f28f3355 # ASIN
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 7b424a7f-e2e9-4c39-af59-545496d76f45
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2024-09-05T23:33:07+00:00'
             elementCondition: null
             fieldUid: 1c31696e-f556-4d1b-902c-6a1df93843bb # Genre
@@ -179,8 +131,94 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2024-09-12T20:23:20+00:00'
+            elementCondition: null
+            fieldUid: 45e385b2-61aa-459b-9af9-130ee578ed93 # Romance Level
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6a9a11e5-47bd-4838-95eb-350f9f8588a7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-10T23:09:28+00:00'
+            elementCondition: null
+            fieldUid: e6b43986-34b3-4dae-949d-8b28bbdf62fa # Includes Explicit Content?
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5e87b773-2ddd-486a-8c5f-e4318bb6e850
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 283be85f-35eb-4cde-a8e5-2a14e70f9b10
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-09-05T20:19:21+00:00'
+            elementCondition: null
+            fieldUid: 24673a8b-9c61-4f80-bd44-eff6f28f3355 # ASIN
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7b424a7f-e2e9-4c39-af59-545496d76f45
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-10T22:23:43+00:00'
+            elementCondition: null
+            fieldUid: 1e32e33a-2e30-4288-9032-6f6dd47f2bbd # Store Links
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 54a247c4-7406-4b87-bf27-aef9e613c5b4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-12T00:00:50+00:00'
+            elementCondition: null
+            fieldUid: dd0271aa-2c8e-4ac9-af62-7b033f1f8550 # Stores
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d7dd72b7-4616-4c15-b72e-1a94986c1c48
+            userCondition: null
+            warning: null
+            width: 100
+        name: Links
+        uid: ff8f08fd-9619-4186-b86e-4d5e0a12a39a
         userCondition: null
 handle: bookEntry
 hasTitleField: true

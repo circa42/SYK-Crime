@@ -4,24 +4,30 @@
       {% if entry.bookCover|length %}
         <img src="{{ entry.bookCover[0].getUrl('thumb') }}" alt="{{ entry.title }} cover" loading="lazy" class="w-full">
       {% endif %}
+      <span class="mt-6 text-xs border-red-500 border text-red-500 px-2 py-1">E</span>
+
     </div>
 
     <!-- Book Details -->
     <div class="book-details w-3/4">
       <!-- Title -->
-      <h2 class="text-2xl font-bold mb-2">{{ entry.title }}</h2>
-
+      <h2 class="text-xl font-bold">{{ entry.title }}
+      </h2>
+      {% if entry.explicit == 1 %}
+      
+      <br>
+      {% endif %}  
       <!-- Hook -->
       {% if entry.hook %}
-        <p class="mb-4">{{ entry.hook }}</p>
+        <span class="mb-4">{{ entry.hook }}</span>
       {% endif %}
 
-      <!-- Placeholder for Buy Now buttons -->
+      <!-- Buy Now buttons -->
       <div class="mb-4">
         <!-- Buy Now Button for Amazon (required field) -->
             <a href="https://www.amazon.com/dp/{{ entry.asin }}?&linkCode=ll1&tag=sykcrime-20&language=en_US&ref_=as_li_ss_tl" 
-                class="buy-now-button bg-blue-500 text-white px-4 py-2 rounded-full inline-block mb-4">
-                Buy on Amazon
+                class="bg-blue-500 text-white px-4 py-2 inline-block mb-4" target="_blank">
+                Amazon
             </a>
      
 
@@ -29,8 +35,8 @@
             {% if entry.storeLinks|length %}
             {% for block in entry.storeLinks.all() %}
             <a href="{{ block.storeLink }}" 
-                class="buy-now-button bg-green-500 text-white px-4 py-2 rounded-full inline-block mb-4">
-                Buy on {{ block.store.label }}
+                class="bg-green-500 text-white px-4 py-2 inline-block mb-4" target="_blank">
+                {{ block.store.label }}
             </a>
             {% endfor %}
             {% endif %}
@@ -41,12 +47,11 @@
       <div class="genres mb-4">
         {% set genres = entry.genre.all() %}
         {% if genres|length %}
-          <p>Categories:</p>
-          <div class="genre-pills flex flex-wrap">
-            {% for genre in genres %}
-              <a href="{{ genre.url }}" class="bg-blue-500 text-white rounded-full px-3 py-1 text-sm mr-2 mb-2">{{ genre.title }}</a>
-            {% endfor %}
-          </div>
+            <div class="text-sm"><span class="font-bold">Categories:</span>
+                {% for genre in genres %}
+                    <a href="{{ genre.url }}" class="hover:text-yellow-300 mr-2 mb-2">{{ genre.title }}</a>
+                {% endfor %}
+            </div>
         {% endif %}
       </div>
 
@@ -54,11 +59,10 @@
       <div class="keywords">
         {% set keywords = entry.keywords.all() %}
         {% if keywords|length %}
-          <p>Keywords:</p>
-          <div class="keyword-pills flex flex-wrap">
-            {% for keyword in keywords %}
-              <a href="/keywords/{{ keyword.slug }}" class="bg-green-500 text-white rounded-full px-3 py-1 text-sm mr-2 mb-2">{{ keyword.title }}</a>
-            {% endfor %}
+            <div class="text-sm"><span class="font-bold">Keywords:</span>
+                {% for keyword in keywords %}
+                    <a href="/keywords/{{ keyword.slug }}" class="hover:text-yellow-300 mr-2 mb-2">{{ keyword.title }}</a>
+                {% endfor %}
           </div>
         {% endif %}
       </div>
