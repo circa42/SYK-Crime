@@ -41,7 +41,7 @@ fieldLayouts:
 handle: genre
 name: Genre
 siteSettings:
-  86baf7e9-fa04-4917-bea7-e40ea7b944ba: # Stuff Your Kindle with Crime
+  86baf7e9-fa04-4917-bea7-e40ea7b944ba: # Stuff Your Kindle: Crime Edition
     hasUrls: true
     template: genre/_category.twig
     uriFormat: 'genre/{slug}'

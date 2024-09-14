@@ -1,0 +1,23 @@
+columnSuffix: null
+handle: body
+instructions: null
+name: Body
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: 72fd5fbf-d505-4d75-8a03-dbb4ac4d5fa4 # Medium
+  createButtonLabel: null
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  entryTypes:
+    - 46b76175-241b-4807-a8d1-f474d60252b1 # Singles
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

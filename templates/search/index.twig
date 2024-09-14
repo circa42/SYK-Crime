@@ -28,16 +28,15 @@
     {% set entriesQuery = entriesQuery.relatedTo({ targetElement: keywordIds }) %}
 {% endif %}
 
-{# Filter for explicit content
+{# Filter for explicit content #}
 {% if explicit == '0' %}
-    {% set entriesQuery = entriesQuery.andWhere(['explicit' => false]) %}
+    {% set entriesQuery = entriesQuery.explicit(false) %}
 {% endif %}
- #}
+
 {% set entries = entriesQuery.all() %}
 
-<h1 class="text-bold font-black	text-center uppercase bg-yellow-300 px-4 py-2 inline-block mb-4">Search Results</h1>
-    <div class="max-w-5xl mx-auto border-blue-500 border-2 my-12">
-
+    <div class="container mx-auto my-12">
+        <h1 class="text-4xl text-bold font-black text-center uppercase bg-yellow-300 px-4 py-2 inline-block mb-12">Search Results</h1>
         {% if entries|length %}
             <div class="entry-list">
                 {% for entry in entries %}
@@ -47,5 +46,5 @@
         {% else %}
             <p>No results found based on your criteria.</p>
         {% endif %}
-</div>
+    </div>
 {% endblock %}

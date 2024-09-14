@@ -1,6 +1,6 @@
-<div class="mx-auto border border-gray-100 drop-shadow mb-12 p-12">
+<div id="filterDiv" class="mx-auto border border-gray-100 drop-shadow mb-12 p-12 hidden">
 
-    <form method="get" action="/search" id="filterForm" class="space-y-6">
+    <form id="filterForm" method="get" action="/search" class="space-y-6">
         
         <!-- Store Section -->
         <h2 class="uppercase text-gray-700">Store</h2>
@@ -9,7 +9,7 @@
                 {% set relatedEntries = craft.entries().section('books').relatedTo(category).limit(1).all() %}
                 {% if relatedEntries|length %}
                     <button type="button"
-                        class="store-button px-4 py-2 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
+                        class="store-button uppercase px-4 py-2 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
                         data-value="{{ category.slug }}">
                         {{ category.title }}
                     </button>
@@ -24,7 +24,7 @@
                 {% set relatedEntries = craft.entries().section('books').relatedTo(category).limit(1).all() %}
                 {% if relatedEntries|length %}
                     <button type="button"
-                        class="genre-button px-4 py-2 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
+                        class="genre-button uppercase px-4 py-2 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
                         data-value="{{ category.slug }}">
                         {{ category.title }}
                     </button>
@@ -39,7 +39,7 @@
                 {% set relatedEntries = craft.entries().section('books').relatedTo(tag).limit(1).all() %}
                 {% if relatedEntries|length %}
                     <button type="button"
-                        class="keyword-button px-4 py-2 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
+                        class="keyword-button uppercase px-4 py-2 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
                         data-value="{{ tag.slug }}">
                         {{ tag.title }}
                     </button>
@@ -48,14 +48,12 @@
         </div>
         
         <!-- Include Explicit Content Section -->
-        <h2 class="uppercase text-gray-700">Include Explicit Content</h2>
+        <h2 class="uppercase text-gray-700">Explicit Content</h2>
         <div class="flex items-center">
             <label class="relative inline-flex items-center cursor-pointer">
-                <!-- Ensure the checkbox is checked by default -->
-                <input type="checkbox" id="explicitSwitch" class="sr-only" checked>
-                <!-- Set the default background to yellow -->
-                <div class="w-11 h-6 bg-gray-300 rounded-full transition-colors duration-300"></div>
-                <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition transform duration-300"></div>
+                <input type="checkbox" id="explicitSwitch" class="sr-only" {% if craft.app.request.getQueryParam('explicit', '1') == '0' %} checked {% endif %}>
+                <div class="w-11 h-6 bg-yellow-300 rounded-full transition-colors duration-300"></div>
+                <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition transform translate-x-5 duration-300"></div>
             </label>
         </div>
 
@@ -68,6 +66,7 @@
         <input type="hidden" name="genre" id="genreInput" value="{{ craft.app.request.getQueryParam('genre')|join(',') }}">
         <input type="hidden" name="keywords" id="keywordsInput" value="{{ craft.app.request.getQueryParam('keywords')|join(',') }}">
         <input type="hidden" name="explicit" id="explicitInput" value="{{ craft.app.request.getQueryParam('explicit', '1') }}">
+
         
     </form>
 </div>

@@ -3,7 +3,7 @@ enabled: true
 handle: default
 hasUrls: true
 language: en-US
-name: 'Stuff Your Kindle with Crime'
+name: 'Stuff Your Kindle: Crime Edition'
 primary: true
 siteGroup: 37614ce4-9525-41ed-ba51-8fb272adfda6 # Stuff Your Kindle: Crime
 sortOrder: 1

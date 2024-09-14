@@ -1,10 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 5ac2d28b-bcfe-4c01-84bd-7023c7f9fe3b # Book Entry
-handle: books
+  - 46b76175-241b-4807-a8d1-f474d60252b1 # Singles
+handle: authors
 maxAuthors: 1
-name: Books
+name: Authors
 previewTargets:
   -
     __assoc__:
@@ -22,9 +22,6 @@ siteSettings:
   86baf7e9-fa04-4917-bea7-e40ea7b944ba: # Stuff Your Kindle: Crime Edition
     enabledByDefault: true
     hasUrls: true
-    template: books/_entry.twig
-    uriFormat: 'books/{slug}'
-structure:
-  maxLevels: null
-  uid: f40a0530-07e0-41db-9f28-8b02bd063156
-type: structure
+    template: pages/_entry.twig
+    uriFormat: '{slug}'
+type: single

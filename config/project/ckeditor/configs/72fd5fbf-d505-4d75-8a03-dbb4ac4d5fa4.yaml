@@ -1,0 +1,17 @@
+headingLevels:
+  - 2
+  - 3
+name: Medium
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic
+  - underline
+  - strikethrough
+  - bulletedList
+  - numberedList
+  - '|'
+  - insertImage
+  - '|'
+  - link

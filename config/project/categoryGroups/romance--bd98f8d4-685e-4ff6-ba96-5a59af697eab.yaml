@@ -41,10 +41,10 @@ fieldLayouts:
 handle: romance
 name: Romance
 siteSettings:
-  86baf7e9-fa04-4917-bea7-e40ea7b944ba: # Stuff Your Kindle with Crime
-    hasUrls: false
-    template: null
-    uriFormat: null
+  86baf7e9-fa04-4917-bea7-e40ea7b944ba: # Stuff Your Kindle: Crime Edition
+    hasUrls: true
+    template: genre/_category.twig
+    uriFormat: 'genre/{slug}'
 structure:
   maxLevels: null
   uid: b5f7c766-f902-4cd9-845a-8f58f9735532

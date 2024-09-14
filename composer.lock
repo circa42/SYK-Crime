@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "079e685b9f78558d8410b6d02981c735",
+    "content-hash": "f8be126162048a1bf375d1b8f85c4fb4",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -232,6 +232,58 @@
             "time": "2024-07-12T11:35:52+00:00"
         },
         {
+            "name": "craftcms/ckeditor",
+            "version": "4.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/07d72b9d05c8f6383086c598c8d555752b72d797",
+                "reference": "07d72b9d05c8f6383086c598c8d555752b72d797",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.3.0",
+                "craftcms/html-field": "^3.1.0",
+                "nystudio107/craft-code-editor": ">=1.0.8 <=1.0.13 || ^1.0.16",
+                "php": "^8.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "CKEditor",
+                "handle": "ckeditor",
+                "documentationUrl": "https://github.com/craftcms/ckeditor/blob/master/README.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\ckeditor\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Edit rich text content in Craft CMS using CKEditor.",
+            "keywords": [
+                "ckeditor",
+                "cms",
+                "craftcms",
+                "html",
+                "yii2"
+            ],
+            "support": {
+                "email": "support@craftcms.com",
+                "issues": "https://github.com/craftcms/ckeditor/issues?state=open",
+                "source": "https://github.com/craftcms/ckeditor",
+                "docs": "https://github.com/craftcms/ckeditor/blob/master/README.md",
+                "rss": "https://github.com/craftcms/ckeditor/commits/master.atom"
+            },
+            "time": "2024-08-15T15:05:08+00:00"
+        },
+        {
             "name": "craftcms/cms",
             "version": "5.4.2",
             "dist": {
@@ -335,6 +387,44 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
             "time": "2024-09-06T17:15:00+00:00"
+        },
+        {
+            "name": "craftcms/html-field",
+            "version": "3.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/html-field/zipball/34a5796c74e22d4ae80709541367114d03d280ca",
+                "reference": "34a5796c74e22d4ae80709541367114d03d280ca",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0-beta.1",
+                "php": "^8.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "craft\\htmlfield\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Base class for Craft CMS field types with HTML values.",
+            "support": {
+                "email": "support@craftcms.com",
+                "issues": "https://github.com/craftcms/html-field/issues?state=open",
+                "source": "https://github.com/craftcms/html-field",
+                "docs": "https://github.com/craftcms/html-field/blob/main/README.md",
+                "rss": "https://github.com/craftcms/html-field/commits/main.atom"
+            },
+            "time": "2024-06-11T14:58:59+00:00"
         },
         {
             "name": "craftcms/plugin-installer",
@@ -1106,7 +1196,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v10.48.20",
+            "version": "v10.48.22",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/collections/zipball/37c863cffb345869dd134eff8e646bc82a19cc96",
@@ -1151,7 +1241,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v10.48.20",
+            "version": "v10.48.22",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/conditionable/zipball/d0958e4741fc9d6f516a552060fd1b829a85e009",
@@ -1187,7 +1277,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v10.48.20",
+            "version": "v10.48.22",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/contracts/zipball/8d7152c4a1f5d9cf7da3e8b71f23e4556f6138ac",
@@ -1225,7 +1315,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v10.48.20",
+            "version": "v10.48.22",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/macroable/zipball/dff667a46ac37b634dcf68909d9d41e94dc97c27",
@@ -1447,6 +1537,74 @@
                 "psr-3"
             ],
             "time": "2024-06-28T09:40:51+00:00"
+        },
+        {
+            "name": "nystudio107/craft-code-editor",
+            "version": "1.0.21",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nystudio107/craft-code-editor.git",
+                "reference": "82f5a4f0e3e8e15974f76cda98659080d51351c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/82f5a4f0e3e8e15974f76cda98659080d51351c4",
+                "reference": "82f5a4f0e3e8e15974f76cda98659080d51351c4",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0 || ^4.0.0 || ^5.0.0",
+                "phpdocumentor/reflection-docblock": "^5.0.0"
+            },
+            "require-dev": {
+                "craftcms/ecs": "dev-main",
+                "craftcms/phpstan": "dev-main",
+                "craftcms/rector": "dev-main"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "bootstrap": "nystudio107\\codeeditor\\CodeEditor"
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\codeeditor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com"
+                }
+            ],
+            "description": "Provides a code editor field with Twig & Craft API autocomplete",
+            "keywords": [
+                "Craft",
+                "Monaco",
+                "cms",
+                "code",
+                "craftcms",
+                "css",
+                "editor",
+                "javascript",
+                "markdown",
+                "twig"
+            ],
+            "support": {
+                "docs": "https://github.com/nystudio107/craft-code-editor/blob/v1/README.md",
+                "issues": "https://github.com/nystudio107/craft-code-editor/issues",
+                "source": "https://github.com/nystudio107/craft-code-editor"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/khalwat",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-09-13T02:32:50+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -2209,11 +2367,11 @@
         },
         {
             "name": "psr/log",
-            "version": "3.0.1",
+            "version": "3.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/79dff0b268932c640297f5208d6298f71855c03e",
-                "reference": "79dff0b268932c640297f5208d6298f71855c03e",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/f16e1d5863e37f8d8c2a01719f5b34baa2b714d3",
+                "reference": "f16e1d5863e37f8d8c2a01719f5b34baa2b714d3",
                 "shasum": ""
             },
             "require": {
@@ -2246,7 +2404,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2024-08-21T13:31:24+00:00"
+            "time": "2024-09-11T13:17:53+00:00"
         },
         {
             "name": "psr/simple-cache",
