@@ -47,14 +47,29 @@
         </div>
         
         <!-- Include Explicit Content Section -->
-        <h2 class="uppercase text-gray-700">Explicit Content</h2>
+        <h2 class="uppercase text-gray-700">Explicit Content Filter:
+        <span id="filterState" class="uppercase ml-2 text-sm font-bold text-gray-500">
+            {% if craft.app.request.getQueryParam('explicit', '1') == '1' %} on {% else %} off {% endif %}
+        </span></h2>
         <div class="flex items-center">
             <label class="relative inline-flex items-center cursor-pointer">
                 <input type="checkbox" id="explicitSwitch" class="sr-only" {% if craft.app.request.getQueryParam('explicit', '1') == '1' %} checked {% endif %}>
                 <div class="w-11 h-6 bg-yellow-300 rounded-full transition-colors duration-300"></div>
                 <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition transform translate-x-5 duration-300"></div>
             </label>
+            <!-- Add a span to display the "on" or "off" state -->
+            
         </div>
+        <!-- Include Explicit Content Section 
+        <h2 class="uppercase text-gray-700">Explicit Content Filter</h2>
+        <div class="flex items-center">
+            <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="explicitSwitch" class="sr-only" {% if craft.app.request.getQueryParam('explicit', '1') == '1' %} checked {% endif %}>
+                <div class="w-11 h-6 bg-yellow-300 rounded-full transition-colors duration-300"></div>
+                <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition transform translate-x-5 duration-300"></div>
+            </label>
+            
+        </div>-->
 
 
         <!-- Filter Button -->

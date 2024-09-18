@@ -187,10 +187,12 @@ document.addEventListener('DOMContentLoaded', function () {
       explicitSwitch.checked = true;
       switchBackground.classList.replace('bg-gray-300', 'bg-yellow-300');
       dot.classList.add('translate-x-5');
+      filterState.textContent = 'on'; // Set the initial text to 'on'
   } else {
       explicitSwitch.checked = false;
       switchBackground.classList.replace('bg-yellow-300', 'bg-gray-300'); // Fix here
       dot.classList.remove('translate-x-5');
+      filterState.textContent = 'off'; // Set the initial text to 'off'
   }
 
   // Toggle explicit content switch
@@ -199,10 +201,12 @@ document.addEventListener('DOMContentLoaded', function () {
           document.getElementById('explicitInput').value = '1';
           switchBackground.classList.replace('bg-gray-300', 'bg-yellow-300');
           dot.classList.add('translate-x-5');
+          filterState.textContent = 'on'; // Update the text to 'on'
       } else {
           document.getElementById('explicitInput').value = '0';
           switchBackground.classList.replace('bg-yellow-300', 'bg-gray-300');
           dot.classList.remove('translate-x-5');
+          filterState.textContent = 'off'; // Update the text to 'off'
       }
   });
 
