@@ -22,10 +22,7 @@ composer.lock
 node_modules/
 
 # Ignore compiled assets (adjust based on your setup)
-web/cpresources/*
-web/assets/*
-web/js/*
-web/css/*
+web/images/*
 
 # Ignore Craft CMS backups
 backups/
