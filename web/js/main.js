@@ -185,11 +185,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const explicitValue = document.getElementById('explicitInput').value;
   if (explicitValue === '1') {
       explicitSwitch.checked = true;
-      switchBackground.classList.add('bg-yellow-300');
+      switchBackground.classList.replace('bg-gray-300', 'bg-yellow-300');
       dot.classList.add('translate-x-5');
   } else {
       explicitSwitch.checked = false;
-      switchBackground.classList.add('bg-gray-300');
+      switchBackground.classList.replace('bg-yellow-300', 'bg-gray-300'); // Fix here
       dot.classList.remove('translate-x-5');
   }
 
