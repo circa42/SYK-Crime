@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: romanceLevel
+instructions: null
+name: 'Romance Level'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: true
+  source: 'group:bd98f8d4-685e-4ff6-ba96-5a59af697eab' # Romance
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

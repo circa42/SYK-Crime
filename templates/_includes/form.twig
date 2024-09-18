@@ -1,0 +1,71 @@
+
+    <form id="filterForm" method="get" action="/search" class="space-y-6">
+        
+        <!-- Store Section -->
+        <h2 class="uppercase text-gray-700">Store</h2>
+        <div class="flex flex-wrap gap-2">
+            {% for category in craft.categories.group('store').all() %}
+                {% set relatedEntries = craft.entries().section('books').relatedTo(category).limit(1).all() %}
+                {% if relatedEntries|length %}
+                    <button type="button"
+                        class="store-button uppercase px-4 py-2 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
+                        data-value="{{ category.slug }}">
+                        {{ category.title }}
+                    </button>
+                {% endif %}
+            {% endfor %}
+        </div>
+        
+        <!-- Genre Section -->
+        <h2 class="uppercase text-gray-700">Genre</h2>
+        <div class="flex flex-wrap gap-2">
+            {% for category in craft.categories.group('genre').all() %}
+                {% set relatedEntries = craft.entries().section('books').relatedTo(category).limit(1).all() %}
+                {% if relatedEntries|length %}
+                    <button type="button"
+                        class="genre-button uppercase px-4 py-2 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
+                        data-value="{{ category.slug }}">
+                        {{ category.title }}
+                    </button>
+                {% endif %}
+            {% endfor %}
+        </div>
+        
+        <!-- Keywords Section -->
+        <h2 class="uppercase text-gray-700">Keywords</h2>
+        <div class="flex flex-wrap gap-2">
+            {% for tag in craft.tags.group('keywords').all() %}
+                {% set relatedEntries = craft.entries().section('books').relatedTo(tag).limit(1).all() %}
+                {% if relatedEntries|length %}
+                    <button type="button"
+                        class="keyword-button text-xs uppercase px-2 py-1 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
+                        data-value="{{ tag.slug }}">
+                        {{ tag.title }}
+                    </button>
+                {% endif %}
+            {% endfor %}
+        </div>
+        
+        <!-- Include Explicit Content Section -->
+        <h2 class="uppercase text-gray-700">Explicit Content</h2>
+        <div class="flex items-center">
+            <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="explicitSwitch" class="sr-only" {% if craft.app.request.getQueryParam('explicit', '1') == '1' %} checked {% endif %}>
+                <div class="w-11 h-6 bg-yellow-300 rounded-full transition-colors duration-300"></div>
+                <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition transform translate-x-5 duration-300"></div>
+            </label>
+        </div>
+
+
+        <!-- Filter Button -->
+        <div class="flex justify-center">
+            <button type="submit" class="bg-yellow-300 hover:bg-gray-300 text-black font-bold py-2 px-6">FILTER</button>
+        </div>
+        <!-- Hidden inputs for the form submission -->
+        <input type="hidden" name="store" id="storeInput" value="{{ craft.app.request.getQueryParam('store')|join(',') }}">
+        <input type="hidden" name="genre" id="genreInput" value="{{ craft.app.request.getQueryParam('genre')|join(',') }}">
+        <input type="hidden" name="keywords" id="keywordsInput" value="{{ craft.app.request.getQueryParam('keywords')|join(',') }}">
+        <input type="hidden" name="explicit" id="explicitInput" value="{{ craft.app.request.getQueryParam('explicit', '1') }}">
+
+        
+    </form>

@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: stores
+instructions: null
+name: Stores
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: 1
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: true
+  source: 'group:794f428d-3f9f-4bb1-8fd7-6ca003d7c247' # Store
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 7863d0f8-7a02-4d03-b291-e630ffccb754 # Home
+handle: home
+maxAuthors: 1
+name: Home
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  86baf7e9-fa04-4917-bea7-e40ea7b944ba: # Stuff Your Kindle: Crime Edition
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: single

@@ -1,0 +1,211 @@
+color: null
+fieldLayouts:
+  795570eb-f838-47a7-b9d3-def9cf0baf2f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-09-04T23:35:35+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 6626d602-305a-4e4e-a6f4-6d730c776bc5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-17T23:27:34+00:00'
+            elementCondition: null
+            fieldUid: 7d5b5753-a092-4bca-bdf2-e62434abf683 # Pen Name
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d6b359b6-6646-4912-8daa-9c131410e233
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-05T20:37:47+00:00'
+            elementCondition: null
+            fieldUid: d2e5aeee-67eb-427b-b509-1392eb5ed1d1 # Author Name
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dff29f5f-cc39-46e3-9b0b-d7feec7acb9c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-05T20:16:01+00:00'
+            elementCondition: null
+            fieldUid: 63314730-9463-4027-81c8-c8a5ee186f19 # Book Cover
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8a60c033-1a32-44ee-948c-3d8be6fbad59
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-04T23:38:16+00:00'
+            elementCondition: null
+            fieldUid: 17daa88c-2431-437f-8aad-f702d1cb5dd7 # Hook
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8aaa5a3c-6e89-42a0-987a-81d80ce0c411
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-04T23:38:16+00:00'
+            elementCondition: null
+            fieldUid: 5bfe5019-ad3d-44a8-8baf-d4d6cd7ade2e # Description
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 59d8128b-7b76-4319-ace8-4bfc1386cb56
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-10T22:23:43+00:00'
+            elementCondition: null
+            fieldUid: 1e32e33a-2e30-4288-9032-6f6dd47f2bbd # Store Links
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 54a247c4-7406-4b87-bf27-aef9e613c5b4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-05T23:33:07+00:00'
+            elementCondition: null
+            fieldUid: 1c31696e-f556-4d1b-902c-6a1df93843bb # Genre
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: abcad7bc-a761-48b2-9b9a-325500c1e9d3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-05T20:14:41+00:00'
+            elementCondition: null
+            fieldUid: bd08465f-6b04-4419-8b44-f53ed8fd4767 # Keywords
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 98503052-d39e-4236-a8ca-41802be92d5b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-12T20:23:20+00:00'
+            elementCondition: null
+            fieldUid: 45e385b2-61aa-459b-9af9-130ee578ed93 # Romance Level
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6a9a11e5-47bd-4838-95eb-350f9f8588a7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-10T23:09:28+00:00'
+            elementCondition: null
+            fieldUid: e6b43986-34b3-4dae-949d-8b28bbdf62fa # Includes Explicit Content?
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5e87b773-2ddd-486a-8c5f-e4318bb6e850
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 283be85f-35eb-4cde-a8e5-2a14e70f9b10
+        userCondition: null
+handle: bookEntry
+hasTitleField: true
+icon: book
+name: 'Book Entry'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
