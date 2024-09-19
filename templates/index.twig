@@ -16,6 +16,17 @@
           <article class="ck-content mb-12">
               {{ entry.body | raw }}
           </article>
+
+
+          {% set testEntries = craft.entries()
+            .section('books')
+            .with('storeLinks.stores')
+            .all() %}
+        
+        {{ dump(testEntries) }}
+     
+
+
     {% else %}
         <p>No content found for the homepage.</p>
     {% endif %}

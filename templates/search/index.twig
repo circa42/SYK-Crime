@@ -19,8 +19,12 @@
 {# Apply store filtering #}
 {% if store %}
     {% set storeIds = craft.categories.group('store').slug(store).ids() %}
-    {% set entriesQuery = entriesQuery.relatedTo({ targetElement: storeIds }) %}
+    {% set entriesQuery = entriesQuery.relatedTo({
+        targetElement: storeIds,
+        field: 'storeLinks.stores' 
+    }) %}
 {% endif %}
+
 
 {# Apply keyword filtering #}
 {% if keywords %}
@@ -49,3 +53,5 @@
         {% endif %}
     </div>
 {% endblock %}
+
+	

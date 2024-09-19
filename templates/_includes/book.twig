@@ -28,43 +28,44 @@
         <span class="my-4 text-sm">{{ entry.hook }}</span>
       {% endif %}
 
-      <!-- Buy Now buttons -->
-      <div class="mb-4">
-        <!-- Buy Now Button for Amazon (required field) 
-            <a href="https://www.amazon.com/dp/{# entry.asin #}?&linkCode=ll1&tag=sykcrime-20&language=en_US&ref_=as_li_ss_tl" 
-                class="bg-blue-500 text-white px-4 py-2 inline-block mb-4" target="_blank">
-                Amazon
-            </a>
-     -->
-        <!--  Store Links -->
+     
+     <!--  Store Links -->
+     <div class="mb-4">
+        {% macro countryFlag(slug) %}
+          {% switch slug %}
+              {% case "amazon" %} 🇺🇸
+              {% case "amazon-au" %} 🇦🇺
+              {% case "amazon-br" %} 🇧🇷
+              {% case "amazon-ca" %} 🇨🇦
+              {% case "amazon-de" %} 🇩🇪
+              {% case "amazon-es" %} 🇪🇸
+              {% case "amazon-fr" %} 🇫🇷
+              {% case "amazon-in" %} 🇮🇳
+              {% case "amazon-it" %} 🇮🇹
+              {% case "amazon-jp" %} 🇯🇵
+              {% case "amazon-mx" %} 🇲🇽
+              {% case "amazon-nl" %} 🇳🇱
+              {% case "amazon-uk" %} 🇬🇧
+              {% default %} 🌍
+          {% endswitch %}
+        {% endmacro %}
+
         {% if entry.storeLinks|length %}
-        <div class="my-2">
-            {% for block in entry.storeLinks.all() %}
-                {% set storeCategory = block.stores.one() %}
-                {% if storeCategory %}
-                    {% set url = block.storeLink %}
-                    {% if storeCategory.slug == 'amazon' %}
-                        {% set url = url ~ '?&linkCode=ll1&tag=sykcrime-20&language=en_US&ref_=as_li_ss_tl' %}
-                    {% endif %}
-                    <a href="{{ url }}" class="bg-yellow-300 text-gray-900 uppercase hover:bg-gray-300 px-2 py-1 inline-block mb-1" target="_blank">
-                        {{ storeCategory.title }}
-                       {# {% set svgPath = '_includes/icons/' ~ storeCategory.slug ~ '.svg' %}
-                        <div class="w-24 border">
-                            {{ source(svgPath) | raw }}
-                        </div>    
-                        #} 
-                    </a>
-                {% endif %}
-            {% endfor %}
-        </div>
+          <div class="my-2">
+              {% for block in entry.storeLinks.all() %}
+                  {% set storeCategory = block.stores.one() %}
+                  {% if storeCategory %}
+                      {% set url = block.storeLink %}
+                      {% if "amazon" in storeCategory.slug %}
+                          {% set url = url ~ '?&linkCode=ll1&tag=sykcrime-20&language=en_US&ref_=as_li_ss_tl' %}
+                      {% endif %}
+                      <a href="{{ url }}" class="bg-yellow-300 text-gray-900 uppercase hover:bg-gray-300 px-2 py-1 inline-block mb-1" target="_blank">
+                          {{ _self.countryFlag(storeCategory.slug) }} {{ storeCategory.title }}
+                      </a>
+                  {% endif %}
+              {% endfor %}
+          </div>
         {% endif %}
-
-
-
-
-
-
-
       </div>
 
       <!-- Categories (Genre) -->

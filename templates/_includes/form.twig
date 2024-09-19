@@ -5,8 +5,22 @@
         <h2 class="uppercase text-gray-700">Store</h2>
         <div class="flex flex-wrap gap-2">
             {% for category in craft.categories.group('store').all() %}
-                {% set relatedEntries = craft.entries().section('books').relatedTo(category).limit(1).all() %}
-                {% if relatedEntries|length %}
+                {% set relatedEntries = craft.entries()
+                    .section('books')
+                    .with(['storeLinks'])  
+                    .all() %}
+        
+                {% set showCategory = false %}
+        
+                {% for entry in relatedEntries %}
+                    {% for block in entry.storeLinks.all() %}
+                        {% if block.stores|length and block.stores.one().slug == category.slug %}
+                            {% set showCategory = true %}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+        
+                {% if showCategory %}
                     <button type="button"
                         class="store-button uppercase px-4 py-2 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
                         data-value="{{ category.slug }}">
@@ -14,13 +28,16 @@
                     </button>
                 {% endif %}
             {% endfor %}
-        </div>
+        </div>   
+
+
+
         
         <!-- Genre Section -->
         <h2 class="uppercase text-gray-700">Genre</h2>
         <div class="flex flex-wrap gap-2">
             {% for category in craft.categories.group('genre').all() %}
-                {% set relatedEntries = craft.entries().section('books').relatedTo(category).limit(1).all() %}
+                {% set relatedEntries = craft.entries().section('books').relatedTo(category).all() %}
                 {% if relatedEntries|length %}
                     <button type="button"
                         class="genre-button uppercase px-4 py-2 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
