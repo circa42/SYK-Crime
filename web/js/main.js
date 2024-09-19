@@ -88,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Handle explicit input separately
     const explicitValue = document.getElementById('explicitInput').value;
-    console.log('Explicit Value:', explicitValue);
 
     // Populate hidden inputs with initial values (if needed)
     updateHiddenInputs();
@@ -176,39 +175,46 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('keywordsInput').value = selectedKeywords.join(',');
   }
 
-  // Toggle explicit content light switch
-  const explicitSwitch = document.getElementById('explicitSwitch');
-  const dot = document.querySelector('.dot');
-  const switchBackground = explicitSwitch.nextElementSibling;
+// Toggle explicit content light switch
+    const explicitSwitch = document.getElementById('explicitSwitch');
+    const dot = document.querySelector('.dot');
+    const switchBackground = explicitSwitch.nextElementSibling;
+    const filterState = document.getElementById('filterState');
+    const explicitInput = document.getElementById('explicitInput'); // Reference to the hidden input
 
-  // Set the initial state for explicit content
-  const explicitValue = document.getElementById('explicitInput').value;
-  if (explicitValue === '1') {
-      explicitSwitch.checked = true;
-      switchBackground.classList.replace('bg-gray-300', 'bg-yellow-300');
-      dot.classList.add('translate-x-5');
-      filterState.textContent = 'on'; // Set the initial text to 'on'
-  } else {
-      explicitSwitch.checked = false;
-      switchBackground.classList.replace('bg-yellow-300', 'bg-gray-300'); // Fix here
-      dot.classList.remove('translate-x-5');
-      filterState.textContent = 'off'; // Set the initial text to 'off'
-  }
+    // Check the initial state of the checkbox
+    if (!explicitSwitch.checked) {
+        // Default to filter off (show all content, including explicit)
+        switchBackground.classList.add('bg-gray-300');
+        dot.classList.remove('translate-x-5');
+        filterState.textContent = 'off';
+        explicitInput.value = '0'; // Show all content
+    } else {
+        // Filter on (hide explicit content)
+        switchBackground.classList.add('bg-yellow-300');
+        dot.classList.add('translate-x-5');
+        filterState.textContent = 'on';
+        explicitInput.value = '1'; // Hide explicit content
+    }
 
-  // Toggle explicit content switch
-  explicitSwitch.addEventListener('change', function () {
-      if (this.checked) {
-          document.getElementById('explicitInput').value = '1';
-          switchBackground.classList.replace('bg-gray-300', 'bg-yellow-300');
-          dot.classList.add('translate-x-5');
-          filterState.textContent = 'on'; // Update the text to 'on'
-      } else {
-          document.getElementById('explicitInput').value = '0';
-          switchBackground.classList.replace('bg-yellow-300', 'bg-gray-300');
-          dot.classList.remove('translate-x-5');
-          filterState.textContent = 'off'; // Update the text to 'off'
-      }
-  });
+    // Add toggle event listener for the switch
+    explicitSwitch.addEventListener('change', function () {
+        if (this.checked) {
+            // Turn filter on (hide explicit content)
+            switchBackground.classList.replace('bg-gray-300', 'bg-yellow-300');
+            dot.classList.add('translate-x-5');
+            filterState.textContent = 'on';
+            explicitInput.value = '1'; // Set to hide explicit content
+        } else {
+            // Turn filter off (show all content)
+            switchBackground.classList.replace('bg-yellow-300', 'bg-gray-300');
+            dot.classList.remove('translate-x-5');
+            filterState.textContent = 'off';
+            explicitInput.value = '0'; // Set to show all content
+        }
+    });
+
+
 
 
 });
