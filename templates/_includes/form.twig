@@ -5,8 +5,22 @@
         <h2 class="uppercase text-gray-700">Store</h2>
         <div class="flex flex-wrap gap-2">
             {% for category in craft.categories.group('store').all() %}
-                {% set relatedEntries = craft.entries().section('books').relatedTo(category).limit(1).all() %}
-                {% if relatedEntries|length %}
+                {% set relatedEntries = craft.entries()
+                    .section('books')
+                    .with(['storeLinks'])  
+                    .all() %}
+        
+                {% set showCategory = false %}
+        
+                {% for entry in relatedEntries %}
+                    {% for block in entry.storeLinks.all() %}
+                        {% if block.stores|length and block.stores.one().slug == category.slug %}
+                            {% set showCategory = true %}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+        
+                {% if showCategory %}
                     <button type="button"
                         class="store-button uppercase px-4 py-2 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
                         data-value="{{ category.slug }}">
@@ -14,13 +28,16 @@
                     </button>
                 {% endif %}
             {% endfor %}
-        </div>
+        </div>   
+
+
+
         
         <!-- Genre Section -->
         <h2 class="uppercase text-gray-700">Genre</h2>
         <div class="flex flex-wrap gap-2">
             {% for category in craft.categories.group('genre').all() %}
-                {% set relatedEntries = craft.entries().section('books').relatedTo(category).limit(1).all() %}
+                {% set relatedEntries = craft.entries().section('books').relatedTo(category).all() %}
                 {% if relatedEntries|length %}
                     <button type="button"
                         class="genre-button uppercase px-4 py-2 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
@@ -47,14 +64,21 @@
         </div>
         
         <!-- Include Explicit Content Section -->
-        <h2 class="uppercase text-gray-700">Explicit Content</h2>
+        <h2 class="uppercase text-gray-700">Filter Explicit Content
+            <!-- Add a span to display the "on" or "off" state -->
+                <span id="filterState" class="uppercase ml-2 text-sm font-bold text-gray-500">
+                {% if craft.app.request.getQueryParam('explicit', '0') == '1' %} on {% else %} off {% endif %}
+            </span>
+        </h2>
         <div class="flex items-center">
             <label class="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" id="explicitSwitch" class="sr-only" {% if craft.app.request.getQueryParam('explicit', '1') == '1' %} checked {% endif %}>
-                <div class="w-11 h-6 bg-yellow-300 rounded-full transition-colors duration-300"></div>
+                <input type="checkbox" id="explicitSwitch" class="sr-only" {% if craft.app.request.getQueryParam('explicit', '0') == '1' %} checked {% endif %}>
+                <div class="w-11 h-6 bg-gray-300 rounded-full transition-colors duration-300"></div>
                 <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition transform translate-x-5 duration-300"></div>
             </label>
+            
         </div>
+
 
 
         <!-- Filter Button -->

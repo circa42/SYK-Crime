@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "902d13b6557de2b5976c067310e19817",
+    "content-hash": "74518dbc7cccb436c6d387b1dd889fac",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -318,15 +318,24 @@
         },
         {
             "name": "composer/semver",
-            "version": "3.4.2",
+            "version": "3.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/semver.git",
+                "reference": "4313d26ada5e0c4edfbd1dc481a92ff7bff91f12"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/c51258e759afdb17f1fd1fe83bc12baaef6309d6",
-                "reference": "c51258e759afdb17f1fd1fe83bc12baaef6309d6",
+                "url": "https://api.github.com/repos/composer/semver/zipball/4313d26ada5e0c4edfbd1dc481a92ff7bff91f12",
+                "reference": "4313d26ada5e0c4edfbd1dc481a92ff7bff91f12",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.3.2 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.11",
+                "symfony/phpunit-bridge": "^3 || ^7"
             },
             "type": "library",
             "extra": {
@@ -339,6 +348,7 @@
                     "Composer\\Semver\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -366,7 +376,26 @@
                 "validation",
                 "versioning"
             ],
-            "time": "2024-07-12T11:35:52+00:00"
+            "support": {
+                "irc": "ircs://irc.libera.chat:6697/composer",
+                "issues": "https://github.com/composer/semver/issues",
+                "source": "https://github.com/composer/semver/tree/3.4.3"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-19T14:15:21+00:00"
         },
         {
             "name": "craftcms/ckeditor",
@@ -422,11 +451,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.4.2",
+            "version": "5.4.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/5e56c6d168524ed02f0620c9bc1c9750f5b94e3b",
-                "reference": "5e56c6d168524ed02f0620c9bc1c9750f5b94e3b",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/e7eaf2a7378419fa5cd359196b0c16e5813dc85f",
+                "reference": "e7eaf2a7378419fa5cd359196b0c16e5813dc85f",
                 "shasum": ""
             },
             "require": {
@@ -468,7 +497,7 @@
                 "symfony/var-dumper": "^5.0|^6.0",
                 "symfony/yaml": "^5.2.3",
                 "theiconic/name-parser": "^1.2",
-                "twig/twig": "~3.12.0",
+                "twig/twig": "~3.14.0",
                 "voku/stringy": "^6.4.0",
                 "web-auth/webauthn-lib": "~4.9.0",
                 "webonyx/graphql-php": "~14.11.5",
@@ -523,7 +552,7 @@
                 "docs": "https://craftcms.com/docs/5.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2024-09-06T17:15:00+00:00"
+            "time": "2024-09-14T16:48:59+00:00"
         },
         {
             "name": "craftcms/feed-me",
@@ -4836,11 +4865,11 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.12.0",
+            "version": "v3.14.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/4d19472d4ac1838e0b1f0e029ce1fa4040eb34ea",
-                "reference": "4d19472d4ac1838e0b1f0e029ce1fa4040eb34ea",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/126b2c97818dbff0cdf3fbfc881aedb3d40aae72",
+                "reference": "126b2c97818dbff0cdf3fbfc881aedb3d40aae72",
                 "shasum": ""
             },
             "require": {
@@ -4887,7 +4916,90 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2024-08-29T09:51:12+00:00"
+            "time": "2024-09-09T17:55:12+00:00"
+        },
+        {
+            "name": "verbb/base",
+            "version": "3.0.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/0d3798a795a83a3fdfbbe9e5c693aecffde3f004",
+                "reference": "0d3798a795a83a3fdfbbe9e5c693aecffde3f004",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "php": "^8.2"
+            },
+            "type": "yii-module",
+            "autoload": {
+                "psr-4": {
+                    "verbb\\base\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "Common utilities and building-blocks for Verbb plugins for Craft CMS.",
+            "time": "2024-09-13T23:33:05+00:00"
+        },
+        {
+            "name": "verbb/knock-knock",
+            "version": "3.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/knock-knock/zipball/deb9c62fdebbf188ac2229ae6f95cb4c9abda59e",
+                "reference": "deb9c62fdebbf188ac2229ae6f95cb4c9abda59e",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "php": "^8.2",
+                "verbb/base": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Knock Knock",
+                "handle": "knock-knock",
+                "changelogUrl": "https://raw.githubusercontent.com/verbb/knock-knock/craft-5/CHANGELOG.md",
+                "class": "verbb\\knockknock\\KnockKnock"
+            },
+            "autoload": {
+                "psr-4": {
+                    "verbb\\knockknock\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "Password protect your public facing Craft website with a single password.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "knock-knock"
+            ],
+            "support": {
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/knock-knock/issues?state=open",
+                "source": "https://github.com/verbb/knock-knock",
+                "docs": "https://github.com/verbb/knock-knock",
+                "rss": "https://github.com/verbb/knock-knock/commits/v2.atom"
+            },
+            "time": "2024-07-21T05:14:35+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

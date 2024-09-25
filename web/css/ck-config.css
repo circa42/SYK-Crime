@@ -1,0 +1,65 @@
+.ck-content h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #333;
+  }
+  
+  .ck-content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0.75rem;
+    color: #555;
+  }
+  
+  .ck-content p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    color: #555;
+  }
+  
+  .ck-content ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .ck-content ol {
+    list-style-type: decimal;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .ck-content ul li,
+  .ck-content ol li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .ck-content figcaption {
+    font-size: 0.875rem;
+    color: #777;
+    margin-top: 0.5rem;
+  }
+  
+  .ck-content a {
+    text-decoration: none;
+    background-color: #fbdf4a; /* Link background color */
+    color: #000;
+    padding: 2px 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ck-content a:hover {
+    background-color: #cbcfd6; /* Hover background color */
+    color: #000; /* Text color remains black */
+  }
+  
+  .ck-content .image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto; /* Center image with some margin */
+    border-radius: 4px; /* Optional: Adds a slight rounded corner effect */
+  }
+  

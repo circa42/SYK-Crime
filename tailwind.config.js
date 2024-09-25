@@ -16,6 +16,9 @@ module.exports = {
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
           },
+          rotate: {
+            '3': '-3deg',
+          },
           keyframes: {
             slideDown: {
               '0%': { transform: 'translateY(-100%)', opacity: '0' },
