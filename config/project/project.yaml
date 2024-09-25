@@ -1,4 +1,4 @@
-dateModified: 1727231805
+dateModified: 1727234850
 email:
   fromEmail: andrew@circa42.com
   fromName: 'Stuff Your Kindle: Crime'
@@ -10,7 +10,7 @@ fs:
     settings:
       path: $FEEDS_FOLDER
     type: craft\fs\Local
-    url: null
+    url: $BASE_URL/feeds
   images:
     hasUrls: true
     name: Images
@@ -26,6 +26,7 @@ meta:
     5ac2d28b-bcfe-4c01-84bd-7023c7f9fe3b: 'Book Entry' # Book Entry
     5bfe5019-ad3d-44a8-8baf-d4d6cd7ade2e: Description # Description
     6fd0f671-1f0a-4f7d-b765-5b1bf2d05c4d: 'Feed Upload' # Feed Upload
+    7d5b5753-a092-4bca-bdf2-e62434abf683: 'Pen Name' # Pen Name
     17daa88c-2431-437f-8aad-f702d1cb5dd7: Hook # Hook
     45e385b2-61aa-459b-9af9-130ee578ed93: 'Romance Level' # Romance Level
     46b76175-241b-4807-a8d1-f474d60252b1: Singles # Singles
@@ -66,6 +67,32 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.1.1
+    settings:
+      checkInvalidLogins: false
+      enableCpProtection: false
+      enabled: true
+      forcedRedirect: ''
+      invalidLoginWindowDuration: '3600'
+      loginPath: ''
+      maxInvalidLogins: 10
+      password: 'syK:crime!'
+      siteSettings:
+        __assoc__:
+          -
+            - default
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - ''
+                -
+                  - password
+                  - ''
+                -
+                  - template
+                  - ''
+      template: ''
+      useRemoteIp: false
 system:
   edition: solo
   live: true
