@@ -43,3 +43,6 @@ storage/backups/*
 
 # Ignore DDEV local development configuration directory
 .ddev/
+
+# Ignore web feeds
+/web/feeds/*
