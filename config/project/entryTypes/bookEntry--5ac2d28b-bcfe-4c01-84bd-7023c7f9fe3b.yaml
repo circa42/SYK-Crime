@@ -36,22 +36,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2024-09-17T23:27:34+00:00'
-            elementCondition: null
-            fieldUid: 7d5b5753-a092-4bca-bdf2-e62434abf683
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d6b359b6-6646-4912-8daa-9c131410e233
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2024-09-05T20:37:47+00:00'
             elementCondition: null
             fieldUid: d2e5aeee-67eb-427b-b509-1392eb5ed1d1 # Author Name
@@ -96,22 +80,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 8aaa5a3c-6e89-42a0-987a-81d80ce0c411
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2024-09-04T23:38:16+00:00'
-            elementCondition: null
-            fieldUid: 5bfe5019-ad3d-44a8-8baf-d4d6cd7ade2e # Description
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 59d8128b-7b76-4319-ace8-4bfc1386cb56
             userCondition: null
             warning: null
             width: 100
