@@ -1,0 +1,41 @@
+{% if pageInfo.totalPages > 1 %}
+    <nav class="pagination flex justify-center my-8 space-x-4 mb-12">
+        <!-- Previous Page Link -->
+        {% if pageInfo.prevUrl %}
+            <a href="{{ pageInfo.prevUrl }}" 
+               class="px-4 py-2 bg-yellow-300 hover:bg-gray-300 text-black">
+                Previous
+            </a>
+        {% else %}
+            <span class="px-4 py-2 bg-gray-300 text-black cursor-not-allowed">
+                Previous
+            </span>
+        {% endif %}
+
+        <!-- Page Numbers -->
+        <div class="flex space-x-4">
+            {% for pageNumber in 1..pageInfo.totalPages %}
+                {% if pageNumber == pageInfo.currentPage %}
+                    <span class="px-4 py-2 bg-gray-300 text-black">{{ pageNumber }}</span>
+                {% else %}
+                    <a href="{{ pageInfo.getPageUrl(pageNumber) }}" 
+                       class="px-4 py-2 bg-yellow-300 hover:bg-gray-300 text-black">
+                        {{ pageNumber }}
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <!-- Next Page Link -->
+        {% if pageInfo.nextUrl %}
+            <a href="{{ pageInfo.nextUrl }}" 
+               class="px-4 py-2 bg-yellow-300 hover:bg-gray-300 text-black">
+                Next
+            </a>
+        {% else %}
+            <span class="px-4 py-2 bg-gray-300 text-black cursor-not-allowed">
+                Next
+            </span>
+        {% endif %}
+    </nav>
+{% endif %}

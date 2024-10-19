@@ -9,17 +9,22 @@
 
   <!-- Fetch all entries in this category -->
   {% cache %}
-    {% set entries = craft.entries()
+
+  {% paginate craft.entries.section('books').relatedTo(category).limit(10) as pageInfo, pageEntries %}
+
+{#}    {% set entries = craft.entries()
         .section('books')   
         .relatedTo(category)
         .all() 
     %}
+
+    #}
   {% endcache %}
 
-  {% if entries|length %}
+  {% if pageEntries|length %}
     <div class="entry-list">
         <!-- Loop through entries -->
-        {% for entry in entries %}
+        {% for entry in pageEntries %}
           {% include "_includes/book" %}
         {% endfor %}
     </div>
@@ -27,4 +32,7 @@
     <p>No entries found in this category.</p>
   {% endif %}
 </div>
+
+{% include "_includes/pagination" %}
+
 {% endblock %}
