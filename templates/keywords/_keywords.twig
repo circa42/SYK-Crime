@@ -13,14 +13,15 @@
         {% endif %}
 
         {% cache globally using key tag.id for 1 hour %}
-            {% paginate craft.entries.section('books')
+        {% set entries = craft.entries()
+            .section('books')
             .relatedTo(tag)
             .orderBy('RAND()')
-             %}
+            .all() %}
 
-            {% if pageEntries|length %}
+            {% if entries|length %}
                 <div class="entry-list">
-                    {% for entry in pageEntries %}
+                    {% for entry in entries %}
                         {% include "_includes/book" %}
                     {% endfor %}
                 </div>
@@ -28,7 +29,6 @@
                 <p>No entries found for this tag.</p>
             {% endif %}
 
-            {% include "_includes/pagination" %}
         {% endcache %}
 
     {% else %}
