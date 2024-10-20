@@ -1,4 +1,3 @@
-
 <div class="book-entry flex xs:flex-wrap sm:flex-nowrap mb-8 bg-white drop-shadow border p-2">
   <!-- Book Image -->
   <div class="book-image xs:w-1/2 sm:w-1/4 sm:mr-2 flex mx-auto mb-8 justify-center">
@@ -128,7 +127,6 @@
           <div class="text-sm"><span class="font-bold">Categories:</span>
               {% for genre in genres %}
                   <a href="{{ genre.url }}" class="hover:bg-yellow-300 p-1 mr-1 mb-2">{{ genre.title }}</a>
->>>>>>> bug/filter
               {% endfor %}
           </div>
       {% endif %}
@@ -140,9 +138,9 @@
       {% if keywords|length %}
           <div class="text-sm"><span class="font-bold">Keywords:</span>
               {% for keyword in keywords %}
-                  <span class="p-1 mr-1 mb-2">{{ keyword.title }}</span>
+                  <a href="{{ url('keywords/' ~ keyword.slug) }}" class="hover:bg-yellow-300 p-1 mr-1 mb-2">{{ keyword.title }}</a>
               {% endfor %}
-        </div>
+          </div>
       {% endif %}
     </div>
 
