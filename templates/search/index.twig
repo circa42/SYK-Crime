@@ -37,7 +37,7 @@
     {% set entriesQuery = entriesQuery.explicit(false) %}
 {% endif %}
 
-{% paginate craft.entries.section('books').limit(10) as pageInfo, pageEntries %}
+{% paginate craft.entries.section('books').limit(50) as pageInfo, pageEntries %}
 {#{% set entries = entriesQuery.all() %} {##}
 
     <div class="xs:mx-12 px-10 md:mx-auto sm:container my-12">
