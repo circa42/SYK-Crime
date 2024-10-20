@@ -47,79 +47,22 @@
 
       {% if entry.storeLinks|length %}
         <div class="mb-2 mt-4">
-            {% for block in entry.storeLinks %}
-                {% set storeCategory = block.stores[0] %}
-                {% if storeCategory %}
-                    {% set url = block.storeLink %}
-                    {% if "amazon" in storeCategory.slug %}
-                        {% set url = url ~ '?&linkCode=ll1&tag=sykcrime-20&language=en_US&ref_=as_li_ss_tl' %}
-                    {% endif %}
-                    <a href="{{ url }}" class="xs:text-xs sm:text-sm text-gray-900 uppercase hover:bg-yellow-300 px-2 py-1 inline-block mb-1" target="_blank">
-                        {{ _self.countryFlag(storeCategory.slug) }} {{ storeCategory.title }}
-                    </a>
-                {% endif %}
-            {% endfor %}
+          {% for block in entry.storeLinks %}
+              {% set storeCategory = block.stores[0] %}
+              {% if storeCategory %}
+                  {% set url = block.storeLink %}
+                  {% if "amazon" in storeCategory.slug %}
+                      {% set url = url ~ '?&linkCode=ll1&tag=sykcrime-20&language=en_US&ref_=as_li_ss_tl' %}
+                  {% endif %}
+                  <a href="{{ url }}" class="xs:text-xs sm:text-sm text-gray-900 uppercase hover:bg-yellow-300 px-2 py-1 inline-block mb-1" target="_blank">
+                      {{ _self.countryFlag(storeCategory.slug) }} {{ storeCategory.title }}
+                  </a>
+              {% endif %}
+          {% endfor %}
         </div>
       {% endif %}
     </div>
 
-<<<<<<< HEAD
-    <!-- Book Details -->
-    <div class="book-details xs:w-full sm:w-3/4">
-      <!-- Title -->
-      <h2 class="text-xl font-bold">{{ entry.title }}
-      
-      <!-- Explicit? -->
-      {% if entry.explicit == 1 %}
-      
-        <span class="uppercase text-xs text-white bg-red-500 px-1 ml-4 relative -top-0.5">
-          E
-        </span>
-        
-      {% endif %}  
-    </h2>
-    <h3 class="text-xs text-gray-400">{{ entry.authorName }}</h3>
-      <!-- Hook -->
-      {% if entry.hook %}
-        <span class="my-4 text-sm">{{ entry.hook }}</span>
-      {% endif %}
-
-     
-     <!--  Store Links -->
-     <div class="mb-4">
-        {% macro countryFlag(slug) %}
-          {% switch slug %}
-              {% case "amazon-us" %} 🇺🇸
-              {% case "amazon-au" %} 🇦🇺
-              {% case "amazon-br" %} 🇧🇷
-              {% case "amazon-ca" %} 🇨🇦
-              {% case "amazon-de" %} 🇩🇪
-              {% case "amazon-es" %} 🇪🇸
-              {% case "amazon-fr" %} 🇫🇷
-              {% case "amazon-in" %} 🇮🇳
-              {% case "amazon-it" %} 🇮🇹
-              {% case "amazon-jp" %} 🇯🇵
-              {% case "amazon-mx" %} 🇲🇽
-              {% case "amazon-nl" %} 🇳🇱
-              {% case "amazon-uk" %} 🇬🇧
-              {% default %} 🌍
-          {% endswitch %}
-        {% endmacro %}
-
-        {% if entry.storeLinks|length %}
-          <div class="my-2">
-              {% for block in entry.storeLinks.all() %}
-                  {% set storeCategory = block.stores.one() %}
-                  {% if storeCategory %}
-                      {% set url = block.storeLink %}
-                      {% if "amazon" in storeCategory.slug %}
-                          {% set url = url ~ '?&linkCode=ll1&tag=sykcrime-20&language=en_US&ref_=as_li_ss_tl' %}
-                      {% endif %}
-                      <a href="{{ url }}" class="bg-yellow-300 xs:text-xs sm:text-sm text-gray-900 uppercase hover:bg-gray-300 px-2 py-1 inline-block mb-1" target="_blank">
-                          {{ _self.countryFlag(storeCategory.slug) }} {{ storeCategory.title }}
-                      </a>
-                  {% endif %}
-=======
     <!-- Categories (Genre) -->
     <div class="genres">
       {% set genres = entry.genre %}
