@@ -1,0 +1,9 @@
+siteUid: null
+sortOrder: 1
+template: keywords/_keywords
+uriParts:
+  - keywords/
+  -
+    - tag
+    - '[^\/]+'
+uriPattern: 'keywords/<tag:[^\/]+>'
