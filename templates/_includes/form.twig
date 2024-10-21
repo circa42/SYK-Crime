@@ -1,95 +1,92 @@
+{% set storeCategories = craft.categories.group('store').all() %}
+{% set genreCategories = craft.categories.group('genre').all() %}
+{% set keywordTags = craft.tags.group('keywords').all() %}
 
-    <form id="filterForm" method="get" action="/search" class="space-y-6">
-        
-        <!-- Store Section -->
-        <h2 class="uppercase text-gray-700">Store</h2>
-        <div class="flex flex-wrap gap-2">
-            {% for category in craft.categories.group('store').all() %}
-                {% set relatedEntries = craft.entries()
-                    .section('books')
-                    .with(['storeLinks'])  
-                    .all() %}
-        
-                {% set showCategory = false %}
-        
-                {% for entry in relatedEntries %}
-                    {% for block in entry.storeLinks.all() %}
-                        {% if block.stores|length and block.stores.one().slug == category.slug %}
-                            {% set showCategory = true %}
-                        {% endif %}
-                    {% endfor %}
-                {% endfor %}
-        
-                {% if showCategory %}
-                    <button type="button"
-                        class="store-button uppercase px-4 py-2 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
-                        data-value="{{ category.slug }}">
-                        {{ category.title }}
-                    </button>
-                {% endif %}
-            {% endfor %}
-        </div>   
+<form id="filterForm" method="get" action="/search" class="space-y-6">
+    
+    <!-- Store Section -->
+    <h2 class="uppercase text-gray-700">Store</h2>
+    <div class="flex flex-wrap gap-2">
+        {% for category in storeCategories %}
+            {% set relatedEntriesExist = craft.entries()
+                .section('books')
+                .relatedTo({
+                    targetElement: category,
+                    field: 'storeLinks'
+                })
+                .exists() %}
 
+            {% if relatedEntriesExist %}
+                <button type="button"
+                    class="store-button uppercase px-4 py-2 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
+                    data-value="{{ category.slug }}">
+                    {{ category.title }}
+                </button>
+            {% endif %}
+        {% endfor %}
+    </div>   
 
-
-        
-        <!-- Genre Section -->
-        <h2 class="uppercase text-gray-700">Genre</h2>
-        <div class="flex flex-wrap gap-2">
-            {% for category in craft.categories.group('genre').all() %}
-                {% set relatedEntries = craft.entries().section('books').relatedTo(category).all() %}
-                {% if relatedEntries|length %}
-                    <button type="button"
-                        class="genre-button uppercase px-4 py-2 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
-                        data-value="{{ category.slug }}">
-                        {{ category.title }}
-                    </button>
-                {% endif %}
-            {% endfor %}
-        </div>
-        
-        <!-- Keywords Section -->
-        <h2 class="uppercase text-gray-700">Keywords</h2>
-        <div class="flex flex-wrap gap-2">
-            {% for tag in craft.tags.group('keywords').all() %}
-                {% set relatedEntries = craft.entries().section('books').relatedTo(tag).limit(1).all() %}
-                {% if relatedEntries|length %}
-                    <button type="button"
-                        class="keyword-button text-xs uppercase px-2 py-1 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
-                        data-value="{{ tag.slug }}">
-                        {{ tag.title }}
-                    </button>
-                {% endif %}
-            {% endfor %}
-        </div>
-        
-        <!-- Include Explicit Content Section -->
-        <h2 class="uppercase text-gray-700">Filter Explicit Content
-            <!-- Add a span to display the "on" or "off" state -->
-                <span id="filterState" class="uppercase ml-2 text-sm font-bold text-gray-500">
-                {% if craft.app.request.getQueryParam('explicit', '0') == '1' %} on {% else %} off {% endif %}
-            </span>
-        </h2>
-        <div class="flex items-center">
-            <label class="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" id="explicitSwitch" class="sr-only" {% if craft.app.request.getQueryParam('explicit', '0') == '1' %} checked {% endif %}>
-                <div class="w-11 h-6 bg-gray-300 rounded-full transition-colors duration-300"></div>
-                <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition transform translate-x-5 duration-300"></div>
-            </label>
+    <!-- Genre Section -->
+    <h2 class="uppercase text-gray-700">Genre</h2>
+    <div class="flex flex-wrap gap-2">
+        {% for category in genreCategories %}
+            {% set relatedEntriesExist = craft.entries()
+                .section('books')
+                .relatedTo(category)
+                .exists() %}
             
-        </div>
+            {% if relatedEntriesExist %}
+                <button type="button"
+                    class="genre-button uppercase px-4 py-2 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
+                    data-value="{{ category.slug }}">
+                    {{ category.title }}
+                </button>
+            {% endif %}
+        {% endfor %}
+    </div>
+    
+    <!-- Keywords Section -->
+    <h2 class="uppercase text-gray-700">Keywords</h2>
+    <div class="flex flex-wrap gap-2">
+        {% for tag in keywordTags %}
+            {% set relatedEntriesExist = craft.entries()
+                .section('books')
+                .relatedTo(tag)
+                .exists() %}
+            
+            {% if relatedEntriesExist %}
+                <button type="button"
+                    class="keyword-button text-xs uppercase px-2 py-1 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
+                    data-value="{{ tag.slug }}">
+                    {{ tag.title }}
+                </button>
+            {% endif %}
+        {% endfor %}
+    </div>
+    
+    <!-- Include Explicit Content Section -->
+    {% set explicitContent = craft.app.request.getQueryParam('explicit', '0') == '1' %}
+    <h2 class="uppercase text-gray-700">Filter Explicit Content
+        <span id="filterState" class="uppercase ml-2 text-sm font-bold text-gray-500">
+            {{ explicitContent ? 'on' : 'off' }}
+        </span>
+    </h2>
+    <div class="flex items-center">
+        <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="explicitSwitch" class="sr-only" {% if explicitContent %} checked {% endif %}>
+            <div class="w-11 h-6 bg-gray-300 rounded-full transition-colors duration-300"></div>
+            <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition transform translate-x-5 duration-300"></div>
+        </label>
+    </div>
 
+    <!-- Filter Button -->
+    <div class="flex justify-center">
+        <button type="submit" class="bg-yellow-300 hover:bg-gray-300 text-black font-bold py-2 px-6">FILTER</button>
+    </div>
 
-
-        <!-- Filter Button -->
-        <div class="flex justify-center">
-            <button type="submit" class="bg-yellow-300 hover:bg-gray-300 text-black font-bold py-2 px-6">FILTER</button>
-        </div>
-        <!-- Hidden inputs for the form submission -->
-        <input type="hidden" name="store" id="storeInput" value="{{ craft.app.request.getQueryParam('store')|join(',') }}">
-        <input type="hidden" name="genre" id="genreInput" value="{{ craft.app.request.getQueryParam('genre')|join(',') }}">
-        <input type="hidden" name="keywords" id="keywordsInput" value="{{ craft.app.request.getQueryParam('keywords')|join(',') }}">
-        <input type="hidden" name="explicit" id="explicitInput" value="{{ craft.app.request.getQueryParam('explicit', '1') }}">
-
-        
-    </form>
+    <!-- Hidden inputs for the form submission -->
+    <input type="hidden" name="store" id="storeInput" value="{{ craft.app.request.getQueryParam('store')|join(',') }}">
+    <input type="hidden" name="genre" id="genreInput" value="{{ craft.app.request.getQueryParam('genre')|join(',') }}">
+    <input type="hidden" name="keywords" id="keywordsInput" value="{{ craft.app.request.getQueryParam('keywords')|join(',') }}">
+    <input type="hidden" name="explicit" id="explicitInput" value="{{ craft.app.request.getQueryParam('explicit', '1') }}">
+</form>

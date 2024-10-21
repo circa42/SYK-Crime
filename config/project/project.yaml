@@ -1,4 +1,4 @@
-dateModified: 1729455594
+dateModified: 1729471512
 email:
   fromEmail: andrew@circa42.com
   fromName: 'Stuff Your Kindle: Crime'
@@ -97,8 +97,9 @@ system:
   edition: solo
   live: true
   name: 'Stuff Your Kindle: Crime'
+  retryDuration: null
   schemaVersion: 5.3.0.2
-  timeZone: America/Los_Angeles
+  timeZone: America/Vancouver
 users:
   allowPublicRegistration: false
   defaultGroup: null
