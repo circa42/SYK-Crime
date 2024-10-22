@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 46b76175-241b-4807-a8d1-f474d60252b1 # Singles
+handle: alerts
+maxAuthors: 1
+name: Alerts
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  86baf7e9-fa04-4917-bea7-e40ea7b944ba: # Stuff Your Kindle: Crime Edition
+    enabledByDefault: true
+    hasUrls: true
+    template: alerts.twig
+    uriFormat: alerts
+type: single
