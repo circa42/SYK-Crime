@@ -1,0 +1,67 @@
+color: null
+fieldLayouts:
+  0a7faf6d-e82f-4dbc-8ae5-e2b516227e22:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-10-23T02:00:59+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 7fb98acb-bc54-4193-a4f6-204000163b5e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-23T02:02:48+00:00'
+            elementCondition: null
+            fieldUid: 465bec08-62f6-42c8-812a-654ff208bb73 # Embed
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2aba9d8a-9a4a-47ff-92dc-0679eec17db2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e1dee186-a95a-4afb-bd8c-2c5d00e209cf
+        userCondition: null
+handle: alerts
+hasTitleField: true
+icon: lighthouse
+name: Alerts
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

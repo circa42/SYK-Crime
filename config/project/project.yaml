@@ -1,4 +1,4 @@
-dateModified: 1729612169
+dateModified: 1729649036
 email:
   fromEmail: andrew@circa42.com
   fromName: 'Stuff Your Kindle: Crime'
@@ -28,11 +28,13 @@ meta:
     6fd0f671-1f0a-4f7d-b765-5b1bf2d05c4d: 'Feed Upload' # Feed Upload
     7d5b5753-a092-4bca-bdf2-e62434abf683: 'Pen Name' # Pen Name
     8b19d58e-a22c-47c2-804f-f668498f2af1: Alerts # Alerts
+    8e8d3d60-ef5a-4d0e-87ce-462056770daf: Alerts # Alerts
     17daa88c-2431-437f-8aad-f702d1cb5dd7: Hook # Hook
     45e385b2-61aa-459b-9af9-130ee578ed93: 'Romance Level' # Romance Level
     46b76175-241b-4807-a8d1-f474d60252b1: Singles # Singles
     72fd5fbf-d505-4d75-8a03-dbb4ac4d5fa4: Medium # Medium
     86baf7e9-fa04-4917-bea7-e40ea7b944ba: 'Stuff Your Kindle: Crime Edition' # Stuff Your Kindle: Crime Edition
+    465bec08-62f6-42c8-812a-654ff208bb73: Embed # Embed
     619ae31f-ba31-40ac-a935-ac7b965394cc: Simple # Simple
     690f8cf4-eb02-4552-a54b-d6bb5dcbd200: 'Store Link' # Store Link
     794f428d-3f9f-4bb1-8fd7-6ca003d7c247: Store # Store
