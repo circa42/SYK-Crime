@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 46b76175-241b-4807-a8d1-f474d60252b1 # Singles
+  - 8e8d3d60-ef5a-4d0e-87ce-462056770daf # Alerts
 handle: alerts
 maxAuthors: 1
 name: Alerts
