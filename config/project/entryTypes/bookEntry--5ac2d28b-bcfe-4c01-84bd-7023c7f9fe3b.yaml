@@ -162,7 +162,7 @@ fieldLayouts:
             uid: 5e2290e0-65ea-4b11-8293-74cc0d11a45a
             userCondition: null
             warning: null
-            width: 25
+            width: 50
           -
             dateAdded: '2024-09-10T23:09:28+00:00'
             elementCondition: null
