@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: explicitCat
+instructions: null
+name: 'Explicit Categories'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: true
+  source: 'group:603eddaf-1f01-40b9-bc37-b24146ec7fa2' # Explicit
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories
