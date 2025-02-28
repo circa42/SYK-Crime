@@ -162,7 +162,7 @@ fieldLayouts:
             uid: 5e87b773-2ddd-486a-8c5f-e4318bb6e850
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             dateAdded: '2025-02-28T05:08:08+00:00'
             elementCondition: null
@@ -178,7 +178,7 @@ fieldLayouts:
             uid: 5e2290e0-65ea-4b11-8293-74cc0d11a45a
             userCondition: null
             warning: null
-            width: 100
+            width: 50
         name: Content
         uid: 283be85f-35eb-4cde-a8e5-2a14e70f9b10
         userCondition: null
