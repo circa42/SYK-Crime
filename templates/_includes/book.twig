@@ -98,5 +98,16 @@
           </div>
       {% endif %}
     </div>
+    <!-- Categories (Genre) -->
+    <div class="explicitCat">
+      {% set explicitCats = entry.explicitCat %}
+      {% if explicitCats|length %}
+          <div class="text-sm"><span class="font-bold">Explicit Content:</span>
+              {% for explicitCat in explicitCats %}
+                  <a href="{{ explicitCat.url }}" class="hover:bg-yellow-300 p-1 mr-1 mb-2">{{ explicitCat.title }}</a>
+              {% endfor %}
+          </div>
+      {% endif %}
+    </div>
   </div>
 </div>
