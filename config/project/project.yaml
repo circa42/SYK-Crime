@@ -1,4 +1,4 @@
-dateModified: 1740720245
+dateModified: 1740721069
 email:
   fromEmail: andrew@circa42.com
   fromName: 'Stuff Your Kindle: Crime'
@@ -68,11 +68,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 5.1.1
-  freeform:
-    edition: pro
-    enabled: true
-    licenseKey: 3HPBR8MVGXVQIV3DKT09YRXU
-    schemaVersion: 5.4.1
   knock-knock:
     edition: standard
     enabled: false
@@ -108,7 +103,7 @@ system:
   live: true
   name: 'Stuff Your Kindle: Crime'
   retryDuration: null
-  schemaVersion: 5.5.0.0
+  schemaVersion: 5.6.0.2
   timeZone: America/Vancouver
 users:
   allowPublicRegistration: false
