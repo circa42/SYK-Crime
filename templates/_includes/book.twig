@@ -2,7 +2,21 @@
   <!-- Book Image -->
   <div class="book-image xs:w-1/2 sm:w-1/4 sm:mr-2 flex mx-auto mb-8 justify-center">
     {% if entry.bookCover|length %}
-      <img src="{{ entry.bookCover[0].getUrl('thumb') }}" alt="{{ entry.title }} cover" loading="lazy">
+
+    {% set firstLinkBlock = entry.storeLinks|first %}
+{% if firstLinkBlock %}
+    {% set storeCategory = firstLinkBlock.stores[0] %}
+    {% set firstUrl = firstLinkBlock.storeLink %}
+    {% if storeCategory and "amazon" in storeCategory.slug %}
+        {% set firstUrl = firstUrl ~ '?&linkCode=ll1&tag=sykcrime-20&language=en_US&ref_=as_li_ss_tl' %}
+    {% endif %}
+
+    <a href="{{ firstUrl }}" class="" target="_blank">
+        <img src="{{ entry.bookCover[0].getUrl('thumb') }}" alt="{{ entry.title }} cover" loading="lazy">
+    </a>
+{% endif %}
+
+    
     {% endif %}
   </div>
 
