@@ -34,7 +34,7 @@ fieldLayouts:
             uid: 6626d602-305a-4e4e-a6f4-6d730c776bc5
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             dateAdded: '2024-09-05T20:37:47+00:00'
             elementCondition: null
@@ -50,23 +50,7 @@ fieldLayouts:
             uid: dff29f5f-cc39-46e3-9b0b-d7feec7acb9c
             userCondition: null
             warning: null
-            width: 100
-          -
-            dateAdded: '2024-09-05T20:16:01+00:00'
-            elementCondition: null
-            fieldUid: 63314730-9463-4027-81c8-c8a5ee186f19 # Book Cover
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 8a60c033-1a32-44ee-948c-3d8be6fbad59
-            userCondition: null
-            warning: null
-            width: 100
+            width: 50
           -
             dateAdded: '2024-09-04T23:38:16+00:00'
             elementCondition: null
@@ -82,7 +66,23 @@ fieldLayouts:
             uid: 8aaa5a3c-6e89-42a0-987a-81d80ce0c411
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            dateAdded: '2025-03-08T21:15:39+00:00'
+            elementCondition: null
+            fieldUid: 63314730-9463-4027-81c8-c8a5ee186f19 # Book Cover
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e6466892-1c17-46ae-8f4d-99ad7443e98c
+            userCondition: null
+            warning: null
+            width: 50
           -
             dateAdded: '2024-09-10T22:23:43+00:00'
             elementCondition: null
