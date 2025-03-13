@@ -2,11 +2,10 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "craftcms/ckeditor": "4.4.0",
-    "craftcms/cms": "5.5.7",
-    "craftcms/feed-me": "6.6.1",
-    "solspace/craft-freeform": "5.8.5",
-    "verbb/knock-knock": "3.0.1",
+    "craftcms/ckeditor": "4.6.0",
+    "craftcms/cms": "5.6.11",
+    "craftcms/feed-me": "6.7.0",
+    "verbb/knock-knock": "3.0.2",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
