@@ -8,9 +8,9 @@
   {% endif %}
 {% endif %}
 
-<div class="book-entry flex xs:flex-wrap sm:flex-nowrap mb-8 bg-white drop-shadow border p-2">
+<div class="book-entry flex xs:flex-wrap sm:flex-nowrap mb-8 bg-white drop-shadow border p-4">
   <!-- Book Image -->
-  <div class="book-image xs:w-1/2 sm:w-1/4 sm:mr-2 flex mx-auto mb-8 justify-center">
+  <div class="book-image sm:mr-6 flex mx-auto mb-8 justify-center">
     {% if entry.bookCover|length and firstUrl is defined %}
       <a href="{{ firstUrl }}" target="_blank">
         <img src="{{ entry.bookCover[0].getUrl('thumb') }}" alt="{{ entry.title }} cover" loading="lazy">
@@ -19,7 +19,7 @@
   </div>
 
   <!-- Book Details -->
-  <div class="book-details xs:w-full sm:w-3/4">
+  <div class="book-details xs:w-full">
     <!-- Title -->
     {% if entry.bookCover|length and firstUrl is defined %}
       <a href="{{ firstUrl }}" target="_blank">
