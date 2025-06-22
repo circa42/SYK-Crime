@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Handle explicit input separately
     const explicitValue = document.getElementById('explicitInput').value;
+    console.log('Explicit Value:', explicitValue);
 
     // Populate hidden inputs with initial values (if needed)
     updateHiddenInputs();
@@ -109,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
           button.classList.add('bg-yellow-300', 'text-gray-800');
           button.classList.remove('bg-gray-300');
       }
-
+/*
       button.addEventListener('click', function () {
           // Toggle button color and update selection arrays
           if (button.classList.contains('bg-yellow-300')) {
@@ -124,7 +125,34 @@ document.addEventListener('DOMContentLoaded', function () {
               addSelectedValue(value, button.classList.contains('store-button'), button.classList.contains('genre-button'), button.classList.contains('keyword-button'));
           }
       });
-  });
+*/
+        // Updated event listener to handle both mouse and touch events
+        function toggleButtonState(event) {
+            event.preventDefault(); // Prevent default behavior for touch events on mobile
+
+            const button = event.currentTarget;
+            const value = button.dataset.value;
+
+            // Toggle button color and update selection arrays
+            if (button.classList.contains('bg-yellow-300')) {
+                // Deselect the button (turn it back to gray)
+                button.classList.remove('bg-yellow-300');
+                button.classList.add('bg-gray-300');
+                removeSelectedValue(value, button.classList.contains('store-button'), button.classList.contains('genre-button'), button.classList.contains('keyword-button'));
+            } else {
+                // Select the button (turn it yellow)
+                button.classList.remove('bg-gray-300');
+                button.classList.add('bg-yellow-300');
+                addSelectedValue(value, button.classList.contains('store-button'), button.classList.contains('genre-button'), button.classList.contains('keyword-button'));
+            }
+        }
+
+        // Apply the event listeners for both click and touch events
+        document.querySelectorAll('.store-button, .genre-button, .keyword-button').forEach(button => {
+            button.addEventListener('click', toggleButtonState);
+            button.addEventListener('touchstart', toggleButtonState);
+        });
+    });
 
   // Add selected value to the correct array
   function addSelectedValue(value, isStore, isGenre, isKeyword) {
@@ -175,46 +203,40 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('keywordsInput').value = selectedKeywords.join(',');
   }
 
-// Toggle explicit content light switch
-    const explicitSwitch = document.getElementById('explicitSwitch');
-    const dot = document.querySelector('.dot');
-    const switchBackground = explicitSwitch.nextElementSibling;
-    const filterState = document.getElementById('filterState');
-    const explicitInput = document.getElementById('explicitInput'); // Reference to the hidden input
+  // Toggle explicit content light switch
+  const explicitSwitch = document.getElementById('explicitSwitch');
+  const dot = document.querySelector('.dot');
+  const switchBackground = explicitSwitch.nextElementSibling;
 
-    // Check the initial state of the checkbox
-    if (!explicitSwitch.checked) {
-        // Default to filter off (show all content, including explicit)
-        switchBackground.classList.add('bg-gray-300');
-        dot.classList.remove('translate-x-5');
-        filterState.textContent = 'off';
-        explicitInput.value = '0'; // Show all content
-    } else {
-        // Filter on (hide explicit content)
-        switchBackground.classList.add('bg-yellow-300');
-        dot.classList.add('translate-x-5');
-        filterState.textContent = 'on';
-        explicitInput.value = '1'; // Hide explicit content
-    }
+  // Set the initial state for explicit content
+  const explicitValue = document.getElementById('explicitInput').value;
+  if (explicitValue === '1') {
+    explicitSwitch.checked = false;
+    switchBackground.classList.replace('bg-yellow-300', 'bg-gray-300'); // Fix here
+    dot.classList.remove('translate-x-5');
+    filterState.textContent = 'off'; // Set the initial text to 'off' explicitSwitch.checked = true;
+      switchBackground.classList.replace('bg-gray-300', 'bg-yellow-300');
+      dot.classList.add('translate-x-5');
+      filterState.textContent = 'on'; // Set the initial text to 'on'
+  } else {
+     
+  }
 
-    // Add toggle event listener for the switch
-    explicitSwitch.addEventListener('change', function () {
-        if (this.checked) {
-            // Turn filter on (hide explicit content)
-            switchBackground.classList.replace('bg-gray-300', 'bg-yellow-300');
-            dot.classList.add('translate-x-5');
-            filterState.textContent = 'on';
-            explicitInput.value = '1'; // Set to hide explicit content
-        } else {
-            // Turn filter off (show all content)
-            switchBackground.classList.replace('bg-yellow-300', 'bg-gray-300');
-            dot.classList.remove('translate-x-5');
-            filterState.textContent = 'off';
-            explicitInput.value = '0'; // Set to show all content
-        }
-    });
+  // Toggle explicit content switch
+  explicitSwitch.addEventListener('change', function () {
+      if (this.checked) {
+          document.getElementById('explicitInput').value = '1';
+          switchBackground.classList.replace('bg-gray-300', 'bg-yellow-300');
+          dot.classList.add('translate-x-5');
+          filterState.textContent = 'on'; // Update the text to 'on'
+      } else {
+          document.getElementById('explicitInput').value = '0';
+          switchBackground.classList.replace('bg-yellow-300', 'bg-gray-300');
+          dot.classList.remove('translate-x-5');
+          filterState.textContent = 'off'; // Update the text to 'off'
 
-
+      }
+  });
 
 
 });
