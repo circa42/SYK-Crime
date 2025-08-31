@@ -1,4 +1,4 @@
-dateModified: 1756600103
+dateModified: 1756603667
 email:
   fromEmail: andrew@circa42.com
   fromName: 'Stuff Your Kindle: Crime'
@@ -52,6 +52,7 @@ meta:
     aa93aced-56a4-4b94-8ffe-80e5cfe98f0a: Books # Books
     ab9df739-9a0c-41b9-938d-e282b83861e4: Keywords # Keywords
     b2ac142b-7068-464d-9a9f-89ffe30d6601: Home # Home
+    b1296bf0-cb9e-40ef-beeb-f656a558fc18: 'Include Books ' # Include Books 
     b9390259-c651-4b5a-bf5e-f5a4659cc704: 'Explicit Categories' # Explicit Categories
     bd08465f-6b04-4419-8b44-f53ed8fd4767: Keywords # Keywords
     bd98f8d4-685e-4ff6-ba96-5a59af697eab: Romance # Romance
@@ -105,7 +106,7 @@ system:
   live: true
   name: 'Stuff Your Kindle: Crime'
   retryDuration: null
-  schemaVersion: 5.7.0.3
+  schemaVersion: 5.8.0.3
   timeZone: America/Vancouver
 users:
   allowPublicRegistration: false
