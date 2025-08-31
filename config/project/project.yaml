@@ -1,4 +1,4 @@
-dateModified: 1750548187
+dateModified: 1756600103
 email:
   fromEmail: andrew@circa42.com
   fromName: 'Stuff Your Kindle: Crime'
@@ -23,6 +23,7 @@ meta:
     1c31696e-f556-4d1b-902c-6a1df93843bb: Genre # Genre
     1de1c31f-1793-4a6c-ac70-1c5e7e2907a9: Thumb # Thumb
     1e32e33a-2e30-4288-9032-6f6dd47f2bbd: 'Store Links' # Store Links
+    1ebab9e0-b7d8-4e9c-a4bd-2dd0933e626a: Blog # Blog
     5ac2d28b-bcfe-4c01-84bd-7023c7f9fe3b: 'Book Entry' # Book Entry
     5bfe5019-ad3d-44a8-8baf-d4d6cd7ade2e: Description # Description
     6fd0f671-1f0a-4f7d-b765-5b1bf2d05c4d: 'Feed Upload' # Feed Upload
@@ -54,6 +55,7 @@ meta:
     b9390259-c651-4b5a-bf5e-f5a4659cc704: 'Explicit Categories' # Explicit Categories
     bd08465f-6b04-4419-8b44-f53ed8fd4767: Keywords # Keywords
     bd98f8d4-685e-4ff6-ba96-5a59af697eab: Romance # Romance
+    c3cceea7-3146-486d-9072-98063e5fa80a: Blog # Blog
     d2e5aeee-67eb-427b-b509-1392eb5ed1d1: 'Author Name' # Author Name
     dd0271aa-2c8e-4ac9-af62-7b033f1f8550: Stores # Stores
     e6b43986-34b3-4dae-949d-8b28bbdf62fa: 'Includes Explicit Content?' # Includes Explicit Content?
