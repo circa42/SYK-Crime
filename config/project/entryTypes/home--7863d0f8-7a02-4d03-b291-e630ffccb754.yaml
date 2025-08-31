@@ -1,6 +1,8 @@
 color: null
+description: null
 fieldLayouts:
   a2407873-8729-4c6a-919a-2c5ef789f120:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -25,7 +27,7 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -37,6 +39,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2024-09-17T22:46:09+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 3822f532-6314-47bd-8921-3df165b3a52a # Body
             handle: null
@@ -51,6 +54,23 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-08-31T01:27:47+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: b1296bf0-cb9e-40ef-beeb-f656a558fc18 # Include Books 
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ffe5e136-473d-44fe-84d3-e8ce352ddaa8
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: a372f05b-c273-4a05-8dcd-5926990818f1
         userCondition: null
@@ -62,6 +82,6 @@ showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

@@ -4,13 +4,13 @@
 {% block content %}
 <div class="xs:mx-6 md:mx-auto sm:container my-12">
     {% set entry = craft.entries.section('home').one() %}
-    {% if entry %}
           <article class="ck-content mb-12">
               {{ entry.body | raw }}
           </article>
+    {% set headline = "Books" %}
 
-    {% else %}
-        <p>No content found for the homepage.</p>
+    {% if entry.includeBooks == 1 %}
+        {% include "_includes/allbooks" %}
     {% endif %}
     </div>
 {% endblock %}

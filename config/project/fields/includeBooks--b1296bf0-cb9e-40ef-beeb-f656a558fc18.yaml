@@ -1,0 +1,12 @@
+columnSuffix: null
+handle: includeBooks
+instructions: 'Turn on to include books'
+name: 'Include Books '
+searchable: false
+settings:
+  default: true
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch
