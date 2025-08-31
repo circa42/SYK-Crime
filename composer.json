@@ -5,6 +5,7 @@
     "craftcms/ckeditor": "4.10.1",
     "craftcms/cms": "5.8.16",
     "craftcms/feed-me": "6.10.1",
+    "craftcms/guest-entries": "4.0.1",
     "verbb/knock-knock": "3.0.4",
     "vlucas/phpdotenv": "^5.4.0"
   },

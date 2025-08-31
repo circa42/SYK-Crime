@@ -1,4 +1,4 @@
-dateModified: 1756603667
+dateModified: 1756605454
 email:
   fromEmail: andrew@circa42.com
   fromName: 'Stuff Your Kindle: Crime'
@@ -71,6 +71,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 5.1.1
+  guest-entries:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.0
   knock-knock:
     edition: standard
     enabled: false
