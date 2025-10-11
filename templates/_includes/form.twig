@@ -3,6 +3,25 @@
 {% set keywordTags = craft.tags.group('keywords').all() %}
 
 <form id="filterForm" method="get" action="/search" class="space-y-6">
+
+    <!-- Form -->
+    <h2 class="uppercase text-gray-700">Search</h2>  
+    <div class="relative flex items-center">
+        <label for="searchQuery" class="sr-only">Search books</label>
+        <input
+            type="text"
+            id="searchQuery"
+            name="q"
+            value="{{ craft.app.request.getQueryParam('q') ?? '' }}"
+            placeholder="Search"
+            class="w-full sm:w-64 px-4 py-2 pr-10 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300"
+        >
+        <!-- Search Button -->
+        <div class="ml-8">
+            {% include "_includes/searchbtn" %}
+        </div>
+    </div>
+    
     
     <!-- Store Section -->
     <h2 class="uppercase text-gray-700">Store</h2>
@@ -13,7 +32,7 @@
                 .relatedTo({
                     targetElement: category,
                     field: 'storeLinks'
-                })
+                }) 
                 .exists() %}
 
             {% if relatedEntriesExist %}
@@ -79,10 +98,8 @@
         </label>
     </div>
 
-    <!-- Filter Button -->
-    <div class="flex justify-center">
-        <button type="submit" class="bg-yellow-300 hover:bg-gray-300 text-black font-bold py-2 px-6">FILTER</button>
-    </div>
+    <!-- Search Button -->
+    {# include "_includes/searchbtn" #}
 
     <!-- Hidden inputs for the form submission -->
     <input type="hidden" name="store" id="storeInput" value="{{ craft.app.request.getQueryParam('store')|join(',') }}">

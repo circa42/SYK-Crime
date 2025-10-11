@@ -62,14 +62,10 @@ function toggleMenu() {
 
 
 
-// debug 
-// Function to get initial selections from the URL and log them
 function getInitialSelection(paramName) {
   const urlParams = new URLSearchParams(window.location.search);
-  const paramValue = urlParams.get(paramName);  // Get the parameter value directly
-
-  console.log('Param Value for ' + paramName + ':', paramValue);  // Log the value for each parameter
-  return paramValue ? paramValue.split(',') : [];  // Split if it’s a comma-separated value, otherwise return as an array
+  const paramValue = urlParams.get(paramName);
+  return paramValue ? paramValue.split(',') : [];
 }
 
 // 
@@ -79,82 +75,78 @@ document.addEventListener('DOMContentLoaded', function () {
   const selectedStores = getInitialSelection('store');
   const selectedGenres = getInitialSelection('genre');
   const selectedKeywords = getInitialSelection('keywords');
+  const searchInput = document.getElementById('searchQuery');
+  const clearSearchButton = document.getElementById('clearSearchButton');
+  const clearFiltersButton = document.getElementById('clearFiltersButton');
+  const filterState = document.getElementById('filterState');
+  const explicitSwitch = document.getElementById('explicitSwitch');
+  const explicitInput = document.getElementById('explicitInput');
+  const dot = document.querySelector('.dot');
+  const switchBackground = explicitSwitch ? explicitSwitch.nextElementSibling : null;
 
-  document.addEventListener('DOMContentLoaded', function () {
-    // Retrieve initial selections from the URL and log them
-    const selectedStores = getInitialSelection('store');
-    const selectedGenres = getInitialSelection('genre');
-    const selectedKeywords = getInitialSelection('keywords');
+  function updateHiddenInputs() {
+      const storeInput = document.getElementById('storeInput');
+      const genreInput = document.getElementById('genreInput');
+      const keywordsInput = document.getElementById('keywordsInput');
+      if (storeInput) storeInput.value = selectedStores.join(',');
+      if (genreInput) genreInput.value = selectedGenres.join(',');
+      if (keywordsInput) keywordsInput.value = selectedKeywords.join(',');
+  }
 
-    // Handle explicit input separately
-    const explicitValue = document.getElementById('explicitInput').value;
-    console.log('Explicit Value:', explicitValue);
+  function updateSearchClearButton() {
+      if (!clearSearchButton || !searchInput) return;
+      if (searchInput.value.trim() === '') {
+          clearSearchButton.classList.add('hidden');
+      } else {
+          clearSearchButton.classList.remove('hidden');
+      }
+  }
 
-    // Populate hidden inputs with initial values (if needed)
-    updateHiddenInputs();
+  function resetFilterButtons() {
+      document.querySelectorAll('.store-button, .genre-button, .keyword-button').forEach(button => {
+          button.classList.remove('bg-yellow-300');
+          button.classList.add('bg-gray-300');
+      });
+  }
 
-});
+  function setExplicitState(isOn) {
+      if (!explicitSwitch) return;
+      explicitSwitch.checked = isOn;
+      if (switchBackground) {
+          switchBackground.classList.remove('bg-yellow-300', 'bg-gray-300');
+          switchBackground.classList.add(isOn ? 'bg-yellow-300' : 'bg-gray-300');
+      }
+      if (dot) {
+          if (isOn) {
+              dot.classList.add('translate-x-5');
+          } else {
+              dot.classList.remove('translate-x-5');
+          }
+      }
+      if (filterState) {
+          filterState.textContent = isOn ? 'on' : 'off';
+      }
+      if (explicitInput) {
+          explicitInput.value = isOn ? '1' : '0';
+      }
+  }
 
-
-
-  
-  // Populate hidden inputs with initial values
-  updateHiddenInputs();
-
-  // Handle button selection for Store, Genre, and Keywords
-  document.querySelectorAll('.store-button, .genre-button, .keyword-button').forEach(button => {
+  function toggleButtonState(event) {
+      event.preventDefault();
+      const button = event.currentTarget;
       const value = button.dataset.value;
 
-      // Set initial state based on query parameters
-      if (selectedStores.includes(value) || selectedGenres.includes(value) || selectedKeywords.includes(value)) {
-          button.classList.add('bg-yellow-300', 'text-gray-800');
+      if (button.classList.contains('bg-yellow-300')) {
+          button.classList.remove('bg-yellow-300');
+          button.classList.add('bg-gray-300');
+          removeSelectedValue(value, button.classList.contains('store-button'), button.classList.contains('genre-button'), button.classList.contains('keyword-button'));
+      } else {
           button.classList.remove('bg-gray-300');
+          button.classList.add('bg-yellow-300');
+          addSelectedValue(value, button.classList.contains('store-button'), button.classList.contains('genre-button'), button.classList.contains('keyword-button'));
       }
-/*
-      button.addEventListener('click', function () {
-          // Toggle button color and update selection arrays
-          if (button.classList.contains('bg-yellow-300')) {
-              // Deselect the button (turn it back to gray)
-              button.classList.remove('bg-yellow-300');
-              button.classList.add('bg-gray-300');
-              removeSelectedValue(value, button.classList.contains('store-button'), button.classList.contains('genre-button'), button.classList.contains('keyword-button'));
-          } else {
-              // Select the button (turn it yellow)
-              button.classList.remove('bg-gray-300');
-              button.classList.add('bg-yellow-300');
-              addSelectedValue(value, button.classList.contains('store-button'), button.classList.contains('genre-button'), button.classList.contains('keyword-button'));
-          }
-      });
-*/
-        // Updated event listener to handle both mouse and touch events
-        function toggleButtonState(event) {
-            event.preventDefault(); // Prevent default behavior for touch events on mobile
+  }
 
-            const button = event.currentTarget;
-            const value = button.dataset.value;
-
-            // Toggle button color and update selection arrays
-            if (button.classList.contains('bg-yellow-300')) {
-                // Deselect the button (turn it back to gray)
-                button.classList.remove('bg-yellow-300');
-                button.classList.add('bg-gray-300');
-                removeSelectedValue(value, button.classList.contains('store-button'), button.classList.contains('genre-button'), button.classList.contains('keyword-button'));
-            } else {
-                // Select the button (turn it yellow)
-                button.classList.remove('bg-gray-300');
-                button.classList.add('bg-yellow-300');
-                addSelectedValue(value, button.classList.contains('store-button'), button.classList.contains('genre-button'), button.classList.contains('keyword-button'));
-            }
-        }
-
-        // Apply the event listeners for both click and touch events
-        document.querySelectorAll('.store-button, .genre-button, .keyword-button').forEach(button => {
-            button.addEventListener('click', toggleButtonState);
-            button.addEventListener('touchstart', toggleButtonState);
-        });
-    });
-
-  // Add selected value to the correct array
   function addSelectedValue(value, isStore, isGenre, isKeyword) {
       if (isStore) {
           if (!selectedStores.includes(value)) selectedStores.push(value);
@@ -166,79 +158,72 @@ document.addEventListener('DOMContentLoaded', function () {
       updateHiddenInputs();
   }
 
-    // Remove deselected value from the correct array
-    function removeSelectedValue(value, isStore, isGenre, isKeyword) {
+  function removeSelectedValue(value, isStore, isGenre, isKeyword) {
       if (isStore) {
-          // Modify the array instead of reassigning it
           const index = selectedStores.indexOf(value);
           if (index > -1) {
-              selectedStores.splice(index, 1);  // Remove the value from the array
+              selectedStores.splice(index, 1);
           }
       } else if (isGenre) {
           const index = selectedGenres.indexOf(value);
           if (index > -1) {
-              selectedGenres.splice(index, 1);  // Remove the value from the array
+              selectedGenres.splice(index, 1);
           }
       } else if (isKeyword) {
           const index = selectedKeywords.indexOf(value);
           if (index > -1) {
-              selectedKeywords.splice(index, 1);  // Remove the value from the array
+              selectedKeywords.splice(index, 1);
           }
       }
       updateHiddenInputs();
-    }
-
-
-  // Get initial selections from the URL
-  function getInitialSelection(paramName) {
-      const urlParams = new URLSearchParams(window.location.search);
-      const paramValue = urlParams.get(paramName);
-      return paramValue ? paramValue.split(',') : [];
   }
 
-  // Update hidden inputs based on selections
-  function updateHiddenInputs() {
-      document.getElementById('storeInput').value = selectedStores.join(',');
-      document.getElementById('genreInput').value = selectedGenres.join(',');
-      document.getElementById('keywordsInput').value = selectedKeywords.join(',');
+  updateHiddenInputs();
+  updateSearchClearButton();
+
+  if (explicitSwitch) {
+      const initialExplicit = explicitInput && explicitInput.value === '1';
+      setExplicitState(initialExplicit);
+      explicitSwitch.addEventListener('change', function () {
+          setExplicitState(this.checked);
+      });
   }
 
-  // Toggle explicit content light switch
-  const explicitSwitch = document.getElementById('explicitSwitch');
-  const dot = document.querySelector('.dot');
-  const switchBackground = explicitSwitch.nextElementSibling;
-
-  // Set the initial state for explicit content
-  const explicitValue = document.getElementById('explicitInput').value;
-  if (explicitValue === '1') {
-    explicitSwitch.checked = false;
-    switchBackground.classList.replace('bg-yellow-300', 'bg-gray-300'); // Fix here
-    dot.classList.remove('translate-x-5');
-    filterState.textContent = 'off'; // Set the initial text to 'off' explicitSwitch.checked = true;
-      switchBackground.classList.replace('bg-gray-300', 'bg-yellow-300');
-      dot.classList.add('translate-x-5');
-      filterState.textContent = 'on'; // Set the initial text to 'on'
-  } else {
-     
-  }
-
-  // Toggle explicit content switch
-  explicitSwitch.addEventListener('change', function () {
-      if (this.checked) {
-          document.getElementById('explicitInput').value = '1';
-          switchBackground.classList.replace('bg-gray-300', 'bg-yellow-300');
-          dot.classList.add('translate-x-5');
-          filterState.textContent = 'on'; // Update the text to 'on'
-      } else {
-          document.getElementById('explicitInput').value = '0';
-          switchBackground.classList.replace('bg-yellow-300', 'bg-gray-300');
-          dot.classList.remove('translate-x-5');
-          filterState.textContent = 'off'; // Update the text to 'off'
-
+  document.querySelectorAll('.store-button, .genre-button, .keyword-button').forEach(button => {
+      const value = button.dataset.value;
+      if (selectedStores.includes(value) || selectedGenres.includes(value) || selectedKeywords.includes(value)) {
+          button.classList.add('bg-yellow-300', 'text-gray-800');
+          button.classList.remove('bg-gray-300');
       }
+      button.addEventListener('click', toggleButtonState);
+      button.addEventListener('touchstart', toggleButtonState, { passive: false });
   });
 
+  if (clearSearchButton && searchInput) {
+      clearSearchButton.addEventListener('click', function (event) {
+          event.preventDefault();
+          searchInput.value = '';
+          updateSearchClearButton();
+          searchInput.focus();
+      });
+      searchInput.addEventListener('input', updateSearchClearButton);
+  }
 
+  if (clearFiltersButton) {
+      clearFiltersButton.addEventListener('click', function (event) {
+          event.preventDefault();
+          selectedStores.length = 0;
+          selectedGenres.length = 0;
+          selectedKeywords.length = 0;
+          resetFilterButtons();
+          if (searchInput) {
+              searchInput.value = '';
+          }
+          setExplicitState(true);
+          updateHiddenInputs();
+          updateSearchClearButton();
+      });
+  }
 });
 
 
@@ -247,25 +232,56 @@ document.addEventListener('DOMContentLoaded', function () {
   const filterToggle = document.getElementById('filterToggle');
   const filterDiv = document.getElementById('filterDiv');
   const filterForm = document.getElementById('filterForm');
+  const filterOverlay = document.getElementById('filterOverlay');
+  const mainContainer = document.getElementById('mainContainer');
+  const siteFooter = document.getElementById('siteFooter');
 
-  // Function to show the filter div with animation
-  function showFilterDiv() {
-      filterDiv.classList.remove('hidden');  // Ensure it's not hidden
-      filterDiv.classList.remove('animate-slideUp');  // Remove the slide-up animation if present
-      filterDiv.classList.add('animate-slideDown');   // Add the slide-down animation
+  function applyBlur() {
+      if (mainContainer) {
+          mainContainer.classList.add('blur-sm', 'pointer-events-none');
+      }
+      if (siteFooter) {
+          siteFooter.classList.add('blur-sm', 'pointer-events-none');
+      }
   }
 
-  // Function to hide the filter div with animation
+  function removeBlur() {
+      if (mainContainer) {
+          mainContainer.classList.remove('blur-sm', 'pointer-events-none');
+      }
+      if (siteFooter) {
+          siteFooter.classList.remove('blur-sm', 'pointer-events-none');
+      }
+  }
+
+  function showFilterDiv() {
+      filterDiv.classList.remove('hidden');
+      filterDiv.classList.remove('animate-slideUp');
+      filterDiv.classList.add('animate-slideDown');
+      if (filterOverlay) {
+          filterOverlay.classList.remove('hidden');
+          requestAnimationFrame(() => {
+              filterOverlay.classList.remove('opacity-0', 'pointer-events-none');
+          });
+      }
+      applyBlur();
+  }
+
   function hideFilterDiv() {
-      filterDiv.classList.remove('animate-slideDown');  // Remove the slide-down animation
-      filterDiv.classList.add('animate-slideUp');  // Add the slide-up animation
-      // Delay adding hidden class until after animation completes (0.5s)
+      filterDiv.classList.remove('animate-slideDown');
+      filterDiv.classList.add('animate-slideUp');
+      if (filterOverlay) {
+          filterOverlay.classList.add('opacity-0', 'pointer-events-none');
+      }
       setTimeout(() => {
           filterDiv.classList.add('hidden');
-      }, 500);  // Matches the animation duration (0.5s)
+          if (filterOverlay) {
+              filterOverlay.classList.add('hidden');
+          }
+          removeBlur();
+      }, 500);
   }
 
-  // Toggle filter div visibility when the button is clicked
   filterToggle.addEventListener('click', function (e) {
       e.preventDefault();
       if (filterDiv.classList.contains('hidden')) {
@@ -275,9 +291,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   });
 
-  // Hide filter div on form submission
   filterForm.addEventListener('submit', function () {
       hideFilterDiv();
   });
-});
 
+  if (filterOverlay) {
+      filterOverlay.addEventListener('click', hideFilterDiv);
+  }
+});
