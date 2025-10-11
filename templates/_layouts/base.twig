@@ -22,7 +22,9 @@
     {% include "_includes/filter" %}
   </header>
 
-  <div class="main-container">
+  <div id="filterOverlay" class="hidden fixed inset-0 z-40 bg-white/40 backdrop-blur-md transition-opacity duration-200 opacity-0 pointer-events-none"></div>
+
+  <div id="mainContainer" class="main-container transition duration-200">
     <main class="font-sans">
       {% block content %}
       {% endblock %}
@@ -30,7 +32,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="flex mx-auto justify-center w-full dropshadow bg-gradient-to-r from-blue-500 to-red-800 py-12">
+  <footer id="siteFooter" class="flex mx-auto justify-center w-full dropshadow bg-gradient-to-r from-blue-500 to-red-800 py-12 transition duration-200">
     <div class="">
       <img class="h-32 w-auto" src="/images/logo-fff.png" alt="Stuff Your Kindle: Crime Edition logo">
       <p class="text-white text-xs text-center mt-4">

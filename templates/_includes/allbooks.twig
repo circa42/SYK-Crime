@@ -5,17 +5,25 @@
 {% set searchTerm = craft.app.request.getQueryParam('q') %}
 {% set explicit = craft.app.request.getQueryParam('explicit') %}
 
+{% set storeSlugs = store is iterable ? store : (store ? store|split(',') : []) %}
+{% set genreSlugs = genre is iterable ? genre : (genre ? genre|split(',') : []) %}
+{% set keywordSlugs = keywords is iterable ? keywords : (keywords ? keywords|split(',') : []) %}
+
+{% set selectedStores = storeSlugs ? craft.categories.group('store').slug(storeSlugs).all() : [] %}
+{% set selectedGenres = genreSlugs ? craft.categories.group('genre').slug(genreSlugs).all() : [] %}
+{% set selectedKeywords = keywordSlugs ? craft.tags.group('keywords').slug(keywordSlugs).all() : [] %}
+
 {% set entriesQuery = craft.entries().section('books').search(searchTerm) %}
 
 {# Apply genre filtering #}
-{% if genre %}
-    {% set genreIds = craft.categories.group('genre').slug(genre).ids() %}
+{% if genreSlugs %}
+    {% set genreIds = craft.categories.group('genre').slug(genreSlugs).ids() %}
     {% set entriesQuery = entriesQuery.relatedTo({ targetElement: genreIds }) %}
 {% endif %}
 
 {# Apply store filtering #}
-{% if store %}
-    {% set storeIds = craft.categories.group('store').slug(store).ids() %}
+{% if storeSlugs %}
+    {% set storeIds = craft.categories.group('store').slug(storeSlugs).ids() %}
     {% set entriesQuery = entriesQuery.relatedTo({
         targetElement: storeIds,
         field: 'storeLinks.stores' 
@@ -24,8 +32,8 @@
 
 
 {# Apply keyword filtering #}
-{% if keywords %}
-    {% set keywordIds = craft.tags.group('keywords').slug(keywords).ids() %}
+{% if keywordSlugs %}
+    {% set keywordIds = craft.tags.group('keywords').slug(keywordSlugs).ids() %}
     {% set entriesQuery = entriesQuery.relatedTo({ targetElement: keywordIds }) %}
 {% endif %}
 
@@ -39,6 +47,21 @@
     <div class="xs:mx-6 md:mx-auto sm:container my-12">
         <h1 class="xs:text-xl md:text-2xl lg:text-4xl text-bold font-black text-center uppercase bg-yellow-300 px-4 py-2 inline-block mb-12">
         {{ headline }}</h1>
+        <div class="mb-6 ml-4 -mt-4">
+            {% if searchTerm %}
+                <span class="text-xs uppercase px-2 py-1 bg-gray-300">"{{ searchTerm }}"</span>
+            {% endif %}
+            {% if selectedStores %}
+                <span class="text-xs uppercase px-2 py-1 bg-gray-300">{% for category in selectedStores %}{{ category.title }}{% if not loop.last %}, {% endif %}{% endfor %}</span>
+            {% endif %}
+            {% if selectedGenres %}
+                <span class="text-xs uppercase px-2 py-1 bg-gray-300">{% for category in selectedGenres %}{{ category.title }}{% if not loop.last %}, {% endif %}{% endfor %}</span>
+            {% endif %}
+            {% if selectedKeywords %}
+                <span class="text-xs uppercase px-2 py-1 bg-gray-300">{% for tag in selectedKeywords %}{{ tag.title }}{% if not loop.last %}, {% endif %}{% endfor %}</span>
+            {% endif %} 
+            {# <span>{{ explicit == '1' ? '' : '<span class="text-xs uppercase px-2 py-1 bg-gray-300">Explicit</span>' }}</span> #}
+        </div>
         {% if entries|length %}
             <div class="entry-list">
                 {% for entry in entries %}

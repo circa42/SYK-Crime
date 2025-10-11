@@ -25,6 +25,8 @@
   transform: none;
 }
 
+
+
 /* Fix the alignment issue for the Genres button */
 .nav-item {
   display: inline-flex;
@@ -57,4 +59,3 @@
 .dropdown a:hover {
   transform: none;
 }
-

@@ -1,4 +1,37 @@
-dateModified: 1756605454
+dateModified: 1760150805
+elementSources:
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - status
+        - section
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      key: singles
+      type: native
+    -
+      heading: Structures
+      key: 'heading:ef24fd02-a133-4670-9b16-54cc0247e5ac'
+      type: heading
+    -
+      key: 'section:aa93aced-56a4-4b94-8ffe-80e5cfe98f0a' # Books
+      type: native
+    -
+      heading: Channels
+      key: 'heading:33464fb3-6772-498d-b71f-2ceeacfae5c5'
+      type: heading
+    -
+      key: 'section:1ebab9e0-b7d8-4e9c-a4bd-2dd0933e626a' # Blog
+      type: native
 email:
   fromEmail: andrew@circa42.com
   fromName: 'Stuff Your Kindle: Crime'
@@ -75,36 +108,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.1.0
-  knock-knock:
-    edition: standard
-    enabled: false
-    schemaVersion: 1.1.1
-    settings:
-      checkInvalidLogins: false
-      enableCpProtection: false
-      enabled: true
-      forcedRedirect: ''
-      invalidLoginWindowDuration: '3600'
-      loginPath: ''
-      maxInvalidLogins: 10
-      password: 'syK:crime!'
-      siteSettings:
-        __assoc__:
-          -
-            - default
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - ''
-                -
-                  - password
-                  - ''
-                -
-                  - template
-                  - ''
-      template: ''
-      useRemoteIp: false
 system:
   edition: solo
   live: true
