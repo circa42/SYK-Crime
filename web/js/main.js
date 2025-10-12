@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
           }
       }
       if (filterState) {
-          filterState.textContent = isOn ? 'on' : 'off';
+          filterState.textContent = isOn ? 'Hide' : 'Show';
       }
       if (explicitInput) {
           explicitInput.value = isOn ? '1' : '0';
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
           if (searchInput) {
               searchInput.value = '';
           }
-          setExplicitState(true);
+          setExplicitState(false);
           updateHiddenInputs();
           updateSearchClearButton();
       });
