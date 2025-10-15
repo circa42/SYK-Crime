@@ -22,19 +22,24 @@
   <div class="book-details xs:w-full">
     <!-- Title -->
     {% if entry.bookCover|length and firstUrl is defined %}
-      <a href="{{ firstUrl }}" target="_blank">
+      
         <h2 class="text-xl font-bold">
+          <a href="{{ firstUrl }}" target="_blank">
           {{ entry.title }}
+        </a>
           {% if entry.explicit == 1 %}
-            <span class="uppercase text-xs text-white bg-red-500 px-1 ml-4 relative -top-0.5">E</span>
+            <span class="uppercase text-xs text-white bg-red-500 px-1 ml-4 relative -top-0.5" title="Explicit content" aria-label="Explicit content">E<span class="sr-only">Explicit content</span></span>
+          {% endif %}
+          {% if entry.shortRead == 1 %}
+            <span class="uppercase text-xs text-white bg-blue-500 px-1 ml-4 relative -top-0.5" title="Short read" aria-label="Short read">S<span class="sr-only">Short read</span></span>
           {% endif %}
         </h2>
-      </a>
+      
     {% else %}
       <h2 class="text-xl font-bold">
         {{ entry.title }}
         {% if entry.explicit == 1 %}
-          <span class="uppercase text-xs text-white bg-red-500 px-1 ml-4 relative -top-0.5">E</span>
+          <span class="uppercase text-xs text-white bg-red-500 px-1 ml-4 relative -top-0.5" title="Explicit content" aria-label="Explicit content">E<span class="sr-only">Explicit content</span></span>
         {% endif %}
       </h2>
     {% endif %}

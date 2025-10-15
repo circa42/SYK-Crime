@@ -1,4 +1,4 @@
-dateModified: 1760150805
+dateModified: 1760497543
 elementSources:
   craft\elements\Entry:
     -
@@ -91,6 +91,7 @@ meta:
     bd98f8d4-685e-4ff6-ba96-5a59af697eab: Romance # Romance
     c3cceea7-3146-486d-9072-98063e5fa80a: Blog # Blog
     d2e5aeee-67eb-427b-b509-1392eb5ed1d1: 'Author Name' # Author Name
+    d457fdc8-7666-4097-b4a0-920fee4795e1: 'Short Read' # Short Read
     dd0271aa-2c8e-4ac9-af62-7b033f1f8550: Stores # Stores
     e6b43986-34b3-4dae-949d-8b28bbdf62fa: 'Includes Explicit Content?' # Includes Explicit Content?
     e398798c-c71d-49fd-9a2a-9f9f5e96e0fa: 'Store Entry' # Store Entry
