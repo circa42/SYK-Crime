@@ -9,11 +9,24 @@
     %}
 
     {% for entry in entries %}
-        <h2 class="mb-8">
-            <a href="{{ entry.url }}" class="nav-item hover:bg-gray-300 md:text-md lg:text-xl text-bold font-black text-center uppercase bg-yellow-300 px-4 py-2">
-                {{ entry.title }}
-            </a>
-        </h2>
+        <article class="mb-12">
+            <h2 class="mb-4">
+                <a href="{{ entry.url }}" class="nav-item hover:bg-yellow-300 md:text-md lg:text-xl text-bold font-black uppercase inline-block">
+                    {{ entry.title }}
+                </a>
+            </h2>
+            {% if entry.body is defined and entry.body %}
+                {% set plainBody = entry.body|striptags %}
+                {% set teaser = plainBody|slice(0, 120) %}
+                {% if plainBody|length > 120 %}
+                    {% set teaser = teaser ~ '…' %}
+                {% endif %}
+                <p class="mb-4 text-sm">
+                    {{ teaser }}
+                    <a href="{{ entry.url }}" class="text-bold font-black text-xs text-center uppercase hover:bg-yellow-300 px-2 py-1">Read More</a>
+                </p>
+            {% endif %}
+        </article>
     {% endfor %}
 </div>
 
