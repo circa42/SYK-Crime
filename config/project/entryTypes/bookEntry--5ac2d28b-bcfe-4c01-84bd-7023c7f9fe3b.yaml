@@ -1,6 +1,8 @@
 color: null
+description: null
 fieldLayouts:
   795570eb-f838-47a7-b9d3-def9cf0baf2f:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -37,6 +39,7 @@ fieldLayouts:
             width: 50
           -
             dateAdded: '2024-09-05T20:37:47+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: d2e5aeee-67eb-427b-b509-1392eb5ed1d1 # Author Name
             handle: null
@@ -53,6 +56,7 @@ fieldLayouts:
             width: 50
           -
             dateAdded: '2024-09-04T23:38:16+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 17daa88c-2431-437f-8aad-f702d1cb5dd7 # Hook
             handle: null
@@ -69,6 +73,7 @@ fieldLayouts:
             width: 50
           -
             dateAdded: '2025-03-08T21:15:39+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 63314730-9463-4027-81c8-c8a5ee186f19 # Book Cover
             handle: null
@@ -85,6 +90,7 @@ fieldLayouts:
             width: 50
           -
             dateAdded: '2024-09-10T22:23:43+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 1e32e33a-2e30-4288-9032-6f6dd47f2bbd # Store Links
             handle: null
@@ -101,6 +107,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2024-09-05T23:33:07+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 1c31696e-f556-4d1b-902c-6a1df93843bb # Genre
             handle: null
@@ -117,6 +124,7 @@ fieldLayouts:
             width: 25
           -
             dateAdded: '2024-09-05T20:14:41+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: bd08465f-6b04-4419-8b44-f53ed8fd4767 # Keywords
             handle: null
@@ -133,6 +141,7 @@ fieldLayouts:
             width: 25
           -
             dateAdded: '2024-09-12T20:23:20+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 45e385b2-61aa-459b-9af9-130ee578ed93 # Romance Level
             handle: null
@@ -149,6 +158,7 @@ fieldLayouts:
             width: 25
           -
             dateAdded: '2025-02-28T05:08:08+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: b9390259-c651-4b5a-bf5e-f5a4659cc704 # Explicit Categories
             handle: null
@@ -165,6 +175,7 @@ fieldLayouts:
             width: 50
           -
             dateAdded: '2024-09-10T23:09:28+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: e6b43986-34b3-4dae-949d-8b28bbdf62fa # Includes Explicit Content?
             handle: null
@@ -179,6 +190,23 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
+          -
+            dateAdded: '2025-10-15T03:05:43+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: d457fdc8-7666-4097-b4a0-920fee4795e1 # Short Read
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c76155c4-dd42-48fb-b4bb-792e095b94c9
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 283be85f-35eb-4cde-a8e5-2a14e70f9b10
         userCondition: null

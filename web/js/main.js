@@ -17,6 +17,125 @@ window.addEventListener('scroll', function() {
   }
 });
 
+function setTooltipState(trigger, tooltip, isOpen) {
+  if (!trigger) {
+    return;
+  }
+
+  if (!tooltip) {
+    if (isOpen) {
+      trigger.setAttribute('data-tooltip-open', 'true');
+      trigger.setAttribute('aria-expanded', 'true');
+    } else {
+      trigger.removeAttribute('data-tooltip-open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+    return;
+  }
+
+  if (isOpen) {
+    trigger.setAttribute('data-tooltip-open', 'true');
+    trigger.setAttribute('aria-expanded', 'true');
+    tooltip.setAttribute('aria-hidden', 'false');
+    tooltip.classList.remove('hidden', 'pointer-events-none');
+  } else {
+    trigger.removeAttribute('data-tooltip-open');
+    trigger.setAttribute('aria-expanded', 'false');
+    tooltip.setAttribute('aria-hidden', 'true');
+    if (!tooltip.classList.contains('hidden')) {
+      tooltip.classList.add('hidden');
+    }
+    if (!tooltip.classList.contains('pointer-events-none')) {
+      tooltip.classList.add('pointer-events-none');
+    }
+  }
+}
+
+function closeOpenTooltips(exceptTrigger) {
+  const openTriggers = document.querySelectorAll('[data-tooltip-trigger][data-tooltip-open="true"]');
+  openTriggers.forEach(trigger => {
+    if (trigger === exceptTrigger) {
+      return;
+    }
+    const tooltipId = trigger.getAttribute('aria-describedby');
+    const tooltip = tooltipId ? document.getElementById(tooltipId) : null;
+    setTooltipState(trigger, tooltip, false);
+  });
+}
+
+function initBadgeTooltips(root = document) {
+  const baseElement = root || document;
+  const triggers = baseElement.querySelectorAll('[data-tooltip-trigger]:not([data-tooltip-initialized])');
+
+  triggers.forEach(trigger => {
+    const tooltipId = trigger.getAttribute('aria-describedby');
+    const tooltip = tooltipId ? document.getElementById(tooltipId) : null;
+
+    if (!tooltip) {
+      return;
+    }
+
+    trigger.setAttribute('data-tooltip-initialized', 'true');
+    setTooltipState(trigger, tooltip, false);
+
+    function openTooltip() {
+      closeOpenTooltips(trigger);
+      setTooltipState(trigger, tooltip, true);
+      if (typeof trigger.focus === 'function') {
+        try {
+          trigger.focus({ preventScroll: true });
+        } catch (error) {
+          trigger.focus();
+        }
+      }
+    }
+
+    function closeTooltip() {
+      setTooltipState(trigger, tooltip, false);
+    }
+
+    function toggleTooltip(event) {
+      event.preventDefault();
+      if (trigger.getAttribute('data-tooltip-open') === 'true') {
+        closeTooltip();
+      } else {
+        openTooltip();
+      }
+    }
+
+    trigger.addEventListener('click', toggleTooltip);
+    trigger.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        toggleTooltip(event);
+      } else if (event.key === 'Escape') {
+        event.preventDefault();
+        closeTooltip();
+        trigger.blur();
+      }
+    });
+
+    trigger.addEventListener('blur', function () {
+      closeTooltip();
+    });
+  });
+
+  if (document.body && !document.body.dataset.badgeTooltipListeners) {
+    document.addEventListener('click', function (event) {
+      if (!event.target.closest('[data-tooltip-trigger]')) {
+        closeOpenTooltips();
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        closeOpenTooltips();
+      }
+    });
+
+    document.body.dataset.badgeTooltipListeners = 'true';
+  }
+}
+
 function loadMoreEntries() {
   page++;
   const loadingElement = document.getElementById('loading');
@@ -26,7 +145,10 @@ function loadMoreEntries() {
     .then(response => response.text())
     .then(data => {
       const entriesElement = document.getElementById('entries');
-      entriesElement.innerHTML += data;
+      if (entriesElement) {
+        entriesElement.innerHTML += data;
+        initBadgeTooltips(entriesElement);
+      }
       loadingElement.style.display = 'none';
       isLoading = false;
     })
@@ -224,6 +346,8 @@ document.addEventListener('DOMContentLoaded', function () {
           updateSearchClearButton();
       });
   }
+
+  initBadgeTooltips();
 });
 
 
