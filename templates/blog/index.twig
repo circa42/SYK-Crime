@@ -3,10 +3,11 @@
 {% block content %} 
 
 <div class="xs:mx-6 md:mx-auto sm:container my-12">
-    {% set entries = craft.entries()
-        .section('blog')
-        .all() 
-    %}
+    {% paginate craft.entries({
+        section: 'blog',
+        orderBy: 'postDate desc',
+        limit: 10
+    }) as pageInfo, entries %}
 
     {% for entry in entries %}
         <article class="mb-12">
@@ -28,6 +29,23 @@
             {% endif %}
         </article>
     {% endfor %}
+
+    {% set totalBlogPosts = pageInfo.total ?? entries|length %}
+    {% if totalBlogPosts > 1 and pageInfo.totalPages > 1 %}
+        <nav class="flex flex-wrap justify-center items-center gap-2 mt-4" aria-label="Blog pagination">
+            {% for pageNumber, pageUrl in pageInfo.getRangeUrls(1, pageInfo.totalPages) %}
+                {% if pageNumber == pageInfo.currentPage %}
+                    <span class="nav-item inline-flex items-center justify-center px-4 py-2 text-sm font-black uppercase bg-gray-300 pointer-events-none">
+                        {{ pageNumber }}
+                    </span>
+                {% else %}
+                    <a href="{{ pageUrl }}" class="nav-item inline-flex items-center justify-center px-4 py-2 text-sm font-black uppercase bg-yellow-300 hover:bg-gray-300">
+                        {{ pageNumber }}
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </nav>
+    {% endif %}
 </div>
 
 {% endblock %}
