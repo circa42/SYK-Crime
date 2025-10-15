@@ -91,7 +91,7 @@
         <label class="relative inline-flex items-center cursor-pointer">
             <input type="checkbox" id="explicitSwitch" class="sr-only" {% if explicitContent %} checked {% endif %}>
             <div class="w-11 h-6 bg-gray-300 rounded-full transition-colors duration-300"></div>
-            <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition transform duration-300"></div>
+            <div class="explicit-switch-dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full{% if explicitContent %} is-on{% endif %}"></div>
         </label>
         <span>Hide</span>
     </div>
