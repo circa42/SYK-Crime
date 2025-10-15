@@ -19,28 +19,53 @@
   </div>
 
   <!-- Book Details --> 
+  {% set explicitTooltipId = 'tooltip-explicit-' ~ entry.id %}
+  {% set shortReadTooltipId = 'tooltip-short-read-' ~ entry.id %}
+  {% set badges -%}
+    {% if entry.explicit == 1 %}
+      <span class="relative inline-flex items-center justify-center uppercase text-xs text-white bg-red-500 px-1 ml-4" data-tooltip-trigger tabindex="0" role="button" aria-label="Explicit content" aria-describedby="{{ explicitTooltipId }}" aria-expanded="false">
+        <span aria-hidden="true">E</span>
+        <span
+          id="{{ explicitTooltipId }}"
+          class="absolute hidden text-white text-xs px-2 py-1 rounded-md shadow-lg pointer-events-none"
+          role="tooltip"
+          aria-hidden="true"
+          style="left: 50%; bottom: calc(100% + 0.5rem); transform: translateX(-50%); background-color: rgba(120, 5, 5, 0.95); white-space: nowrap;"
+        >
+          Explicit content
+          <span aria-hidden="true" class="absolute block" style="left: 50%; top: 100%; width: 0.5rem; height: 0.5rem; transform: translate(-50%, -50%) rotate(45deg); background-color: rgba(120, 5, 5, 0.95);"></span>
+        </span>
+        <span class="sr-only">Explicit content</span>
+      </span>
+    {% endif %}
+    {% if entry.shortRead == 1 %}
+      <span class="relative inline-flex items-center justify-center uppercase text-xs text-white bg-blue-500 px-1 ml-4" data-tooltip-trigger tabindex="0" role="button" aria-label="Shorter read" aria-describedby="{{ shortReadTooltipId }}" aria-expanded="false">
+        <span aria-hidden="true">S</span>
+        <span
+          id="{{ shortReadTooltipId }}"
+          class="absolute hidden text-white text-xs px-2 py-1 rounded-md shadow-lg pointer-events-none"
+          role="tooltip"
+          aria-hidden="true"
+          style="left: 50%; bottom: calc(100% + 0.5rem); transform: translateX(-50%); background-color: rgba(25, 55, 122, 0.95); white-space: nowrap;"
+        >
+          Shorter read 
+          <span aria-hidden="true" class="absolute block" style="left: 50%; top: 100%; width: 0.5rem; height: 0.5rem; transform: translate(-50%, -50%) rotate(45deg); background-color: rgba(25, 55, 122, 0.95);"></span>
+        </span>
+        <span class="sr-only">Shorter read</span>
+      </span>
+    {% endif %}
+  {%- endset %}
   <div class="book-details xs:w-full">
     <!-- Title -->
     {% if entry.bookCover|length and firstUrl is defined %}
-      
-        <h2 class="text-xl font-bold">
-          <a href="{{ firstUrl }}" target="_blank">
-          {{ entry.title }}
-        </a>
-          {% if entry.explicit == 1 %}
-            <span class="uppercase text-xs text-white bg-red-500 px-1 ml-4 relative -top-0.5" title="Explicit content" aria-label="Explicit content">E<span class="sr-only">Explicit content</span></span>
-          {% endif %}
-          {% if entry.shortRead == 1 %}
-            <span class="uppercase text-xs text-white bg-blue-500 px-1 ml-4 relative -top-0.5" title="Short read" aria-label="Short read">S<span class="sr-only">Short read</span></span>
-          {% endif %}
-        </h2>
-      
+      <h2 class="text-xl font-bold">
+        <a href="{{ firstUrl }}" target="_blank" class="inline-block">{{ entry.title }}</a>
+        {{ badges|raw }}
+      </h2>
     {% else %}
       <h2 class="text-xl font-bold">
         {{ entry.title }}
-        {% if entry.explicit == 1 %}
-          <span class="uppercase text-xs text-white bg-red-500 px-1 ml-4 relative -top-0.5" title="Explicit content" aria-label="Explicit content">E<span class="sr-only">Explicit content</span></span>
-        {% endif %}
+        {{ badges|raw }}
       </h2>
     {% endif %}
     <h3 class="text-xs text-gray-400">{{ entry.authorName }}</h3>
