@@ -187,7 +187,7 @@ function toggleMenu() {
 function getInitialSelection(paramName) {
   const urlParams = new URLSearchParams(window.location.search);
   const paramValue = urlParams.get(paramName);
-  return paramValue ? paramValue.split(',') : [];
+  return paramValue ? paramValue.split(',').filter(Boolean) : [];
 }
 
 // 
@@ -200,10 +200,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.getElementById('searchQuery');
   const clearSearchButton = document.getElementById('clearSearchButton');
   const clearFiltersButton = document.getElementById('clearFiltersButton');
+  const filterForm = document.getElementById('filterForm');
   const filterState = document.getElementById('filterState');
   const explicitSwitch = document.getElementById('explicitSwitch');
   const explicitInput = document.getElementById('explicitInput');
-  const dot = document.querySelector('.dot');
+  const dot = document.querySelector('.explicit-switch-dot');
   const switchBackground = explicitSwitch ? explicitSwitch.nextElementSibling : null;
 
   function updateHiddenInputs() {
@@ -239,14 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
           switchBackground.classList.add(isOn ? 'bg-yellow-300' : 'bg-gray-300');
       }
       if (dot) {
-          if (isOn) {
-              dot.classList.add('translate-x-5');
-          } else {
-              dot.classList.remove('translate-x-5');
-          }
-      }
-      if (filterState) {
-          filterState.textContent = isOn ? 'Hide' : 'Show';
+          dot.classList.toggle('is-on', isOn);
       }
       if (explicitInput) {
           explicitInput.value = isOn ? '1' : '0';
@@ -344,6 +338,11 @@ document.addEventListener('DOMContentLoaded', function () {
           setExplicitState(false);
           updateHiddenInputs();
           updateSearchClearButton();
+          const formAction = filterForm && typeof filterForm.getAttribute === 'function'
+              ? filterForm.getAttribute('action')
+              : null;
+          const destination = new URL(formAction || window.location.pathname, window.location.origin);
+          window.location.href = destination.href;
       });
   }
 
