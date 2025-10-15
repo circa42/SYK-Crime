@@ -11,13 +11,25 @@
 <div class="book-entry flex xs:flex-wrap sm:flex-nowrap mb-8 bg-white drop-shadow border p-4">
   <!-- Book Image -->
   <div class="book-image sm:mr-6 flex mx-auto mb-8 justify-center">
-    {% if entry.bookCover|length and firstUrl is defined %}
-      <a href="{{ firstUrl }}" target="_blank">
-        <img src="{{ entry.bookCover[0].getUrl('thumb') }}" alt="{{ entry.title }} cover" loading="lazy">
-      </a>
-    {% endif %}
+    <div class="text-center">
+      {% if entry.bookCover|length %}
+        {% if firstUrl is defined %}
+          <a href="{{ firstUrl }}" target="_blank">
+            <img src="{{ entry.bookCover[0].getUrl('thumb') }}" alt="{{ entry.title }} cover" loading="lazy">
+          </a>
+        {% else %}
+          <img src="{{ entry.bookCover[0].getUrl('thumb') }}" alt="{{ entry.title }} cover" loading="lazy">
+        {% endif %}
+      {% endif %}
+      {% if currentUser %}
+        <div class="mt-4">
+          <a href="{{ entry.cpEditUrl }}" class="text-xs uppercase" target="_blank">
+            edit entry
+          </a>
+        </div>
+      {% endif %}
+    </div>
   </div>
-
   <!-- Book Details --> 
   {% set explicitTooltipId = 'tooltip-explicit-' ~ entry.id %}
   {% set shortReadTooltipId = 'tooltip-short-read-' ~ entry.id %}
