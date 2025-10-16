@@ -1,12 +1,12 @@
 {% extends '_layouts/base' %}
 
 {% block content %}
-<div class="xs:mx-4 sm:container md:mx-auto px-10 my-12">
+<div class="xs:mx-6 md:mx-auto sm:container my-12">
     {% set tagSlug = craft.app.request.getSegment(2) %}
     {% set tag = craft.tags.group('keywords').slug(tagSlug).one() %}
   
     {% if tag %}
-        <h1 class="xs:text-xl md:text-2xl lg:text-3xl font-black text-center uppercase bg-yellow-300 px-4 py-2 inline-block mb-12">#{{ tag.title }}</h1>
+        <h1 class="xs:text-md md:text-xl lg:text-3xl text-bold font-black text-center uppercase bg-yellow-300 lg:px-4 lg:py-2 xs:px-2 xs:py-1 inline-block mb-12">#{{ tag.title }}</h1>
   
         {% if tag.description %}
             <p class="text-gray-700 mb-4">{{ tag.description }}</p>

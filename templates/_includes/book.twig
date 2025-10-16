@@ -33,52 +33,65 @@
   <!-- Book Details --> 
   {% set explicitTooltipId = 'tooltip-explicit-' ~ entry.id %}
   {% set shortReadTooltipId = 'tooltip-short-read-' ~ entry.id %}
+  {% set hasExplicit = entry.explicit == 1 %}
+  {% set hasShortRead = entry.shortRead == 1 %}
+  {% set hasBadges = hasExplicit or hasShortRead %}
   {% set badges -%}
-    {% if entry.explicit == 1 %}
-      <span class="relative inline-flex items-center justify-center uppercase text-xs text-white bg-red-500 px-1 ml-4" data-tooltip-trigger tabindex="0" role="button" aria-label="Explicit content" aria-describedby="{{ explicitTooltipId }}" aria-expanded="false">
-        <span aria-hidden="true">E</span>
-        <span
-          id="{{ explicitTooltipId }}"
-          class="absolute hidden text-white text-xs px-2 py-1 rounded-md shadow-lg pointer-events-none"
-          role="tooltip"
-          aria-hidden="true"
-          style="left: 50%; bottom: calc(100% + 0.5rem); transform: translateX(-50%); background-color: rgba(120, 5, 5, 0.95); white-space: nowrap;"
-        >
-          Explicit content
-          <span aria-hidden="true" class="absolute block" style="left: 50%; top: 100%; width: 0.5rem; height: 0.5rem; transform: translate(-50%, -50%) rotate(45deg); background-color: rgba(120, 5, 5, 0.95);"></span>
-        </span>
-        <span class="sr-only">Explicit content</span>
-      </span>
-    {% endif %}
-    {% if entry.shortRead == 1 %}
-      <span class="relative inline-flex items-center justify-center uppercase text-xs text-white bg-blue-500 px-1 ml-4" data-tooltip-trigger tabindex="0" role="button" aria-label="Shorter read" aria-describedby="{{ shortReadTooltipId }}" aria-expanded="false">
-        <span aria-hidden="true">S</span>
-        <span
-          id="{{ shortReadTooltipId }}"
-          class="absolute hidden text-white text-xs px-2 py-1 rounded-md shadow-lg pointer-events-none"
-          role="tooltip"
-          aria-hidden="true"
-          style="left: 50%; bottom: calc(100% + 0.5rem); transform: translateX(-50%); background-color: rgba(25, 55, 122, 0.95); white-space: nowrap;"
-        >
-          Shorter read 
-          <span aria-hidden="true" class="absolute block" style="left: 50%; top: 100%; width: 0.5rem; height: 0.5rem; transform: translate(-50%, -50%) rotate(45deg); background-color: rgba(25, 55, 122, 0.95);"></span>
-        </span>
-        <span class="sr-only">Shorter read</span>
-      </span>
+    {% if hasBadges %}
+      <div class="flex flex-wrap items-center gap-2 w-full mt-2 md:mt-0 md:w-auto md:ml-1 xs:mb-2 md:mb-0">
+        {% if hasExplicit %}
+          <span class="relative inline-flex items-center justify-center uppercase text-xs text-white bg-red-500 px-2 py-0.5" data-tooltip-trigger tabindex="0" role="button" aria-label="Explicit content" aria-describedby="{{ explicitTooltipId }}" aria-expanded="false">
+            <span aria-hidden="true">E</span>
+            <span
+              id="{{ explicitTooltipId }}"
+              class="absolute hidden text-white text-xs px-2 py-1 rounded-md shadow-lg pointer-events-none left-1/2 bottom-full -translate-x-1/2 -translate-y-2 bg-red-900 whitespace-nowrap"
+              role="tooltip"
+              aria-hidden="true"
+            >
+              Explicit content
+              <span aria-hidden="true" class="absolute left-1/2 top-full w-2 h-2 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-red-900"></span>
+            </span>
+            <span class="sr-only">Explicit content</span>
+          </span>
+        {% endif %}
+        {% if hasShortRead %}
+          <span class="relative inline-flex items-center justify-center uppercase text-xs text-white bg-blue-500 px-2 py-0.5" data-tooltip-trigger tabindex="0" role="button" aria-label="Shorter read" aria-describedby="{{ shortReadTooltipId }}" aria-expanded="false">
+            <span aria-hidden="true">S</span>
+            <span
+              id="{{ shortReadTooltipId }}"
+              class="absolute hidden text-white text-xs px-2 py-1 rounded-md shadow-lg pointer-events-none left-1/2 bottom-full -translate-x-1/2 -translate-y-2 bg-blue-900 whitespace-nowrap"
+              role="tooltip"
+              aria-hidden="true"
+            >
+              Shorter read 
+              <span aria-hidden="true" class="absolute left-1/2 top-full w-2 h-2 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-blue-900"></span>
+            </span>
+            <span class="sr-only">Shorter read</span>
+          </span>
+        {% endif %}
+      </div>
     {% endif %}
   {%- endset %}
   <div class="book-details xs:w-full">
     <!-- Title -->
     {% if entry.bookCover|length and firstUrl is defined %}
-      <h2 class="text-xl font-bold">
-        <a href="{{ firstUrl }}" target="_blank" class="inline-block">{{ entry.title }}</a>
-        {{ badges|raw }}
-      </h2>
+      <div class="flex flex-col md:flex-row md:items-center md:gap-4">
+        <h2 class="text-xl font-bold xs:text-base md:text-md lg:text-xl">
+          <a href="{{ firstUrl }}" target="_blank" class="inline-block">{{ entry.title }}</a>
+        </h2>
+        {% if hasBadges %}
+          {{ badges|raw }}
+        {% endif %}
+      </div>
     {% else %}
-      <h2 class="text-xl font-bold">
-        {{ entry.title }}
-        {{ badges|raw }}
-      </h2>
+      <div class="flex flex-col md:flex-row md:items-center md:gap-4">
+        <h2 class="text-xl font-bold xs:text-base md:text-md lg:text-xl">
+          {{ entry.title }}
+        </h2>
+        {% if hasBadges %}
+          {{ badges|raw }}
+        {% endif %}
+      </div>
     {% endif %}
     <h3 class="text-xs text-gray-400">{{ entry.authorName }}</h3>
 
@@ -131,9 +144,9 @@
       {% set genres = entry.genre %}
       {% if genres|length %}
         <div class="text-sm">
-          <span class="font-bold">Categories:</span>
+          <span class="font-bold xs:text-xs md:text-base">Categories:</span>
           {% for genre in genres %}
-            <a href="{{ genre.url }}" class="hover:bg-yellow-300 p-1 mr-1 mb-2">{{ genre.title }}</a>
+            <a href="{{ genre.url }}" class="xs:text-xs md:text-base hover:bg-yellow-300 p-1 mr-1 mb-2">{{ genre.title }}</a>
           {% endfor %}
         </div>
       {% endif %}
@@ -144,9 +157,9 @@
       {% set keywords = entry.keywords %}
       {% if keywords|length %}
         <div class="text-sm">
-          <span class="font-bold">Keywords:</span>
+          <span class="font-bold xs:text-xs md:text-base">Keywords:</span>
           {% for keyword in keywords %}
-            <a href="{{ url('keywords/' ~ keyword.slug) }}" class="hover:bg-yellow-300 p-1 mr-1 mb-2">{{ keyword.title }}</a>
+            <a href="{{ url('keywords/' ~ keyword.slug) }}" class="xs:text-xs md:text-base hover:bg-yellow-300 p-1 mr-1 mb-2">{{ keyword.title }}</a>
           {% endfor %}
         </div>
       {% endif %}
@@ -157,9 +170,9 @@
       {% set romanceLevels = entry.romanceLevel %}
       {% if romanceLevels|length %}
         <div class="text-sm">
-          <span class="font-bold">Romance Level:</span>
+          <span class="font-bold xs:text-xs md:text-base">Romance Level:</span>
           {% for romanceLevel in romanceLevels %}
-            <a href="{{ romanceLevel.url }}" class="hover:bg-yellow-300 p-1 mr-1 mb-2">{{ romanceLevel.title }}</a>
+            <a href="{{ romanceLevel.url }}" class="xs:text-xs md:text-base hover:bg-yellow-300 p-1 mr-1 mb-2">{{ romanceLevel.title }}</a>
           {% endfor %}
         </div>
       {% endif %}
@@ -170,9 +183,9 @@
       {% set explicitCats = entry.explicitCat %}
       {% if explicitCats|length %}
         <div class="text-sm">
-          <span class="font-bold">Explicit Content: </span>
+          <span class="font-bold xs:text-xs md:text-base">Explicit Content: </span>
           {% for explicitCat in explicitCats %}
-            <a href="{{ explicitCat.url }}" class="hover:bg-yellow-300 p-1 mr-1 mb-2">{{ explicitCat.title }}</a>
+            <a href="{{ explicitCat.url }}" class="xs:text-xs md:text-base hover:bg-yellow-300 p-1 mr-1 mb-2">{{ explicitCat.title }}</a>
           {% endfor %}
         </div>
       {% endif %}
