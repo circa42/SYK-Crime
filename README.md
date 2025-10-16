@@ -1,5 +1,8 @@
 # SYK Change Overview
 
+## 1.3.6
+- Refactoring code to improve speed, reduce queries
+
 ## 1.3.5
 - Add umami tracking analytics
 
