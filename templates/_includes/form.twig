@@ -2,6 +2,33 @@
 {% set genreCategories = craft.categories.group('genre').all() %}
 {% set keywordTags = craft.tags.group('keywords').all() %}
 
+{# Collect related element IDs once so we can render filters without per-button queries #}
+{% set bookIds = craft.entries().section('books').ids() %}
+{% set availableStoreIds = bookIds ? craft.categories()
+    .group('store')
+    .relatedTo({
+        sourceElement: bookIds,
+        field: 'storeLinks'
+    })
+    .ids()
+  : [] %}
+{% set availableGenreIds = bookIds ? craft.categories()
+    .group('genre')
+    .relatedTo({
+        sourceElement: bookIds,
+        field: 'genre'
+    })
+    .ids()
+  : [] %}
+{% set availableKeywordIds = bookIds ? craft.tags()
+    .group('keywords')
+    .relatedTo({
+        sourceElement: bookIds,
+        field: 'keywords'
+    })
+    .ids()
+  : [] %}
+
 <form id="filterForm" method="get" action="/search" class="xs:space-y-4 lg:space-y-6">
 
     <!-- Form -->
@@ -23,15 +50,7 @@
     <h2 class="uppercase text-gray-700">Store</h2>
     <div class="flex flex-wrap gap-2">
         {% for category in storeCategories %}
-            {% set relatedEntriesExist = craft.entries()
-                .section('books')
-                .relatedTo({
-                    targetElement: category,
-                    field: 'storeLinks'
-                }) 
-                .exists() %}
-
-            {% if relatedEntriesExist %}
+            {% if category.id in availableStoreIds %}
                 <button type="button"
                     class="store-button uppercase 
                     xs:px-2 md:px-3 lg:px-4 
@@ -47,14 +66,9 @@
 
     <!-- Genre Section -->
     <h2 class="uppercase text-gray-700">Genre</h2>
-    <div class="flex flex-wrap gap-2">
+   <div class="flex flex-wrap gap-2">
         {% for category in genreCategories %}
-            {% set relatedEntriesExist = craft.entries()
-                .section('books')
-                .relatedTo(category)
-                .exists() %}
-            
-            {% if relatedEntriesExist %}
+            {% if category.id in availableGenreIds %}
                 <button type="button"
                     class="genre-button uppercase 
                     xs:px-2 md:px-3 lg:px-4 
@@ -72,12 +86,7 @@
     <h2 class="uppercase text-gray-700">Keywords</h2>
     <div class="flex flex-wrap gap-2">
         {% for tag in keywordTags %}
-            {% set relatedEntriesExist = craft.entries()
-                .section('books')
-                .relatedTo(tag)
-                .exists() %}
-            
-            {% if relatedEntriesExist %}
+            {% if tag.id in availableKeywordIds %}
                 <button type="button"
                     class="keyword-button text-xs uppercase px-2 py-1 bg-gray-300 text-gray-800 hover:bg-yellow-300 transition-colors"
                     data-value="{{ tag.slug }}">
