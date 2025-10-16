@@ -16,7 +16,6 @@
         {% set entries = craft.entries()
             .section('books')
             .relatedTo(tag)
-            .orderBy('RAND()')
             .all() %}
 
             {% if entries|length %}

@@ -12,7 +12,6 @@
     {% set entries = craft.entries()
       .section('books')
       .relatedTo(category)
-      .orderBy('RAND()')
       .all() %}
   
 
