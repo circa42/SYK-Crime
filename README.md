@@ -1,6 +1,7 @@
 # SYK Change Overview
 
-High-level milestones that track the evolution of the site. The latest release line is 1.3.x.
+## 1.3.5
+- Add umami tracking analytics
 
 ## 1.3.4 — Mobile & Search Polish
 - Tightened search logic (correct AND/OR behaviour) and streamlined the search/clear controls.
