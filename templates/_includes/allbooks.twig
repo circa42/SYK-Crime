@@ -13,36 +13,42 @@
 {% set selectedGenres = genreSlugs ? craft.categories.group('genre').slug(genreSlugs).all() : [] %}
 {% set selectedKeywords = keywordSlugs ? craft.tags.group('keywords').slug(keywordSlugs).all() : [] %}
 
+
+
+
 {% set entriesQuery = craft.entries().section('books').search(searchTerm) %}
 
-{# Apply genre filtering #}
-{% if genreSlugs %}
-    {% set genreIds = craft.categories.group('genre').slug(genreSlugs).ids() %}
-    {% set entriesQuery = entriesQuery.relatedTo({ targetElement: genreIds }) %}
+{% set storeIds   = storeSlugs|length   ? craft.categories.group('store').slug(storeSlugs).ids()   : [] %}
+{% set genreIds   = genreSlugs|length   ? craft.categories.group('genre').slug(genreSlugs).ids()   : [] %}
+{% set keywordIds = keywordSlugs|length ? craft.tags.group('keywords').slug(keywordSlugs).ids()    : [] %}
+
+{# Build AND group — one per field that’s active #}
+{% set andGroup = [] %}
+
+{% if storeIds|length %}
+  {% set andGroup = andGroup|merge([{ field: 'storeLinks', targetElement: storeIds }]) %}
 {% endif %}
 
-{# Apply store filtering #}
-{% if storeSlugs %}
-    {% set storeIds = craft.categories.group('store').slug(storeSlugs).ids() %}
-    {% set entriesQuery = entriesQuery.relatedTo({
-        targetElement: storeIds,
-        field: 'storeLinks.stores' 
-    }) %}
+{% if genreIds|length %}
+  {% set andGroup = andGroup|merge([{ field: 'genre', targetElement: genreIds }]) %}
 {% endif %}
 
-
-{# Apply keyword filtering #}
-{% if keywordSlugs %}
-    {% set keywordIds = craft.tags.group('keywords').slug(keywordSlugs).ids() %}
-    {% set entriesQuery = entriesQuery.relatedTo({ targetElement: keywordIds }) %}
+{% if keywordIds|length %}
+  {% set andGroup = andGroup|merge([{ field: 'keywords', targetElement: keywordIds }]) %}
 {% endif %}
 
-{# Filter for explicit content #}
+{% if andGroup|length %}
+  {% set entriesQuery = entriesQuery.relatedTo(['and']|merge(andGroup)) %}
+{% endif %}
+
+{# Hide explicit entries when toggle is ON (explicit=1) #}
 {% if explicit == '1' %}
-    {% set entriesQuery = entriesQuery.explicit(false) %}
+  {% set entriesQuery = entriesQuery.explicit(false) %}
 {% endif %}
 
-{% set entries = entriesQuery.all() %} 
+{% set entries = entriesQuery.all() %}
+
+
 
     <div class="xs:mx-6 md:mx-auto sm:container my-12">
         <h1 class="xs:text-xl md:text-2xl lg:text-4xl text-bold font-black text-center uppercase bg-yellow-300 px-4 py-2 inline-block mb-12">
@@ -65,6 +71,7 @@
         {% if entries|length %}
             <div class="entry-list">
                 {% for entry in entries %}
+                
                     {% include "_includes/book" %}
                 {% endfor %}
             </div>

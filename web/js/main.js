@@ -342,7 +342,9 @@ document.addEventListener('DOMContentLoaded', function () {
               ? filterForm.getAttribute('action')
               : null;
           const destination = new URL(formAction || window.location.pathname, window.location.origin);
-          window.location.href = destination.href;
+          if (window.history && typeof window.history.replaceState === 'function') {
+              window.history.replaceState({}, document.title, destination.pathname);
+          }
       });
   }
 
