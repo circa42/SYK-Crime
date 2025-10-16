@@ -25,6 +25,14 @@
   transform: none;
 }
 
+.explicit-switch-dot {
+  transition: transform 0.3s ease-in-out;
+}
+
+.explicit-switch-dot.is-on {
+  transform: translateX(1.25rem);
+}
+
 
 
 /* Fix the alignment issue for the Genres button */
