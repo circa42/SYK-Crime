@@ -46,6 +46,17 @@
   {% set entriesQuery = entriesQuery.explicit(false) %}
 {% endif %}
 
+{% set eagerLoadTargets = [
+  'bookCover',
+  'storeLinks.stores',
+  'genre',
+  'keywords',
+  'romanceLevel',
+  'explicitCat'
+] %}
+
+{% set entriesQuery = entriesQuery.with(eagerLoadTargets) %}
+
 {% set entries = entriesQuery.all() %}
 
 
