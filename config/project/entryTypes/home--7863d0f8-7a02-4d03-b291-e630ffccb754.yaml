@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -16,7 +17,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -25,7 +25,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             required: true
             size: null
@@ -41,12 +40,11 @@ fieldLayouts:
             dateAdded: '2024-09-17T22:46:09+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 3822f532-6314-47bd-8921-3df165b3a52a # Body
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -55,25 +53,25 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-08-31T01:27:47+00:00'
+            dateAdded: '2026-03-27T18:54:02+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: b1296bf0-cb9e-40ef-beeb-f656a558fc18 # Include Books 
+            elementEditCondition: null
+            fieldUid: 796ee489-82bf-4a93-a738-0262b17f1482 # Event Details
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ffe5e136-473d-44fe-84d3-e8ce352ddaa8
+            uid: 83e753dc-75e0-4e12-a302-ac1625645433
             userCondition: null
             warning: null
             width: 100
         name: Content
         uid: a372f05b-c273-4a05-8dcd-5926990818f1
         userCondition: null
+    thumbFieldKey: null
 handle: home
 hasTitleField: true
 icon: house
@@ -85,3 +83,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

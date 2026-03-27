@@ -2,16 +2,24 @@
 {% extends '_layouts/base' %}
 
 {% block content %}
+{% set entry = craft.entries.section('home').one() %}
 <div class="xs:mx-6 md:mx-auto sm:container my-12">
-    {% set entry = craft.entries.section('home').one() %}
-          <article class="ck-content mb-12">
-              {{ entry.body | raw }}
-          </article>
+    {% if entry and entry.body and entry.eventDetails %}
+        <dialog id="homeIntroModal" class="home-modal" aria-labelledby="homeIntroModalTitle" data-modal-auto-open="true">
+            <div class="home-modal__surface" role="document">
+                <div class="home-modal__header">
+                    <h2 id="homeIntroModalTitle" class="home-modal__title">{{ entry.title ? entry.title : 'About This List' }}</h2>
+                    <button type="button" class="home-modal__close" data-modal-close aria-label="Close dialog">&times;</button>
+                </div>
+                <div class="home-modal__body ck-content">
+                    {{ entry.body | raw }}
+                </div>
+            </div>
+        </dialog>
+    {% endif %}
+
     {% set headline = "Books" %}
 
-    {% if entry.includeBooks == 1 %}
-        {% include "_includes/allbooks" %}
-    {% endif %}
-    </div>
+    {% include "_includes/allbooks" %}
+</div>
 {% endblock %}
-

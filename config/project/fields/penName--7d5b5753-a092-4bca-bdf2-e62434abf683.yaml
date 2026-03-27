@@ -2,17 +2,15 @@ columnSuffix: null
 handle: penName
 instructions: null
 name: 'Pen Name'
-searchable: true
+searchable: false
 settings:
   allowSelfRelations: false
   branchLimit: null
-  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: 1
   selectionLabel: null
   showCardsInGrid: false
-  showSearchInput: true
   showSiteMenu: true
   sources: '*'
   targetSiteId: null
