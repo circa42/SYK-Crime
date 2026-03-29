@@ -46,3 +46,4 @@ storage/backups/*
 
 # Ignore web feeds
 /web/feeds/*
+/web/authors.html
