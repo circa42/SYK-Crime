@@ -2,6 +2,7 @@ altTranslationKeyFormat: null
 altTranslationMethod: none
 fieldLayouts:
   76abe164-2c2a-4636-a850-69cf1a34dfcb:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -15,7 +16,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -24,7 +24,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -39,6 +38,7 @@ fieldLayouts:
         name: Content
         uid: 0d6099dc-7377-4fd5-b6c0-b71cf6144abd
         userCondition: null
+    thumbFieldKey: null
 fs: feeds
 handle: feedsVolume
 name: 'Feeds Volume'

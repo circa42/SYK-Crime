@@ -1,37 +1,4 @@
-dateModified: 1760497543
-elementSources:
-  craft\elements\Entry:
-    -
-      defaultSort:
-        - postDate
-        - desc
-      defaultViewMode: ''
-      disabled: false
-      key: '*'
-      tableAttributes:
-        - status
-        - section
-        - postDate
-        - expiryDate
-        - link
-      type: native
-    -
-      key: singles
-      type: native
-    -
-      heading: Structures
-      key: 'heading:ef24fd02-a133-4670-9b16-54cc0247e5ac'
-      type: heading
-    -
-      key: 'section:aa93aced-56a4-4b94-8ffe-80e5cfe98f0a' # Books
-      type: native
-    -
-      heading: Channels
-      key: 'heading:33464fb3-6772-498d-b71f-2ceeacfae5c5'
-      type: heading
-    -
-      key: 'section:1ebab9e0-b7d8-4e9c-a4bd-2dd0933e626a' # Blog
-      type: native
+dateModified: 1774757155
 email:
   fromEmail: andrew@circa42.com
   fromName: 'Stuff Your Kindle: Crime'
@@ -57,6 +24,7 @@ meta:
     1de1c31f-1793-4a6c-ac70-1c5e7e2907a9: Thumb # Thumb
     1e32e33a-2e30-4288-9032-6f6dd47f2bbd: 'Store Links' # Store Links
     1ebab9e0-b7d8-4e9c-a4bd-2dd0933e626a: Blog # Blog
+    4b4faa74-5378-425e-b518-ef3f600d9926: 'Short Read' # Short Read
     5ac2d28b-bcfe-4c01-84bd-7023c7f9fe3b: 'Book Entry' # Book Entry
     5bfe5019-ad3d-44a8-8baf-d4d6cd7ade2e: Description # Description
     6fd0f671-1f0a-4f7d-b765-5b1bf2d05c4d: 'Feed Upload' # Feed Upload
@@ -66,13 +34,12 @@ meta:
     17daa88c-2431-437f-8aad-f702d1cb5dd7: Hook # Hook
     45e385b2-61aa-459b-9af9-130ee578ed93: 'Romance Level' # Romance Level
     46b76175-241b-4807-a8d1-f474d60252b1: Singles # Singles
-    72fd5fbf-d505-4d75-8a03-dbb4ac4d5fa4: Medium # Medium
     86baf7e9-fa04-4917-bea7-e40ea7b944ba: 'Stuff Your Kindle: Crime Edition' # Stuff Your Kindle: Crime Edition
     465bec08-62f6-42c8-812a-654ff208bb73: Embed # Embed
     603eddaf-1f01-40b9-bc37-b24146ec7fa2: Explicit # Explicit
-    619ae31f-ba31-40ac-a935-ac7b965394cc: Simple # Simple
     690f8cf4-eb02-4552-a54b-d6bb5dcbd200: 'Store Link' # Store Link
     794f428d-3f9f-4bb1-8fd7-6ca003d7c247: Store # Store
+    796ee489-82bf-4a93-a738-0262b17f1482: 'Event Details' # Event Details
     3822f532-6314-47bd-8921-3df165b3a52a: Body # Body
     7863d0f8-7a02-4d03-b291-e630ffccb754: Home # Home
     7905d83c-dbcd-4b4a-b792-36421f7e7c4e: 'Feeds Volume' # Feeds Volume
@@ -85,13 +52,11 @@ meta:
     aa93aced-56a4-4b94-8ffe-80e5cfe98f0a: Books # Books
     ab9df739-9a0c-41b9-938d-e282b83861e4: Keywords # Keywords
     b2ac142b-7068-464d-9a9f-89ffe30d6601: Home # Home
-    b1296bf0-cb9e-40ef-beeb-f656a558fc18: 'Include Books ' # Include Books 
     b9390259-c651-4b5a-bf5e-f5a4659cc704: 'Explicit Categories' # Explicit Categories
     bd08465f-6b04-4419-8b44-f53ed8fd4767: Keywords # Keywords
     bd98f8d4-685e-4ff6-ba96-5a59af697eab: Romance # Romance
     c3cceea7-3146-486d-9072-98063e5fa80a: Blog # Blog
     d2e5aeee-67eb-427b-b509-1392eb5ed1d1: 'Author Name' # Author Name
-    d457fdc8-7666-4097-b4a0-920fee4795e1: 'Short Read' # Short Read
     dd0271aa-2c8e-4ac9-af62-7b033f1f8550: Stores # Stores
     e6b43986-34b3-4dae-949d-8b28bbdf62fa: 'Includes Explicit Content?' # Includes Explicit Content?
     e398798c-c71d-49fd-9a2a-9f9f5e96e0fa: 'Store Entry' # Store Entry
@@ -100,21 +65,47 @@ plugins:
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.0.0
+    schemaVersion: 5.0.0.1
   feed-me:
     edition: standard
     enabled: true
-    schemaVersion: 5.1.1
-  guest-entries:
+    schemaVersion: 5.14.0
+  knock-knock:
     edition: standard
-    enabled: true
-    schemaVersion: 2.1.0
+    enabled: false
+    schemaVersion: 1.1.1
+    settings:
+      checkInvalidLogins: false
+      enableCpProtection: false
+      enabled: true
+      forcedRedirect: ''
+      invalidLoginWindowDuration: '3600'
+      loginPath: ''
+      maxInvalidLogins: 10
+      password: 'syK:crime!'
+      siteSettings:
+        __assoc__:
+          -
+            - default
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - ''
+                -
+                  - password
+                  - ''
+                -
+                  - template
+                  - ''
+      template: ''
+      useRemoteIp: false
 system:
   edition: solo
   live: true
   name: 'Stuff Your Kindle: Crime'
   retryDuration: null
-  schemaVersion: 5.8.0.3
+  schemaVersion: 5.9.0.8
   timeZone: America/Vancouver
 users:
   allowPublicRegistration: false

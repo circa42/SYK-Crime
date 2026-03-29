@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   801d6ac7-d504-455c-ae03-33230daf8a0f:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -14,7 +17,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -23,9 +25,8 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -37,13 +38,13 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2024-09-13T17:37:33+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: dd0271aa-2c8e-4ac9-af62-7b033f1f8550 # Stores
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -53,13 +54,13 @@ fieldLayouts:
             width: 25
           -
             dateAdded: '2024-09-10T23:11:33+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 690f8cf4-eb02-4552-a54b-d6bb5dcbd200 # Store Link
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -70,6 +71,7 @@ fieldLayouts:
         name: Content
         uid: b900a89f-8b8d-4e5a-b0f0-ee603ea59114
         userCondition: null
+    thumbFieldKey: null
 handle: storeEntry
 hasTitleField: false
 icon: store
@@ -78,6 +80,7 @@ showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -6,7 +6,8 @@ searchable: false
 settings:
   default: false
   offLabel: 'Long read'
-  onLabel: 'Short Read'
+  onLabel: 'Short read'
+  showLabelsInCards: false
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Lightswitch

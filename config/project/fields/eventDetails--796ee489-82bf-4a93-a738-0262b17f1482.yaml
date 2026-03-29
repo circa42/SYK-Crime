@@ -1,12 +1,13 @@
 columnSuffix: null
-handle: includeBooks
-instructions: 'Turn on to include books'
-name: 'Include Books '
+handle: eventDetails
+instructions: null
+name: 'Event Details'
 searchable: false
 settings:
   default: true
-  offLabel: null
-  onLabel: null
+  offLabel: Hide
+  onLabel: Show
+  showLabelsInCards: false
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Lightswitch

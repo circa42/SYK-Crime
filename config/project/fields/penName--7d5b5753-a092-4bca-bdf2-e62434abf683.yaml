@@ -2,7 +2,7 @@ columnSuffix: null
 handle: penName
 instructions: null
 name: 'Pen Name'
-searchable: true
+searchable: false
 settings:
   allowSelfRelations: false
   branchLimit: null
@@ -11,7 +11,6 @@ settings:
   maxRelations: null
   minRelations: 1
   selectionLabel: null
-  showCardsInGrid: false
   showSearchInput: true
   showSiteMenu: true
   sources: '*'

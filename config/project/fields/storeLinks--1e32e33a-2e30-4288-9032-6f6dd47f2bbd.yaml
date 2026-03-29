@@ -5,8 +5,14 @@ name: 'Store Links'
 searchable: true
 settings:
   createButtonLabel: 'Add store link'
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
-    - e398798c-c71d-49fd-9a2a-9f9f5e96e0fa # Store Entry
+    -
+      __assoc__:
+        -
+          - uid
+          - e398798c-c71d-49fd-9a2a-9f9f5e96e0fa # Store Entry
   includeTableView: false
   maxEntries: null
   minEntries: null

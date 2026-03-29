@@ -1,6 +1,7 @@
 defaultPlacement: end
 fieldLayouts:
   25ae0199-bb85-4be9-877f-d5aeb08b88d2:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -14,7 +15,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -23,7 +23,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -38,6 +37,7 @@ fieldLayouts:
         name: Content
         uid: d2bbfbf9-c0c4-4a65-a8db-719ff2c6eebf
         userCondition: null
+    thumbFieldKey: null
 handle: genre
 name: Genre
 siteSettings:

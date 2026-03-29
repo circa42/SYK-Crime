@@ -1,22 +1,16 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 5ac2d28b-bcfe-4c01-84bd-7023c7f9fe3b # Book Entry
+  -
+    uid: 5ac2d28b-bcfe-4c01-84bd-7023c7f9fe3b # Book Entry
 handle: books
 maxAuthors: 1
 name: Books
 previewTargets:
   -
-    __assoc__:
-      -
-        - label
-        - 'Primary entry page'
-      -
-        - urlFormat
-        - '{url}'
-      -
-        - refresh
-        - '1'
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   86baf7e9-fa04-4917-bea7-e40ea7b944ba: # Stuff Your Kindle: Crime Edition

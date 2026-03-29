@@ -1,5 +1,6 @@
 fieldLayouts:
   63afac0d-f453-470f-9777-f7244fdc4556:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -13,7 +14,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -22,7 +22,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -37,5 +36,6 @@ fieldLayouts:
         name: Content
         uid: ec646b04-3381-4584-85b1-d87c11531a9c
         userCondition: null
+    thumbFieldKey: null
 handle: keywords
 name: Keywords
