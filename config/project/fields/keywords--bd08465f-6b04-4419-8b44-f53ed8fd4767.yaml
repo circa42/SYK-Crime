@@ -6,16 +6,17 @@ searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
   selectionLabel: 'Add a keyword'
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: false
   source: 'taggroup:ab9df739-9a0c-41b9-938d-e282b83861e4' # Keywords
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: null
+  viewMode: list
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Tags

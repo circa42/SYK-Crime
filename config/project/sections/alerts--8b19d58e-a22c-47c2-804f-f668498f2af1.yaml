@@ -1,22 +1,16 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 8e8d3d60-ef5a-4d0e-87ce-462056770daf # Alerts
+  -
+    uid: 8e8d3d60-ef5a-4d0e-87ce-462056770daf # Alerts
 handle: alerts
 maxAuthors: 1
 name: Alerts
 previewTargets:
   -
-    __assoc__:
-      -
-        - label
-        - 'Primary entry page'
-      -
-        - urlFormat
-        - '{url}'
-      -
-        - refresh
-        - '1'
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   86baf7e9-fa04-4917-bea7-e40ea7b944ba: # Stuff Your Kindle: Crime Edition

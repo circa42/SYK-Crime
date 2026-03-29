@@ -1,5 +1,6 @@
 fieldLayouts:
   63afac0d-f453-470f-9777-f7244fdc4556:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -35,5 +36,6 @@ fieldLayouts:
         name: Content
         uid: ec646b04-3381-4584-85b1-d87c11531a9c
         userCondition: null
+    thumbFieldKey: null
 handle: keywords
 name: Keywords

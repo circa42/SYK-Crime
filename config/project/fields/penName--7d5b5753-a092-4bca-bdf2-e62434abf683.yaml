@@ -10,7 +10,7 @@ settings:
   maxRelations: null
   minRelations: 1
   selectionLabel: null
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: true
   sources: '*'
   targetSiteId: null

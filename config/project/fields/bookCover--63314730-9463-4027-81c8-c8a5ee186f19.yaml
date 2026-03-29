@@ -9,6 +9,7 @@ settings:
   allowUploads: true
   allowedKinds: null
   branchLimit: null
+  defaultPlacement: end
   defaultUploadLocationSource: 'volume:922578ca-b0b6-48c0-aae1-c55cd66e3ffd' # Book Covers
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
@@ -21,7 +22,7 @@ settings:
   restrictedLocationSource: 'volume:922578ca-b0b6-48c0-aae1-c55cd66e3ffd' # Book Covers
   restrictedLocationSubpath: null
   selectionLabel: null
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false

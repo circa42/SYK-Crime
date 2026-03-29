@@ -1,6 +1,7 @@
 defaultPlacement: end
 fieldLayouts:
   cba2f5cc-06f1-4f09-b6f3-b2703c0a4f39:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -36,6 +37,7 @@ fieldLayouts:
         name: Content
         uid: 8b8d7fbb-dc73-4a65-927b-9650efb2670d
         userCondition: null
+    thumbFieldKey: null
 handle: romance
 name: Romance
 siteSettings:

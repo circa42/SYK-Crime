@@ -19,7 +19,8 @@
     {% endif %}
 
     {% set headline = "Books" %}
-
-    {% include "_includes/allbooks" %}
+    {% if craft.entries().section('books').status('live').limit(1).exists() %}
+        {% include "_includes/allbooks" %}
+    {% endif %}
 </div>
 {% endblock %}

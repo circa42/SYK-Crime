@@ -6,11 +6,12 @@ searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: 1
   minRelations: 1
   selectionLabel: null
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: true
   source: 'group:794f428d-3f9f-4bb1-8fd7-6ca003d7c247' # Store
   targetSiteId: null
