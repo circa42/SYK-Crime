@@ -16,7 +16,10 @@
 
 
 
-{% set entriesQuery = craft.entries().section('books').search(searchTerm) %}
+{% set entriesQuery = craft.entries()
+  .section('books')
+  .search(searchTerm)
+  .orderBy('postDate asc') %}
 
 {% set storeIds   = storeSlugs|length   ? craft.categories.group('store').slug(storeSlugs).ids()   : [] %}
 {% set genreIds   = genreSlugs|length   ? craft.categories.group('genre').slug(genreSlugs).ids()   : [] %}
