@@ -1,4 +1,14 @@
 <div id="filterDiv" class="relative xs:m-2 md:m-4 lg:m-8 bg-gray-100 border border-gray-100 drop-shadow mb-12 p-12 hidden z-50">
+    <button
+        type="button"
+        id="filterClose"
+        class="transition-opacity hover:opacity-80"
+        style="position:absolute; top:1rem; right:1rem; display:flex; align-items:center; justify-content:center; width:2.5rem; height:2.5rem; border-radius:9999px; background:transparent; color:#000; border:2px solid #000; z-index:10;"
+        onclick="if (window.hideSearchFilterPopup) { window.hideSearchFilterPopup(); } else { const filterDiv = document.getElementById('filterDiv'); const filterOverlay = document.getElementById('filterOverlay'); const mainContainer = document.getElementById('mainContainer'); const siteFooter = document.getElementById('siteFooter'); if (filterDiv) { filterDiv.classList.add('hidden'); filterDiv.classList.remove('animate-slideDown', 'animate-slideUp'); } if (filterOverlay) { filterOverlay.classList.add('hidden', 'opacity-0', 'pointer-events-none'); } if (mainContainer) { mainContainer.classList.remove('blur-sm', 'pointer-events-none'); } if (siteFooter) { siteFooter.classList.remove('blur-sm', 'pointer-events-none'); } }"
+        aria-label="Close search"
+    >
+        &times;
+    </button>
 
     {% include "_includes/form" %}
 </div>
