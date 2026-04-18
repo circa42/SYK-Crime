@@ -436,6 +436,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const filterToggle = document.getElementById('filterToggle');
   const filterDiv = document.getElementById('filterDiv');
   const filterForm = document.getElementById('filterForm');
+  const filterClose = document.getElementById('filterClose');
   const filterOverlay = document.getElementById('filterOverlay');
   const mainContainer = document.getElementById('mainContainer');
   const siteFooter = document.getElementById('siteFooter');
@@ -486,6 +487,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 500);
   }
 
+  window.hideSearchFilterPopup = hideFilterDiv;
+
   filterToggle.addEventListener('click', function (e) {
       e.preventDefault();
       if (filterDiv.classList.contains('hidden')) {
@@ -501,5 +504,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (filterOverlay) {
       filterOverlay.addEventListener('click', hideFilterDiv);
+  }
+
+  if (filterClose) {
+      filterClose.addEventListener('click', hideFilterDiv);
   }
 });
