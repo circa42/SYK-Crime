@@ -78,10 +78,10 @@ function initBadgeTooltips(root = document) {
     trigger.setAttribute('data-tooltip-initialized', 'true');
     setTooltipState(trigger, tooltip, false);
 
-    function openTooltip() {
+    function openTooltip({ focusTrigger = false } = {}) {
       closeOpenTooltips(trigger);
       setTooltipState(trigger, tooltip, true);
-      if (typeof trigger.focus === 'function') {
+      if (focusTrigger && typeof trigger.focus === 'function') {
         try {
           trigger.focus({ preventScroll: true });
         } catch (error) {
@@ -99,11 +99,38 @@ function initBadgeTooltips(root = document) {
       if (trigger.getAttribute('data-tooltip-open') === 'true') {
         closeTooltip();
       } else {
-        openTooltip();
+        openTooltip({ focusTrigger: true });
       }
     }
 
-    trigger.addEventListener('click', toggleTooltip);
+    trigger.addEventListener('pointerdown', function (event) {
+      trigger.dataset.tooltipPointerType = event.pointerType || 'mouse';
+    });
+
+    trigger.addEventListener('mouseenter', function () {
+      openTooltip();
+    });
+
+    trigger.addEventListener('mouseleave', function () {
+      closeTooltip();
+    });
+
+    trigger.addEventListener('focus', function () {
+      openTooltip();
+    });
+
+    trigger.addEventListener('click', function (event) {
+      const pointerType = trigger.dataset.tooltipPointerType || 'mouse';
+
+      if (pointerType === 'mouse') {
+        event.preventDefault();
+        openTooltip();
+        return;
+      }
+
+      toggleTooltip(event);
+    });
+
     trigger.addEventListener('keydown', function (event) {
       if (event.key === 'Enter' || event.key === ' ') {
         toggleTooltip(event);
