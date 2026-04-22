@@ -190,10 +190,89 @@ function getInitialSelection(paramName) {
   return paramValue ? paramValue.split(',').filter(Boolean) : [];
 }
 
-// 
+function initDialogs(root = document) {
+  const baseElement = root || document;
+  const openButtons = baseElement.querySelectorAll('[data-modal-open]');
+  const autoOpenDialogs = baseElement.querySelectorAll('dialog[data-modal-auto-open="true"]');
+
+  openButtons.forEach(button => {
+    if (button.dataset.modalInitialized) {
+      return;
+    }
+
+    const dialogId = button.getAttribute('data-modal-open');
+    const dialog = dialogId ? document.getElementById(dialogId) : null;
+
+    if (!dialog || typeof dialog.showModal !== 'function') {
+      return;
+    }
+
+    button.dataset.modalInitialized = 'true';
+
+    button.addEventListener('click', function () {
+      dialog.returnFocusElement = button;
+      dialog.showModal();
+      document.body.classList.add('modal-open');
+    });
+  });
+
+  const dialogs = baseElement.querySelectorAll('dialog');
+
+  dialogs.forEach(dialog => {
+    if (dialog.dataset.modalSetup) {
+      return;
+    }
+
+    dialog.dataset.modalSetup = 'true';
+
+    function closeDialog() {
+      if (dialog.open) {
+        dialog.close();
+      }
+      document.body.classList.remove('modal-open');
+    }
+
+    dialog.querySelectorAll('[data-modal-close]').forEach(button => {
+      button.addEventListener('click', closeDialog);
+    });
+
+    dialog.addEventListener('click', function (event) {
+      if (event.target === dialog) {
+        closeDialog();
+      }
+    });
+
+    dialog.addEventListener('close', function () {
+      document.body.classList.remove('modal-open');
+      if (dialog.returnFocusElement && typeof dialog.returnFocusElement.focus === 'function') {
+        dialog.returnFocusElement.focus();
+        dialog.returnFocusElement = null;
+      }
+    });
+
+    dialog.addEventListener('cancel', function () {
+      document.body.classList.remove('modal-open');
+    });
+  });
+
+  autoOpenDialogs.forEach(dialog => {
+    if (dialog.dataset.modalAutoOpened) {
+      return;
+    }
+
+    if (!dialog.open && typeof dialog.showModal === 'function') {
+      dialog.dataset.modalAutoOpened = 'true';
+      dialog.showModal();
+      document.body.classList.add('modal-open');
+    }
+  });
+}
+
+//
 
 // Filter logic  
 document.addEventListener('DOMContentLoaded', function () {
+  initDialogs();
   const selectedStores = getInitialSelection('store');
   const selectedGenres = getInitialSelection('genre');
   const selectedKeywords = getInitialSelection('keywords');

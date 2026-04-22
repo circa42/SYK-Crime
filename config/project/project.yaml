@@ -15,9 +15,9 @@ fs:
     hasUrls: true
     name: Images
     settings:
-      path: '@webroot/images/covers'
+      path: $COVERS_FS_PATH
     type: craft\fs\Local
-    url: /images/covers
+    url: $COVERS_BASE_URL
 meta:
   __names__:
     1c31696e-f556-4d1b-902c-6a1df93843bb: Genre # Genre

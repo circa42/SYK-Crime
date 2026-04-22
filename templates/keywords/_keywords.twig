@@ -16,6 +16,7 @@
         {% set entries = craft.entries()
             .section('books')
             .relatedTo(tag)
+            .orderBy('postDate asc')
             .all() %}
 
             {% if entries|length %}
