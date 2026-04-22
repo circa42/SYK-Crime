@@ -1,5 +1,9 @@
 # SYK Change Overview
 
+## 1.3.7
+- Core update
+- x on filter 
+
 ## 1.3.6
 - Refactoring code to improve speed, reduce queries
 
