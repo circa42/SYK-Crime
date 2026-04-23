@@ -1,4 +1,4 @@
-dateModified: 1774757155
+dateModified: 1776923350
 email:
   fromEmail: andrew@circa42.com
   fromName: 'Stuff Your Kindle: Crime'
@@ -100,6 +100,24 @@ plugins:
                   - ''
       template: ''
       useRemoteIp: false
+  sprout-redirects:
+    edition: lite
+    enabled: true
+    schemaVersion: 5.0.2
+sprout:
+  sprout-module-core:
+    modules:
+      BarrelStrength\Sprout\redirects\RedirectsModule:
+        enabled: true
+  sprout-module-redirects:
+    cleanupProbability: 1000
+    enable404RedirectLog: false
+    globallyExcludedUrlPatterns: null
+    matchDefinition: urlWithoutQueryStrings
+    queryStringStrategy: removeQueryStrings
+    structureUid: 8d394f4f-cd96-446c-8bf5-e05009ef0cfe
+    total404Redirects: 250
+    trackRemoteIp: false
 system:
   edition: solo
   live: true

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ee37f2cf8cce5adf0bf4468c14c1cae",
+    "content-hash": "775a74ec99ac4cc0ff919c5fe48bca69",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -43,6 +43,90 @@
             "description": "BaconQrCode is a QR code generator for PHP.",
             "homepage": "https://github.com/Bacon/BaconQrCode",
             "time": "2022-12-07T17:46:57+00:00"
+        },
+        {
+            "name": "barrelstrength/sprout",
+            "version": "5.0.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barrelstrength/sprout.git",
+                "reference": "e904063411d0c3fdeafdc387a556de72b2aa5021"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barrelstrength/sprout/zipball/e904063411d0c3fdeafdc387a556de72b2aa5021",
+                "reference": "e904063411d0c3fdeafdc387a556de72b2aa5021",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0",
+                "giggsey/libphonenumber-for-php": "^8.13",
+                "league/csv": "^9.8",
+                "league/html-to-markdown": "^5.1",
+                "nystudio107/craft-plugin-vite": "^5.0",
+                "php": ">=8.2",
+                "php-science/textrank": "^1.2",
+                "putyourlightson/craft-datastar-module": "^1.0.0-RC.1",
+                "twig/cssinliner-extra": "^v3.7"
+            },
+            "type": "craft-module",
+            "autoload": {
+                "psr-4": {
+                    "BarrelStrength\\Sprout\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Barrel Strength",
+                    "homepage": "https://www.barrelstrengthdesign.com/"
+                }
+            ],
+            "description": "The Sprout Framework module",
+            "support": {
+                "docs": "https://github.com/barrelstrength/craft-sprout",
+                "email": "sprout@barrelstrengthdesign.com",
+                "issues": "https://github.com/barrelstrength/craft-sprout/issues?state=open",
+                "rss": "https://github.com/barrelstrength/craft-sprout/commits/v2.atom",
+                "source": "https://github.com/barrelstrength/craft-sprout"
+            },
+            "time": "2026-02-21T18:20:10+00:00"
+        },
+        {
+            "name": "barrelstrength/sprout-redirects",
+            "version": "5.0.9",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barrelstrength/sprout-redirects/zipball/c654ef906497d6824a35ec6d867727bd1222d5ee",
+                "reference": "c654ef906497d6824a35ec6d867727bd1222d5ee",
+                "shasum": ""
+            },
+            "require": {
+                "barrelstrength/sprout": "^5.0.14",
+                "craftcms/cms": "^5.1.7"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Sprout Redirects",
+                "handle": "sprout-redirects",
+                "developer": "Barrel Strength Design",
+                "developerUrl": "https://barrelstrengthdesign.com",
+                "developerEmail": "support@barrelstrengthdesign.com",
+                "documentationUrl": "https://barrelstrengthdesign.com",
+                "class": "BarrelStrength\\SproutRedirects\\SproutRedirects"
+            },
+            "autoload": {
+                "psr-4": {
+                    "BarrelStrength\\SproutRedirects\\": "src/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "time": "2026-02-21T18:22:08+00:00"
         },
         {
             "name": "brick/math",
@@ -1616,6 +1700,141 @@
                 "source": "https://github.com/ezyang/htmlpurifier/tree/v4.19.0"
             },
             "time": "2025-10-17T16:34:55+00:00"
+        },
+        {
+            "name": "giggsey/libphonenumber-for-php",
+            "version": "8.13.55",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/giggsey/libphonenumber-for-php.git",
+                "reference": "6e28b3d53cf96d7f41c83d9b80b6021ecbd00537"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/6e28b3d53cf96d7f41c83d9b80b6021ecbd00537",
+                "reference": "6e28b3d53cf96d7f41c83d9b80b6021ecbd00537",
+                "shasum": ""
+            },
+            "require": {
+                "giggsey/locale": "^2.0",
+                "php": "^7.4|^8.0",
+                "symfony/polyfill-mbstring": "^1.17"
+            },
+            "replace": {
+                "giggsey/libphonenumber-for-php-lite": "self.version"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.64",
+                "pear/pear-core-minimal": "^1.10",
+                "pear/pear_exception": "^1.0",
+                "pear/versioncontrol_git": "^0.7",
+                "phing/phing": "^3.0",
+                "php-coveralls/php-coveralls": "^2.0",
+                "phpunit/phpunit": "^9.6",
+                "symfony/console": "^v5.2",
+                "symfony/var-exporter": "^5.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "libphonenumber\\": "src/"
+                },
+                "exclude-from-classmap": [
+                    "/src/data/",
+                    "/src/carrier/data/",
+                    "/src/geocoding/data/",
+                    "/src/timezone/data/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Joshua Gigg",
+                    "email": "giggsey@gmail.com",
+                    "homepage": "https://giggsey.com/"
+                }
+            ],
+            "description": "PHP Port of Google's libphonenumber",
+            "homepage": "https://github.com/giggsey/libphonenumber-for-php",
+            "keywords": [
+                "geocoding",
+                "geolocation",
+                "libphonenumber",
+                "mobile",
+                "phonenumber",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/giggsey/libphonenumber-for-php/issues",
+                "source": "https://github.com/giggsey/libphonenumber-for-php"
+            },
+            "time": "2025-02-14T08:14:08+00:00"
+        },
+        {
+            "name": "giggsey/locale",
+            "version": "2.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/giggsey/Locale.git",
+                "reference": "fe741e99ae6ccbe8132f3d63d8ec89924e689778"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/giggsey/Locale/zipball/fe741e99ae6ccbe8132f3d63d8ec89924e689778",
+                "reference": "fe741e99ae6ccbe8132f3d63d8ec89924e689778",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "ext-json": "*",
+                "friendsofphp/php-cs-fixer": "^3.66",
+                "infection/infection": "^0.29|^0.32.0",
+                "php-coveralls/php-coveralls": "^2.7",
+                "phpstan/extension-installer": "^1.4.3",
+                "phpstan/phpstan": "^2.1.7",
+                "phpstan/phpstan-deprecation-rules": "^2.0.1",
+                "phpstan/phpstan-phpunit": "^2.0.4",
+                "phpstan/phpstan-strict-rules": "^2.0.3",
+                "phpunit/phpunit": "^10.5.45",
+                "symfony/console": "^6.4",
+                "symfony/filesystem": "^6.4",
+                "symfony/finder": "^6.4",
+                "symfony/process": "^6.4",
+                "symfony/var-exporter": "^6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Giggsey\\Locale\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joshua Gigg",
+                    "email": "giggsey@gmail.com",
+                    "homepage": "https://giggsey.com/"
+                }
+            ],
+            "description": "Locale functions required by libphonenumber-for-php",
+            "support": {
+                "issues": "https://github.com/giggsey/Locale/issues",
+                "source": "https://github.com/giggsey/Locale/tree/2.9.0"
+            },
+            "time": "2026-02-24T15:32:13+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -3380,6 +3599,45 @@
             "time": "2026-01-30T19:10:22+00:00"
         },
         {
+            "name": "nystudio107/craft-plugin-vite",
+            "version": "5.0.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft-plugin-vite/zipball/023ea9013f03ac8b15c9b800c66943ce4d02cf48",
+                "reference": "023ea9013f03ac8b15c9b800c66943ce4d02cf48",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\pluginvite\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com"
+                }
+            ],
+            "description": "Plugin Vite is the conduit between Craft CMS plugins and Vite, with manifest.json & HMR support",
+            "keywords": [
+                "craftcms",
+                "plugin",
+                "vite"
+            ],
+            "support": {
+                "docs": "https://github.com/nystudio107/craft-plugin-vite/blob/v5/README.md",
+                "issues": "https://github.com/nystudio107/craft-plugin-vite/issues"
+            },
+            "time": "2024-08-14T02:02:01+00:00"
+        },
+        {
             "name": "oscarotero/html-parser",
             "version": "v0.1.8",
             "dist": {
@@ -3485,6 +3743,52 @@
                 "source": "https://github.com/paragonie/constant_time_encoding"
             },
             "time": "2025-09-24T15:06:41+00:00"
+        },
+        {
+            "name": "php-science/textrank",
+            "version": "1.2.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DavidBelicza/PHP-Science-TextRank/zipball/d63788f7f7305b8dd726a367a5653cdd5dac7fba",
+                "reference": "d63788f7f7305b8dd726a367a5653cdd5dac7fba",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-mbstring": "*",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpScience\\TextRank\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Belicza",
+                    "email": "david@belicza.com"
+                }
+            ],
+            "description": "TextRank (automatic text summarization) for PHP.",
+            "keywords": [
+                "ai",
+                "artificial",
+                "automatic",
+                "intelligence",
+                "php",
+                "php8",
+                "science",
+                "strict",
+                "summarization",
+                "textrank"
+            ],
+            "time": "2023-12-29T15:21:30+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -4475,6 +4779,55 @@
             "time": "2021-10-29T13:26:27+00:00"
         },
         {
+            "name": "putyourlightson/craft-datastar-module",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/putyourlightson/craft-datastar-module.git",
+                "reference": "b2b9eaad4a5db4555c4eb168adeab8854d036c8a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/putyourlightson/craft-datastar-module/zipball/b2b9eaad4a5db4555c4eb168adeab8854d036c8a",
+                "reference": "b2b9eaad4a5db4555c4eb168adeab8854d036c8a",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.4",
+                "php": "^8.2",
+                "starfederation/datastar-php": "^1.0.0"
+            },
+            "require-dev": {
+                "craftcms/ecs": "dev-main",
+                "craftcms/phpstan": "dev-main",
+                "markhuot/craft-pest-core": "^2.0.4",
+                "nystudio107/craft-autocomplete": "^1.12"
+            },
+            "type": "yii-module",
+            "autoload": {
+                "psr-4": {
+                    "putyourlightson\\datastar\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "mit"
+            ],
+            "description": "A template-driven, reactive hypermedia framework for Craft.",
+            "support": {
+                "docs": "https://github.com/putyourlightson/craft-datastar-module",
+                "issues": "https://github.com/putyourlightson/craft-datastar-module/issues",
+                "source": "https://github.com/putyourlightson/craft-datastar-module"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/bencroker",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-04-20T14:57:42+00:00"
+        },
+        {
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
             "dist": {
@@ -4805,6 +5158,53 @@
                 }
             ],
             "time": "2026-03-23T22:56:56+00:00"
+        },
+        {
+            "name": "starfederation/datastar-php",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/starfederation/datastar-php.git",
+                "reference": "0114ec8e5f38f5ebb4f5c54deed21bf95ea39f11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/starfederation/datastar-php/zipball/0114ec8e5f38f5ebb4f5c54deed21bf95ea39f11",
+                "reference": "0114ec8e5f38f5ebb4f5c54deed21bf95ea39f11",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "craftcms/ecs": "dev-main",
+                "craftcms/phpstan": "dev-main",
+                "pestphp/pest": "^3.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "starfederation\\datastar\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "mit"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Croker",
+                    "homepage": "https://putyourlightson.com/",
+                    "role": "Author"
+                }
+            ],
+            "description": "A PHP SDK for working with Datastar.",
+            "support": {
+                "docs": "https://github.com/starfederation/datastar-php",
+                "issues": "https://github.com/starfederation/datastar-php/issues",
+                "source": "https://github.com/starfederation/datastar-php"
+            },
+            "time": "2026-04-16T18:20:32+00:00"
         },
         {
             "name": "symfony/clock",
@@ -7450,6 +7850,130 @@
             ],
             "description": "PHP library for parsing a string containing a full name into its parts",
             "time": "2019-11-14T14:08:48+00:00"
+        },
+        {
+            "name": "tijsverkoyen/css-to-inline-styles",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tijsverkoyen/CssToInlineStyles.git",
+                "reference": "f0292ccf0ec75843d65027214426b6b163b48b41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/f0292ccf0ec75843d65027214426b6b163b48b41",
+                "reference": "f0292ccf0ec75843d65027214426b6b163b48b41",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "php": "^7.4 || ^8.0",
+                "symfony/css-selector": "^5.4 || ^6.0 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-phpunit": "^2.0",
+                "phpunit/phpunit": "^8.5.21 || ^9.5.10"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TijsVerkoyen\\CssToInlineStyles\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Tijs Verkoyen",
+                    "email": "css_to_inline_styles@verkoyen.eu",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
+            "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
+            "support": {
+                "issues": "https://github.com/tijsverkoyen/CssToInlineStyles/issues",
+                "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.4.0"
+            },
+            "time": "2025-12-02T11:56:42+00:00"
+        },
+        {
+            "name": "twig/cssinliner-extra",
+            "version": "v3.24.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/cssinliner-extra.git",
+                "reference": "c25fa18b09a418e4d1454ec291f9406f630675ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/cssinliner-extra/zipball/c25fa18b09a418e4d1454ec291f9406f630675ba",
+                "reference": "c25fa18b09a418e4d1454ec291f9406f630675ba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1.0",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "tijsverkoyen/css-to-inline-styles": "^2.0",
+                "twig/twig": "^3.13|^4.0"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "Resources/functions.php"
+                ],
+                "psr-4": {
+                    "Twig\\Extra\\CssInliner\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "A Twig extension to allow inlining CSS",
+            "homepage": "https://twig.symfony.com",
+            "keywords": [
+                "css",
+                "inlining",
+                "twig"
+            ],
+            "support": {
+                "source": "https://github.com/twigphp/cssinliner-extra/tree/v3.24.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/twig/twig",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-12-02T14:45:16+00:00"
         },
         {
             "name": "twig/twig",
