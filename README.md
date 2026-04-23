@@ -1,6 +1,9 @@
 # SYK Change Overview
 
 ## 1.3.8
+- Redirects
+
+## 1.3.7
 - Core update
 - x on filter 
 

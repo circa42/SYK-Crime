@@ -2,6 +2,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
+    "barrelstrength/sprout-redirects": "^5.0.9",
     "craftcms/ckeditor": "^5.4.0",
     "craftcms/cms": "^5.9.20",
     "craftcms/feed-me": "6.11.0",
