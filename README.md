@@ -1,5 +1,9 @@
 # SYK Change Overview
 
+## 1.3.8.1
+- Reverting redirects from /about 
+- Restoring /about in main nav 
+
 ## 1.3.8.1 
 - canary - force reload 
 
