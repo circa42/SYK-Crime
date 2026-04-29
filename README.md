@@ -1,6 +1,6 @@
 # SYK Change Overview
 
-## 1.3.8.1
+## 1.3.8.2
 - Reverting redirects from /about 
 - Restoring /about in main nav 
 
