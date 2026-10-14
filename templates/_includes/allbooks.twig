@@ -84,10 +84,7 @@
         </div>
         {% if entries|length %}
             <div class="entry-list">
-                {% for entry in entries %}
-                
-                    {% include "_includes/book" %}
-                {% endfor %}
+                {% include '_includes/book-list' %}
             </div>
         {% else %}
             <p>No results found based on your criteria.</p>

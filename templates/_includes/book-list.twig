@@ -1,0 +1,16 @@
+{# The query supplies postDate asc; preserve that order within both groups. #}
+{% set priorityEntries = [] %}
+{% set remainingEntries = [] %}
+
+{% for entry in entries %}
+    {% set authorName = (entry.authorName ?? '')|lower %}
+    {% if 'caren' in authorName or 'hahn' in authorName %}
+        {% set priorityEntries = priorityEntries|merge([entry]) %}
+    {% else %}
+        {% set remainingEntries = remainingEntries|merge([entry]) %}
+    {% endif %}
+{% endfor %}
+
+{% for entry in priorityEntries|merge(remainingEntries) %}
+    {% include '_includes/book' %}
+{% endfor %}

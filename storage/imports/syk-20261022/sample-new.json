@@ -1,0 +1,216 @@
+[
+  {
+    "Title": "Appointment Kept (A Fog Harbor Mystery)",
+    "Author": "Dani Wood",
+    "Hook": "Tessa Hartwell came to Fog Harbor to shelve books. When the dentist circling her library turns up dead, his secrets, fake pills, and blackmail, are too serious to ignore. Now someone’s after her too.",
+    "BookCoverFileName": "syk-20261022-1L9WzCvETzhxVgUnDhX3uo7atpPz5Lre9.jpg",
+    "storeEntry": [
+      {
+        "fields": {
+          "store": "amazon-us",
+          "link": "https://www.amazon.com/dp/B0G5JFCDSK"
+        }
+      },
+      {
+        "fields": {
+          "store": "amazon-au",
+          "link": "https://www.amazon.com.au/dp/B0G5JFCDSK"
+        }
+      },
+      {
+        "fields": {
+          "store": "amazon-ca",
+          "link": "https://www.amazon.ca/dp/B0G5JFCDSK"
+        }
+      },
+      {
+        "fields": {
+          "store": "amazon-uk",
+          "link": "https://www.amazon.co.uk/dp/B0G5JFCDSK"
+        }
+      }
+    ],
+    "Genre": "Cozy Mystery",
+    "Keywords": [
+      "Amateur sleuth",
+      "Animal sidekick",
+      "Female sleuth",
+      "Small town",
+      "Whodunit"
+    ],
+    "Romance": [],
+    "ExplicitCat": [],
+    "Explicit": false,
+    "ShorterRead": false,
+    "SourceRow": 2
+  },
+  {
+    "Title": "The Reluctant Coroner (Fenway Stevenson Mysteries #1)",
+    "Author": "Paul Austin Ardoin",
+    "Hook": "Blood is thicker than oil... until murder changes everything. Fenway Stevenson returns to the town where her estranged father is practically king. Will the coroner’s murder turn family bonds deadly?",
+    "BookCoverFileName": "syk-20261022-17ZOkaxQNKs6Pa2BqJA0XHfgYfLRrp6ju.jpg",
+    "storeEntry": [
+      {
+        "fields": {
+          "store": "amazon-us",
+          "link": "https://www.amazon.com/dp/B07CKKMDGC"
+        }
+      },
+      {
+        "fields": {
+          "store": "amazon-au",
+          "link": "https://www.amazon.com.au/dp/B07CKKMDGC"
+        }
+      },
+      {
+        "fields": {
+          "store": "amazon-ca",
+          "link": "https://www.amazon.ca/dp/B07CKKMDGC"
+        }
+      },
+      {
+        "fields": {
+          "store": "amazon-uk",
+          "link": "https://www.amazon.co.uk/dp/B07CKKMDGC"
+        }
+      },
+      {
+        "fields": {
+          "store": "barnes-noble",
+          "link": "https://www.barnesandnoble.com/w/the-reluctant-coroner-paul-austin-ardoin/1128732453?ean=2940161617106"
+        }
+      },
+      {
+        "fields": {
+          "store": "kobo",
+          "link": "https://www.kobo.com/us/en/ebook/the-reluctant-coroner"
+        }
+      },
+      {
+        "fields": {
+          "store": "apple-books",
+          "link": "https://books.apple.com/us/book/the-reluctant-coroner/id1426247475"
+        }
+      },
+      {
+        "fields": {
+          "store": "google",
+          "link": "https://play.google.com/store/books/details?id=WL2XDwAAQBAJ"
+        }
+      }
+    ],
+    "Genre": "Mystery",
+    "Keywords": [
+      "Female sleuth",
+      "Hard-boiled",
+      "Police procedural",
+      "Small town",
+      "Whodunit"
+    ],
+    "Romance": [
+      "No Spice"
+    ],
+    "ExplicitCat": [
+      "Language"
+    ],
+    "Explicit": true,
+    "ShorterRead": false,
+    "SourceRow": 3
+  },
+  {
+    "Title": "A Cut Above",
+    "Author": "Rebekah Dodson",
+    "Hook": "After finishing third on SuperChefs, Allison Chase teams with detective Lucas Gray to investigate when former castmates fall victim to deadly tragedies.",
+    "BookCoverFileName": "syk-20261022-1qjgdJIAVxrDpovD7oRTrHQeJNrLHwHwi.webp",
+    "storeEntry": [
+      {
+        "fields": {
+          "store": "amazon-us",
+          "link": "https://www.amazon.com/dp/B0GG5RJCYD"
+        }
+      },
+      {
+        "fields": {
+          "store": "amazon-au",
+          "link": "https://www.amazon.com.au/dp/B0GG5RJCYD"
+        }
+      },
+      {
+        "fields": {
+          "store": "amazon-ca",
+          "link": "https://www.amazon.ca/dp/B0GG5RJCYD"
+        }
+      },
+      {
+        "fields": {
+          "store": "amazon-uk",
+          "link": "https://www.amazon.co.uk/dp/B0GG5RJCYD"
+        }
+      }
+    ],
+    "Genre": "Thriller",
+    "Keywords": [
+      "Law enforcement",
+      "Morally gray",
+      "Multiple POV",
+      "Serial killer",
+      "Unreliable narrator"
+    ],
+    "Romance": [
+      "Spicy"
+    ],
+    "ExplicitCat": [
+      "Violence",
+      "Language",
+      "Sex"
+    ],
+    "Explicit": true,
+    "ShorterRead": false,
+    "SourceRow": 4
+  },
+  {
+    "Title": "Tinsel Tragedy (Holiday Hijinx Series #1)",
+    "Author": "Clare Lockhart",
+    "Hook": "She can spot a liar—but can she catch a killer? Juliet Marlow escapes to a charming northern resort as Santa's helper, until a dead body brings her past roaring back.",
+    "BookCoverFileName": "syk-20261022-1SjE4-bIzHdPd2ScUAiof4_ng7jAP6eFs.jpg",
+    "storeEntry": [
+      {
+        "fields": {
+          "store": "amazon-us",
+          "link": "https://www.amazon.com/dp/B0DPBDWQV2"
+        }
+      },
+      {
+        "fields": {
+          "store": "amazon-au",
+          "link": "https://www.amazon.com.au/dp/B0DPBDWQV2"
+        }
+      },
+      {
+        "fields": {
+          "store": "amazon-ca",
+          "link": "https://www.amazon.ca/dp/B0DPBDWQV2"
+        }
+      },
+      {
+        "fields": {
+          "store": "amazon-uk",
+          "link": "https://www.amazon.co.uk/dp/B0DPBDWQV2"
+        }
+      }
+    ],
+    "Genre": "Cozy Mystery",
+    "Keywords": [
+      "Amateur sleuth",
+      "Female sleuth",
+      "Friendship",
+      "Holiday",
+      "Whodunit"
+    ],
+    "Romance": [],
+    "ExplicitCat": [],
+    "Explicit": false,
+    "ShorterRead": true,
+    "SourceRow": 27
+  }
+]
