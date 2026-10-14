@@ -1,0 +1,1251 @@
+{
+    "verifiedDates": 124,
+    "catalogBooksChecked": 445,
+    "unrelatedBooksUnchanged": 321,
+    "errors": [],
+    "backup": "\/home\/forge\/syk.on-forge.com\/releases\/80143683\/storage\/backups\/stuff-your-kindle-crime--2026-10-14-031925--v5.11.5.1.sql",
+    "timezone": "America\/Los_Angeles",
+    "templateCachesCleared": true,
+    "books": [
+        {
+            "id": 26429,
+            "sourceRow": 2,
+            "title": "A Bridesmaid’s Guide to Murder : An Emelia Walsh Cozy Mystery (Emelia Walsh Sutton Cozy Mysteries Book 1)",
+            "author": "Abigail Scott",
+            "timestamp": "9\/19\/2026 17:11:19",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-19T17:11:19-07:00",
+            "changed": true
+        },
+        {
+            "id": 26194,
+            "sourceRow": 3,
+            "title": "A Cut Above",
+            "author": "Rebekah Dodson",
+            "timestamp": "9\/18\/2026 13:59:59",
+            "oldPostDate": "2026-10-13T17:42:00-07:00",
+            "newPostDate": "2026-09-18T13:59:59-07:00",
+            "changed": true
+        },
+        {
+            "id": 27175,
+            "sourceRow": 5,
+            "title": "A Hare's Breadth from Death (The Thistle and Hare Mysteries #1)",
+            "author": "Maya Black",
+            "timestamp": "10\/2\/2026 14:43:28",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-02T14:43:28-07:00",
+            "changed": true
+        },
+        {
+            "id": 26631,
+            "sourceRow": 6,
+            "title": "A Murder of Crowes (The Crowes Trilogy #1)",
+            "author": "Michael Paul Patrick",
+            "timestamp": "9\/22\/2026 15:31:08",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-22T15:31:08-07:00",
+            "changed": true
+        },
+        {
+            "id": 26233,
+            "sourceRow": 7,
+            "title": "A Road More Travaled (Cumberlin Intelligence Agency #1)",
+            "author": "Rebekah Dodson",
+            "timestamp": "9\/18\/2026 14:03:50",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-18T14:03:50-07:00",
+            "changed": true
+        },
+        {
+            "id": 26741,
+            "sourceRow": 8,
+            "title": "A Study in Stone: A British Mystery (The Devonshire Mysteries #1)",
+            "author": "Michael Campling",
+            "timestamp": "9\/25\/2026 5:37:52",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-25T05:37:52-07:00",
+            "changed": true
+        },
+        {
+            "id": 26681,
+            "sourceRow": 9,
+            "title": "All Hallows' Eve in Stickleback Hollow (#3 The Mysteries of Stickleback Hollow)",
+            "author": "C.S. Woolley",
+            "timestamp": "9\/24\/2026 1:43:36",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-24T01:43:36-07:00",
+            "changed": true
+        },
+        {
+            "id": 27255,
+            "sourceRow": 10,
+            "title": "All the Bad Girls",
+            "author": "Kim Cresswell",
+            "timestamp": "10\/3\/2026 8:20:19",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-03T08:20:19-07:00",
+            "changed": true
+        },
+        {
+            "id": 26651,
+            "sourceRow": 11,
+            "title": "All the Right Favors",
+            "author": "Cassie Croft",
+            "timestamp": "9\/23\/2026 9:20:56",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-23T09:20:56-07:00",
+            "changed": true
+        },
+        {
+            "id": 27229,
+            "sourceRow": 12,
+            "title": "An Abrupt Departure (A Bleeding Hearts Valley Thriller)",
+            "author": "P.D. Workman",
+            "timestamp": "10\/2\/2026 21:37:33",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-02T21:37:33-07:00",
+            "changed": true
+        },
+        {
+            "id": 26641,
+            "sourceRow": 13,
+            "title": "Apartment 4C",
+            "author": "Michael Paul Patrick",
+            "timestamp": "9\/22\/2026 15:36:58",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-22T15:36:58-07:00",
+            "changed": true
+        },
+        {
+            "id": 26751,
+            "sourceRow": 14,
+            "title": "Appetizers and Alibis",
+            "author": "Erica J Whelton",
+            "timestamp": "9\/25\/2026 8:54:56",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-25T08:54:56-07:00",
+            "changed": true
+        },
+        {
+            "id": 26166,
+            "sourceRow": 15,
+            "title": "Appointment Kept (A Fog Harbor Mystery)",
+            "author": "Dani Wood",
+            "timestamp": "9\/18\/2026 13:18:43",
+            "oldPostDate": "2026-10-13T17:42:00-07:00",
+            "newPostDate": "2026-09-18T13:18:43-07:00",
+            "changed": true
+        },
+        {
+            "id": 27067,
+            "sourceRow": 16,
+            "title": "Beach Club Bloodshed (Barefoot Sleuth Cozy Mystery #1)",
+            "author": "Christine Wellert",
+            "timestamp": "9\/29\/2026 9:28:00",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-29T09:28:00-07:00",
+            "changed": true
+        },
+        {
+            "id": 27145,
+            "sourceRow": 17,
+            "title": "Beds, Breakfasts, & Beta Blockers (Three Dog Mysteries #1)",
+            "author": "Jann Franklin",
+            "timestamp": "10\/2\/2026 14:35:46",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-02T14:35:46-07:00",
+            "changed": true
+        },
+        {
+            "id": 27191,
+            "sourceRow": 18,
+            "title": "Bindings, Crimes & a Chihuahua (Paw-liday Craft Caper)",
+            "author": "Maya Black",
+            "timestamp": "10\/2\/2026 14:57:06",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-02T14:57:06-07:00",
+            "changed": true
+        },
+        {
+            "id": 26959,
+            "sourceRow": 20,
+            "title": "Blood Orchids, Book 1 Paradise Crime Mysteries",
+            "author": "Toby Neal",
+            "timestamp": "9\/28\/2026 10:06:10",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-28T10:06:10-07:00",
+            "changed": true
+        },
+        {
+            "id": 27477,
+            "sourceRow": 21,
+            "title": "Born for Revenge (Paxton & Walsh Mysteries #1)",
+            "author": "Staci Troilo",
+            "timestamp": "10\/9\/2026 12:45:16",
+            "oldPostDate": "2026-10-13T17:45:00-07:00",
+            "newPostDate": "2026-10-09T12:45:16-07:00",
+            "changed": true
+        },
+        {
+            "id": 27159,
+            "sourceRow": 22,
+            "title": "Boudin and Bloodshed (Small Town Girl Mysteries #2)",
+            "author": "Jann Franklin",
+            "timestamp": "10\/2\/2026 14:41:06",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-02T14:41:06-07:00",
+            "changed": true
+        },
+        {
+            "id": 26797,
+            "sourceRow": 23,
+            "title": "Buried Secrets (Ella Perri Mysteries #1)",
+            "author": "Krissy Baccaro",
+            "timestamp": "9\/27\/2026 6:13:24",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-27T06:13:24-07:00",
+            "changed": true
+        },
+        {
+            "id": 26409,
+            "sourceRow": 24,
+            "title": "Call it a Knight",
+            "author": "K Howell",
+            "timestamp": "9\/19\/2026 17:01:00",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-19T17:01:00-07:00",
+            "changed": true
+        },
+        {
+            "id": 26889,
+            "sourceRow": 26,
+            "title": "Clifford's War: Bluegrass Battleground",
+            "author": "J. Denison Reed",
+            "timestamp": "9\/27\/2026 12:02:40",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-27T12:02:40-07:00",
+            "changed": true
+        },
+        {
+            "id": 27437,
+            "sourceRow": 27,
+            "title": "Cody (Reed Hawthorne Security)",
+            "author": "Danielle Pays",
+            "timestamp": "10\/7\/2026 11:59:49",
+            "oldPostDate": "2026-10-13T17:45:00-07:00",
+            "newPostDate": "2026-10-07T11:59:49-07:00",
+            "changed": true
+        },
+        {
+            "id": 26977,
+            "sourceRow": 28,
+            "title": "Cold Hit (Shadowfast Heist Thriller #4)",
+            "author": "Cole Chase",
+            "timestamp": "9\/28\/2026 10:45:51",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-28T10:45:51-07:00",
+            "changed": true
+        },
+        {
+            "id": 27535,
+            "sourceRow": 29,
+            "title": "Cold Press (Anna Burgin British Mystery Thriller Series Book 1)",
+            "author": "David Bradwell",
+            "timestamp": "10\/11\/2026 9:39:37",
+            "oldPostDate": "2026-10-13T17:45:00-07:00",
+            "newPostDate": "2026-10-11T09:39:37-07:00",
+            "changed": true
+        },
+        {
+            "id": 27447,
+            "sourceRow": 30,
+            "title": "Cold Woods",
+            "author": "S. L. Hansen",
+            "timestamp": "10\/8\/2026 5:40:28",
+            "oldPostDate": "2026-10-13T17:45:00-07:00",
+            "newPostDate": "2026-10-08T05:40:28-07:00",
+            "changed": true
+        },
+        {
+            "id": 26467,
+            "sourceRow": 31,
+            "title": "Corktown (Abby Kane Thriller #1)",
+            "author": "Ty Hutchinson",
+            "timestamp": "9\/19\/2026 19:47:59",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-19T19:47:59-07:00",
+            "changed": true
+        },
+        {
+            "id": 27371,
+            "sourceRow": 33,
+            "title": "Dare You? (The Society Book 0)",
+            "author": "Karen Guyler",
+            "timestamp": "10\/5\/2026 2:46:51",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-05T02:46:51-07:00",
+            "changed": true
+        },
+        {
+            "id": 26671,
+            "sourceRow": 35,
+            "title": "Deadly Ruse",
+            "author": "Tina Saxon",
+            "timestamp": "9\/23\/2026 17:52:20",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-23T17:52:20-07:00",
+            "changed": true
+        },
+        {
+            "id": 26545,
+            "sourceRow": 36,
+            "title": "Deadly Sanctuary (Cassidy Knox series #1)",
+            "author": "Shannon Hollinger",
+            "timestamp": "9\/21\/2026 10:38:22",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-21T10:38:22-07:00",
+            "changed": true
+        },
+        {
+            "id": 26721,
+            "sourceRow": 37,
+            "title": "Death Beneath the Covers",
+            "author": "Fiona Tarr",
+            "timestamp": "9\/24\/2026 15:30:40",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-24T15:30:40-07:00",
+            "changed": true
+        },
+        {
+            "id": 26319,
+            "sourceRow": 38,
+            "title": "Death in the Berwyns (Claire Tanner Series #1)",
+            "author": "JJ Sullivan",
+            "timestamp": "9\/18\/2026 23:30:09",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-18T23:30:09-07:00",
+            "changed": true
+        },
+        {
+            "id": 27087,
+            "sourceRow": 39,
+            "title": "Desert Viper: A Stiller–Sawyer Story (The Lost Tomb series Book 11)",
+            "author": "Arla Jones",
+            "timestamp": "9\/29\/2026 15:35:26",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-29T15:35:26-07:00",
+            "changed": true
+        },
+        {
+            "id": 27295,
+            "sourceRow": 40,
+            "title": "Desolation Gulch",
+            "author": "Jessica Jesinghaus",
+            "timestamp": "10\/3\/2026 13:43:16",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-03T13:43:16-07:00",
+            "changed": true
+        },
+        {
+            "id": 27497,
+            "sourceRow": 42,
+            "title": "Don't Close Your Eyes - Book one of the Hallowed Halls series.",
+            "author": "Mary Alford",
+            "timestamp": "10\/10\/2026 12:45:19",
+            "oldPostDate": "2026-10-13T17:45:00-07:00",
+            "newPostDate": "2026-10-10T12:45:19-07:00",
+            "changed": true
+        },
+        {
+            "id": 26949,
+            "sourceRow": 43,
+            "title": "Dwayne Morrow: Welcome to the Morrowverse (Dwayne Morrow Mysteries #1 - #3)",
+            "author": "Darin Miller",
+            "timestamp": "9\/28\/2026 6:17:17",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-28T06:17:17-07:00",
+            "changed": true
+        },
+        {
+            "id": 26525,
+            "sourceRow": 44,
+            "title": "Extraction (US Marshal Thriller Series #1)",
+            "author": "Jodi Burnett",
+            "timestamp": "9\/21\/2026 9:35:37",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-21T09:35:37-07:00",
+            "changed": true
+        },
+        {
+            "id": 26939,
+            "sourceRow": 45,
+            "title": "Feline Protector (City Shifter Mysteries #1)",
+            "author": "Sapphire Wolf",
+            "timestamp": "9\/28\/2026 5:33:16",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-28T05:33:16-07:00",
+            "changed": true
+        },
+        {
+            "id": 26571,
+            "sourceRow": 47,
+            "title": "Fireside and Secrets: A Cozy Mystery with Dragons",
+            "author": "K.E. O'Connor",
+            "timestamp": "9\/22\/2026 3:36:15",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-22T03:36:15-07:00",
+            "changed": true
+        },
+        {
+            "id": 26711,
+            "sourceRow": 48,
+            "title": "Four Good Reasons (Kenna Devlin Mysteries #3)",
+            "author": "Kate Francis",
+            "timestamp": "9\/24\/2026 11:47:46",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-24T11:47:46-07:00",
+            "changed": true
+        },
+        {
+            "id": 26919,
+            "sourceRow": 49,
+            "title": "Game of Lies",
+            "author": "Spencer Guerrero",
+            "timestamp": "9\/27\/2026 16:41:59",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-27T16:41:59-07:00",
+            "changed": true
+        },
+        {
+            "id": 26273,
+            "sourceRow": 50,
+            "title": "Girl in Trouble",
+            "author": "Stacy Claflin",
+            "timestamp": "9\/18\/2026 15:24:33",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-18T15:24:33-07:00",
+            "changed": true
+        },
+        {
+            "id": 27387,
+            "sourceRow": 52,
+            "title": "Haunted in Dearing (The Medium and The Ghost Hunter Book 1)",
+            "author": "Dennis Shock",
+            "timestamp": "10\/5\/2026 7:39:02",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-05T07:39:02-07:00",
+            "changed": true
+        },
+        {
+            "id": 27055,
+            "sourceRow": 53,
+            "title": "Hell as Well",
+            "author": "Becca Lynne",
+            "timestamp": "9\/29\/2026 4:24:31",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-29T04:24:31-07:00",
+            "changed": true
+        },
+        {
+            "id": 27035,
+            "sourceRow": 54,
+            "title": "Here Goes Muffin (The Mysteries of Cozy Cove)",
+            "author": "Virginia K. Bennett",
+            "timestamp": "9\/28\/2026 13:56:32",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-28T13:56:32-07:00",
+            "changed": true
+        },
+        {
+            "id": 26289,
+            "sourceRow": 55,
+            "title": "Honor Roll of Lies",
+            "author": "Darcie Morin",
+            "timestamp": "9\/18\/2026 15:59:39",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-18T15:59:39-07:00",
+            "changed": true
+        },
+        {
+            "id": 26495,
+            "sourceRow": 56,
+            "title": "How to Commit the Perfect Murder in Ten Easy Steps",
+            "author": "Jessica Huntley",
+            "timestamp": "9\/20\/2026 2:25:52",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-20T02:25:52-07:00",
+            "changed": true
+        },
+        {
+            "id": 26309,
+            "sourceRow": 57,
+            "title": "Hunted",
+            "author": "LaBrie James",
+            "timestamp": "9\/18\/2026 21:39:35",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-18T21:39:35-07:00",
+            "changed": true
+        },
+        {
+            "id": 26701,
+            "sourceRow": 58,
+            "title": "I'll Be Your Shadow",
+            "author": "Bobbie Robins",
+            "timestamp": "9\/24\/2026 11:21:02",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-24T11:21:02-07:00",
+            "changed": true
+        },
+        {
+            "id": 26691,
+            "sourceRow": 59,
+            "title": "I'll Never Let You Go (Samantha Raven Book #2)",
+            "author": "Bobbie Robins",
+            "timestamp": "9\/24\/2026 11:04:09",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-24T11:04:09-07:00",
+            "changed": true
+        },
+        {
+            "id": 26899,
+            "sourceRow": 60,
+            "title": "Imprinted",
+            "author": "Elizabeth Charles",
+            "timestamp": "9\/27\/2026 14:37:57",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-27T14:37:57-07:00",
+            "changed": true
+        },
+        {
+            "id": 27107,
+            "sourceRow": 61,
+            "title": "In His Sights (Second Sight #1)",
+            "author": "K.C. Wells",
+            "timestamp": "9\/30\/2026 0:08:00",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-30T00:08:00-07:00",
+            "changed": true
+        },
+        {
+            "id": 27097,
+            "sourceRow": 63,
+            "title": "Inside The Mushroom Farm",
+            "author": "Athena Wynyard",
+            "timestamp": "9\/29\/2026 17:26:05",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-29T17:26:05-07:00",
+            "changed": true
+        },
+        {
+            "id": 26581,
+            "sourceRow": 64,
+            "title": "It Began With a Lie (Secrets of Redemption #1)",
+            "author": "Michele Pariza Wacek",
+            "timestamp": "9\/22\/2026 10:54:13",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-22T10:54:13-07:00",
+            "changed": true
+        },
+        {
+            "id": 27005,
+            "sourceRow": 66,
+            "title": "Joyce AI",
+            "author": "Sabine Frisch",
+            "timestamp": "9\/28\/2026 11:37:25",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-28T11:37:25-07:00",
+            "changed": true
+        },
+        {
+            "id": 26769,
+            "sourceRow": 67,
+            "title": "Judged",
+            "author": "Aime Austin",
+            "timestamp": "9\/26\/2026 20:08:23",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-26T20:08:23-07:00",
+            "changed": true
+        },
+        {
+            "id": 26419,
+            "sourceRow": 68,
+            "title": "Knight Shift",
+            "author": "K Howell",
+            "timestamp": "9\/19\/2026 17:09:54",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-19T17:09:54-07:00",
+            "changed": true
+        },
+        {
+            "id": 26731,
+            "sourceRow": 70,
+            "title": "Lawful Duty: A Devonshire Crime Thriller (The DC Spiller Mysteries #1)",
+            "author": "Michael Campling",
+            "timestamp": "9\/25\/2026 5:30:43",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-25T05:30:43-07:00",
+            "changed": true
+        },
+        {
+            "id": 26601,
+            "sourceRow": 71,
+            "title": "Ledge Pond",
+            "author": "Sangay Glass",
+            "timestamp": "9\/22\/2026 12:30:11",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-22T12:30:11-07:00",
+            "changed": true
+        },
+        {
+            "id": 26449,
+            "sourceRow": 72,
+            "title": "Lest We Forgive (Detective Liz Moorland #1)",
+            "author": "Phillipa Nefri Clark",
+            "timestamp": "9\/19\/2026 19:40:50",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-19T19:40:50-07:00",
+            "changed": true
+        },
+        {
+            "id": 27239,
+            "sourceRow": 73,
+            "title": "Lethal Dissection (Dr. Zora Smyth Thriller Series #1)",
+            "author": "Dobi Cross",
+            "timestamp": "10\/3\/2026 2:12:06",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-03T02:12:06-07:00",
+            "changed": true
+        },
+        {
+            "id": 27305,
+            "sourceRow": 74,
+            "title": "Litter Stalker Prey",
+            "author": "E Elizabeth Franklin",
+            "timestamp": "10\/4\/2026 0:17:59",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-04T00:17:59-07:00",
+            "changed": true
+        },
+        {
+            "id": 26379,
+            "sourceRow": 75,
+            "title": "Low Water",
+            "author": "JJ Sullivan",
+            "timestamp": "9\/19\/2026 6:48:16",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-19T06:48:16-07:00",
+            "changed": true
+        },
+        {
+            "id": 26243,
+            "sourceRow": 76,
+            "title": "Meditation and Mischief (Magical Cozy Mystery Book Store #8)",
+            "author": "Elizabeth Pantley",
+            "timestamp": "9\/18\/2026 14:26:57",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-18T14:26:57-07:00",
+            "changed": true
+        },
+        {
+            "id": 26253,
+            "sourceRow": 77,
+            "title": "Michigan Fixer",
+            "author": "Phil Warner",
+            "timestamp": "9\/18\/2026 14:28:17",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-18T14:28:17-07:00",
+            "changed": true
+        },
+        {
+            "id": 26995,
+            "sourceRow": 78,
+            "title": "Murder by Moonlight (Felines of Fairytale Forest #1)",
+            "author": "K.L. Montgomery",
+            "timestamp": "9\/28\/2026 11:04:49",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-28T11:04:49-07:00",
+            "changed": true
+        },
+        {
+            "id": 27315,
+            "sourceRow": 79,
+            "title": "Murder By Thread (Willow Creek Series #1)",
+            "author": "Lainey Hollis",
+            "timestamp": "10\/4\/2026 1:48:51",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-04T01:48:51-07:00",
+            "changed": true
+        },
+        {
+            "id": 27015,
+            "sourceRow": 80,
+            "title": "Murder Calls at Shadow Falls (Olivia Twist Series #1)",
+            "author": "Irene Jorgensen",
+            "timestamp": "9\/28\/2026 13:36:00",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-28T13:36:00-07:00",
+            "changed": true
+        },
+        {
+            "id": 27397,
+            "sourceRow": 81,
+            "title": "Murder on Liberty Bay (Pacific Northwest Cozy Culinary Series book 1)",
+            "author": "Dennis Shock",
+            "timestamp": "10\/5\/2026 7:48:00",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-05T07:48:00-07:00",
+            "changed": true
+        },
+        {
+            "id": 27467,
+            "sourceRow": 82,
+            "title": "Murder On Main Street (Cottage Country Cozy Mysteries #1)",
+            "author": "Anne Shillolo",
+            "timestamp": "10\/9\/2026 11:58:10",
+            "oldPostDate": "2026-10-13T17:45:00-07:00",
+            "newPostDate": "2026-10-09T11:58:10-07:00",
+            "changed": true
+        },
+        {
+            "id": 27427,
+            "sourceRow": 84,
+            "title": "Murder, 9 Points",
+            "author": "J Caldwell",
+            "timestamp": "10\/6\/2026 21:00:20",
+            "oldPostDate": "2026-10-13T17:45:00-07:00",
+            "newPostDate": "2026-10-06T21:00:20-07:00",
+            "changed": true
+        },
+        {
+            "id": 27507,
+            "sourceRow": 86,
+            "title": "Night Comes Down (The C.T. Ferguson Mysteries #13)",
+            "author": "Tom Fowler",
+            "timestamp": "10\/10\/2026 13:27:10",
+            "oldPostDate": "2026-10-13T17:45:00-07:00",
+            "newPostDate": "2026-10-10T13:27:10-07:00",
+            "changed": true
+        },
+        {
+            "id": 27117,
+            "sourceRow": 87,
+            "title": "Nightwatch (Sentry 6 series #1)",
+            "author": "Nellie K. Neves",
+            "timestamp": "10\/2\/2026 6:48:57",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-02T06:48:57-07:00",
+            "changed": true
+        },
+        {
+            "id": 26561,
+            "sourceRow": 88,
+            "title": "Not Her Story Anymore",
+            "author": "Momo Marie",
+            "timestamp": "9\/21\/2026 10:47:43",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-21T10:47:43-07:00",
+            "changed": true
+        },
+        {
+            "id": 26399,
+            "sourceRow": 89,
+            "title": "One Wonders (Silas McKay Suspense Series #1)",
+            "author": "Luana Ehrlich",
+            "timestamp": "9\/19\/2026 13:21:08",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-19T13:21:08-07:00",
+            "changed": true
+        },
+        {
+            "id": 26591,
+            "sourceRow": 90,
+            "title": "Out of the Ashes (Danger in Destiny #1)",
+            "author": "Melanie D. Snitker",
+            "timestamp": "9\/22\/2026 11:14:47",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-22T11:14:47-07:00",
+            "changed": true
+        },
+        {
+            "id": 27211,
+            "sourceRow": 91,
+            "title": "Out With the Sunset (Parks Pat Mysteries #1)",
+            "author": "P.D. Workman",
+            "timestamp": "10\/2\/2026 21:30:13",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-02T21:30:13-07:00",
+            "changed": true
+        },
+        {
+            "id": 27325,
+            "sourceRow": 92,
+            "title": "Over My Dead Husband's Body (The Ghosts of Landover Mysteries #1)",
+            "author": "Etta Faire",
+            "timestamp": "10\/4\/2026 19:14:06",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-04T19:14:06-07:00",
+            "changed": true
+        },
+        {
+            "id": 26843,
+            "sourceRow": 94,
+            "title": "Paw & Order (The Detective Whiskers Cozy Mystery Series)",
+            "author": "Chris Abernathy",
+            "timestamp": "9\/27\/2026 7:31:34",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-27T07:31:34-07:00",
+            "changed": true
+        },
+        {
+            "id": 26389,
+            "sourceRow": 95,
+            "title": "Peril Among the Pansies",
+            "author": "Kristy T Dixon",
+            "timestamp": "9\/19\/2026 8:40:43",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-19T08:40:43-07:00",
+            "changed": true
+        },
+        {
+            "id": 26909,
+            "sourceRow": 96,
+            "title": "Plan X: A Shakespearean Thriller",
+            "author": "Lise McClendon",
+            "timestamp": "9\/27\/2026 15:52:13",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-27T15:52:13-07:00",
+            "changed": true
+        },
+        {
+            "id": 26661,
+            "sourceRow": 97,
+            "title": "Poison Point (Wild Blue Air Series #1)",
+            "author": "Sabine Frisch",
+            "timestamp": "9\/23\/2026 10:44:17",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-23T10:44:17-07:00",
+            "changed": true
+        },
+        {
+            "id": 26621,
+            "sourceRow": 98,
+            "title": "Pranks, Poitín, and Púcas (Skye O'Shea Paranormal Cozy Mystery Series #3)",
+            "author": "Rowan Dillon",
+            "timestamp": "9\/22\/2026 14:13:26",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-22T14:13:26-07:00",
+            "changed": true
+        },
+        {
+            "id": 27265,
+            "sourceRow": 100,
+            "title": "Reckoning (A Jordan Reynolds Thriller #1)",
+            "author": "Sable Noire",
+            "timestamp": "10\/3\/2026 10:18:11",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-03T10:18:11-07:00",
+            "changed": true
+        },
+        {
+            "id": 26787,
+            "sourceRow": 102,
+            "title": "Rejection is Murder",
+            "author": "Carol E. Ayer",
+            "timestamp": "9\/27\/2026 5:55:19",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-27T05:55:19-07:00",
+            "changed": true
+        },
+        {
+            "id": 27407,
+            "sourceRow": 104,
+            "title": "Rule #1: Spies Don't Fall In Love",
+            "author": "Natalie Tay",
+            "timestamp": "10\/5\/2026 11:18:29",
+            "oldPostDate": "2026-10-13T17:45:00-07:00",
+            "newPostDate": "2026-10-05T11:18:29-07:00",
+            "changed": true
+        },
+        {
+            "id": 26515,
+            "sourceRow": 105,
+            "title": "Run For The Hills (Flint River Series #1)",
+            "author": "Jodi Burnett",
+            "timestamp": "9\/21\/2026 9:27:02",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-21T09:27:02-07:00",
+            "changed": true
+        },
+        {
+            "id": 27275,
+            "sourceRow": 106,
+            "title": "Run for the Roses (Circles #1)",
+            "author": "Elizabeth Noble",
+            "timestamp": "10\/3\/2026 10:34:55",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-03T10:34:55-07:00",
+            "changed": true
+        },
+        {
+            "id": 27285,
+            "sourceRow": 107,
+            "title": "Scintilla (El Corazon #1)",
+            "author": "Elizabeth Noble",
+            "timestamp": "10\/3\/2026 11:00:25",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-03T11:00:25-07:00",
+            "changed": true
+        },
+        {
+            "id": 26611,
+            "sourceRow": 109,
+            "title": "Sirens of the Siamese Ponds Wilderness",
+            "author": "S.G. Glass",
+            "timestamp": "9\/22\/2026 12:43:54",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-22T12:43:54-07:00",
+            "changed": true
+        },
+        {
+            "id": 26863,
+            "sourceRow": 110,
+            "title": "Sixty (Linda Radcliffe Chronicles #1)",
+            "author": "Yvette Walker",
+            "timestamp": "9\/27\/2026 9:09:57",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-27T09:09:57-07:00",
+            "changed": true
+        },
+        {
+            "id": 27351,
+            "sourceRow": 111,
+            "title": "Squashed in the Pumpkin",
+            "author": "Jemima Jenkins",
+            "timestamp": "10\/5\/2026 0:19:59",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-05T00:19:59-07:00",
+            "changed": true
+        },
+        {
+            "id": 27335,
+            "sourceRow": 112,
+            "title": "Striker's Stand Straight Flight (Team Colt #0.5)",
+            "author": "Arleigh Jacobs",
+            "timestamp": "10\/4\/2026 19:25:18",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-04T19:25:18-07:00",
+            "changed": true
+        },
+        {
+            "id": 27077,
+            "sourceRow": 113,
+            "title": "Sugar: Black Ops: Sweet Spy Games (The Sugar Directive #3)",
+            "author": "Arla Jones",
+            "timestamp": "9\/29\/2026 15:25:02",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-29T15:25:02-07:00",
+            "changed": true
+        },
+        {
+            "id": 27127,
+            "sourceRow": 114,
+            "title": "Take Her Under",
+            "author": "Pamela Crane",
+            "timestamp": "10\/2\/2026 10:32:13",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-02T10:32:13-07:00",
+            "changed": true
+        },
+        {
+            "id": 27361,
+            "sourceRow": 118,
+            "title": "The Campsite Murder (A Quayside Adventure #2)",
+            "author": "Jemima Jenkins",
+            "timestamp": "10\/5\/2026 0:29:09",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-05T00:29:09-07:00",
+            "changed": true
+        },
+        {
+            "id": 26823,
+            "sourceRow": 119,
+            "title": "The Case of the Christmas Angel (Jack and Frances 1930s mysteries, #6),",
+            "author": "Carmen Radtke",
+            "timestamp": "9\/27\/2026 6:17:57",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-27T06:17:57-07:00",
+            "changed": true
+        },
+        {
+            "id": 26329,
+            "sourceRow": 120,
+            "title": "The Christmas Present",
+            "author": "Lorna Dounaeva",
+            "timestamp": "9\/18\/2026 23:34:30",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-18T23:34:30-07:00",
+            "changed": true
+        },
+        {
+            "id": 26263,
+            "sourceRow": 121,
+            "title": "The Disappearance of Emily: Destiny Falls Mystery & Magic Series #2",
+            "author": "Elizabeth Pantley",
+            "timestamp": "9\/18\/2026 14:35:37",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-18T14:35:37-07:00",
+            "changed": true
+        },
+        {
+            "id": 26339,
+            "sourceRow": 122,
+            "title": "The Final Sentence",
+            "author": "Nicole Annbury",
+            "timestamp": "9\/18\/2026 23:59:20",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-18T23:59:20-07:00",
+            "changed": true
+        },
+        {
+            "id": 26223,
+            "sourceRow": 123,
+            "title": "The Girl Once Known",
+            "author": "R.M. Demeester",
+            "timestamp": "9\/18\/2026 14:01:11",
+            "oldPostDate": "2026-10-13T17:43:00-07:00",
+            "newPostDate": "2026-09-18T14:01:11-07:00",
+            "changed": true
+        },
+        {
+            "id": 27487,
+            "sourceRow": 124,
+            "title": "The Hackpen Hound (Narrowboat Rue Mystery #1)",
+            "author": "Tamsin Culpepper",
+            "timestamp": "10\/9\/2026 19:01:38",
+            "oldPostDate": "2026-10-13T17:45:00-07:00",
+            "newPostDate": "2026-10-09T19:01:38-07:00",
+            "changed": true
+        },
+        {
+            "id": 26873,
+            "sourceRow": 126,
+            "title": "The Last Owners (Crocus Hill Inn Mysteries)",
+            "author": "Jean Rezab",
+            "timestamp": "9\/27\/2026 10:36:29",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-27T10:36:29-07:00",
+            "changed": true
+        },
+        {
+            "id": 27045,
+            "sourceRow": 128,
+            "title": "The Murder at Graduation (Clara Young Mystery Book 9)",
+            "author": "Renee Marski",
+            "timestamp": "9\/29\/2026 2:39:24",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-29T02:39:24-07:00",
+            "changed": true
+        },
+        {
+            "id": 26485,
+            "sourceRow": 129,
+            "title": "THE NINETEEN (a Jack Shepherd novel, #6)",
+            "author": "Jake Needham",
+            "timestamp": "9\/19\/2026 20:59:39",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-19T20:59:39-07:00",
+            "changed": true
+        },
+        {
+            "id": 26359,
+            "sourceRow": 130,
+            "title": "The Paranormal Detectives Books 1-3",
+            "author": "Lily Luchesi",
+            "timestamp": "9\/19\/2026 5:53:47",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-19T05:53:47-07:00",
+            "changed": true
+        },
+        {
+            "id": 26505,
+            "sourceRow": 131,
+            "title": "The Piper Sniper (A Travel Writer Cozy Mystery Book #1)",
+            "author": "Kelly Young",
+            "timestamp": "9\/21\/2026 6:54:46",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-21T06:54:46-07:00",
+            "changed": true
+        },
+        {
+            "id": 27417,
+            "sourceRow": 132,
+            "title": "The Protector",
+            "author": "Jason Caldwell",
+            "timestamp": "10\/6\/2026 20:39:10",
+            "oldPostDate": "2026-10-13T17:45:00-07:00",
+            "newPostDate": "2026-10-06T20:39:10-07:00",
+            "changed": true
+        },
+        {
+            "id": 26176,
+            "sourceRow": 133,
+            "title": "The Reluctant Coroner (Fenway Stevenson Mysteries #1)",
+            "author": "Paul Austin Ardoin",
+            "timestamp": "9\/18\/2026 13:55:32",
+            "oldPostDate": "2026-10-13T17:42:00-07:00",
+            "newPostDate": "2026-09-18T13:55:32-07:00",
+            "changed": true
+        },
+        {
+            "id": 26349,
+            "sourceRow": 134,
+            "title": "The Signature Line",
+            "author": "Nicole Annbury",
+            "timestamp": "9\/19\/2026 0:46:58",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-19T00:46:58-07:00",
+            "changed": true
+        },
+        {
+            "id": 26439,
+            "sourceRow": 136,
+            "title": "The View from Nob Hill",
+            "author": "Ty Hutchinson",
+            "timestamp": "9\/19\/2026 19:24:14",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-19T19:24:14-07:00",
+            "changed": true
+        },
+        {
+            "id": 26369,
+            "sourceRow": 137,
+            "title": "The Wife I Was",
+            "author": "Maria Frankland",
+            "timestamp": "9\/19\/2026 6:25:24",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-19T06:25:24-07:00",
+            "changed": true
+        },
+        {
+            "id": 26929,
+            "sourceRow": 138,
+            "title": "THE XMAS DAY BUTCHER",
+            "author": "Spencer Guerrero",
+            "timestamp": "9\/27\/2026 16:52:42",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-27T16:52:42-07:00",
+            "changed": true
+        },
+        {
+            "id": 27553,
+            "sourceRow": 139,
+            "title": "This Side of Dark",
+            "author": "Caren Hahn",
+            "timestamp": "10\/11\/2026 18:03:44",
+            "oldPostDate": "2026-10-13T17:45:00-07:00",
+            "newPostDate": "2026-10-11T18:03:44-07:00",
+            "changed": true
+        },
+        {
+            "id": 26813,
+            "sourceRow": 140,
+            "title": "Through Her Gaze (Roxy Powers Standalone Series Book One",
+            "author": "KAREN BRADY",
+            "timestamp": "9\/27\/2026 6:16:58",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-27T06:16:58-07:00",
+            "changed": true
+        },
+        {
+            "id": 26204,
+            "sourceRow": 141,
+            "title": "Tinsel Tragedy (Holiday Hijinx Series #1)",
+            "author": "Clare Lockhart",
+            "timestamp": "9\/19\/2026 7:54:07",
+            "oldPostDate": "2026-10-13T17:42:00-07:00",
+            "newPostDate": "2026-09-19T07:54:07-07:00",
+            "changed": true
+        },
+        {
+            "id": 26853,
+            "sourceRow": 142,
+            "title": "Trapping, Turkeys, & Thanksgiving (A Camper & Criminals Cozy Mystery Series Book 28)",
+            "author": "Tonya Kappes",
+            "timestamp": "9\/27\/2026 8:42:42",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-27T08:42:42-07:00",
+            "changed": true
+        },
+        {
+            "id": 27525,
+            "sourceRow": 143,
+            "title": "Trigger Point",
+            "author": "Darcie Morin",
+            "timestamp": "10\/11\/2026 3:47:38",
+            "oldPostDate": "2026-10-13T17:45:00-07:00",
+            "newPostDate": "2026-10-11T03:47:38-07:00",
+            "changed": true
+        },
+        {
+            "id": 27025,
+            "sourceRow": 144,
+            "title": "Turnover My Dead Body (A Newfound Lake Cozy Mystery)",
+            "author": "Virginia K. Bennett",
+            "timestamp": "9\/28\/2026 13:42:46",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-28T13:42:46-07:00",
+            "changed": true
+        },
+        {
+            "id": 26833,
+            "sourceRow": 145,
+            "title": "Unknown Caller Book One - The Orphan Trilogy",
+            "author": "Karen Brady",
+            "timestamp": "9\/27\/2026 6:29:53",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-27T06:29:53-07:00",
+            "changed": true
+        },
+        {
+            "id": 27457,
+            "sourceRow": 149,
+            "title": "Who She Was (Sylvia Wilcox Series #1)",
+            "author": "Braylee Parkinson",
+            "timestamp": "10\/8\/2026 12:30:15",
+            "oldPostDate": "2026-10-13T17:45:00-07:00",
+            "newPostDate": "2026-10-08T12:30:15-07:00",
+            "changed": true
+        },
+        {
+            "id": 26299,
+            "sourceRow": 150,
+            "title": "Wired Rogue: Paradise Crime Thrillers #2",
+            "author": "Toby Neal",
+            "timestamp": "9\/18\/2026 19:10:33",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-18T19:10:33-07:00",
+            "changed": true
+        },
+        {
+            "id": 26535,
+            "sourceRow": 151,
+            "title": "Would You Rather",
+            "author": "Shannon Hollinger",
+            "timestamp": "9\/21\/2026 10:08:36",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-09-21T10:08:36-07:00",
+            "changed": true
+        },
+        {
+            "id": 27201,
+            "sourceRow": 152,
+            "title": "Yes, Pychological Thriller.",
+            "author": "Isabel Wells",
+            "timestamp": "10\/2\/2026 16:49:17",
+            "oldPostDate": "2026-10-13T17:44:00-07:00",
+            "newPostDate": "2026-10-02T16:49:17-07:00",
+            "changed": true
+        }
+    ]
+}
