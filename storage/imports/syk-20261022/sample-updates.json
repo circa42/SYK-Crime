@@ -1,0 +1,52 @@
+[
+  {
+    "Title": "Proven Innocence",
+    "Author": "Mary J. Rocco",
+    "Hook": "Cynthia Evans wakes up in the trunk of a car, no idea how she got there, only to discover she’s wanted for the murder of her husband and children.",
+    "BookCoverFileName": "syk-20261022-1B2czkXq8zrBiuwQPPQqgFlf0GIbEmYQE.jpg",
+    "storeEntry": [
+      {
+        "fields": {
+          "store": "amazon-us",
+          "link": "https://www.amazon.com/dp/B0GZM267TR"
+        }
+      },
+      {
+        "fields": {
+          "store": "amazon-au",
+          "link": "https://www.amazon.com.au/dp/B0GZM267TR"
+        }
+      },
+      {
+        "fields": {
+          "store": "amazon-ca",
+          "link": "https://www.amazon.ca/dp/B0GZM267TR"
+        }
+      },
+      {
+        "fields": {
+          "store": "amazon-uk",
+          "link": "https://www.amazon.co.uk/dp/B0GZM267TR"
+        }
+      }
+    ],
+    "Genre": "Mystery",
+    "Keywords": [
+      "Action",
+      "Amateur sleuth",
+      "Domestic",
+      "Friendship",
+      "Whodunit"
+    ],
+    "Romance": [
+      "No Spice"
+    ],
+    "ExplicitCat": [
+      "Language"
+    ],
+    "Explicit": true,
+    "ShorterRead": false,
+    "SourceRow": 59,
+    "ExistingId": "21057"
+  }
+]

@@ -18,9 +18,7 @@
 
         {% if entries|length %}
             <div class="entry-list">
-                {% for entry in entries %}
-                    {% include "_includes/book" %}
-                {% endfor %}
+                {% include '_includes/book-list' %}
             </div>
         {% else %}
             <p>No entries found in this category.</p>

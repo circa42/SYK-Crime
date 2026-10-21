@@ -1,0 +1,27 @@
+{
+  "books": 152,
+  "new": 124,
+  "updates": 28,
+  "covers": 152,
+  "short_reads": 22,
+  "explicit": 56,
+  "store_links": 714,
+  "warnings": {
+    "Language": 55,
+    "Violence": 18,
+    "Sex": 7
+  },
+  "romance": {
+    "No romance": 54,
+    "No Spice": 66,
+    "Spicy": 7,
+    "Low Spice": 25
+  },
+  "sample": [
+    "Appointment Kept (A Fog Harbor Mystery)",
+    "The Reluctant Coroner (Fenway Stevenson Mysteries #1)",
+    "A Cut Above",
+    "Tinsel Tragedy (Holiday Hijinx Series #1)",
+    "Proven Innocence"
+  ]
+}

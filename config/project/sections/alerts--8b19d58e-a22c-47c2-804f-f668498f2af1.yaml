@@ -5,6 +5,7 @@ entryTypes:
     uid: 8e8d3d60-ef5a-4d0e-87ce-462056770daf # Alerts
 handle: alerts
 maxAuthors: 1
+minAuthors: 1
 name: Alerts
 previewTargets:
   -

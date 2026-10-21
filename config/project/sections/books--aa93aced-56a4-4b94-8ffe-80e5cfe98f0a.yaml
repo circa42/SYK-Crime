@@ -5,6 +5,7 @@ entryTypes:
     uid: 5ac2d28b-bcfe-4c01-84bd-7023c7f9fe3b # Book Entry
 handle: books
 maxAuthors: 1
+minAuthors: 1
 name: Books
 previewTargets:
   -

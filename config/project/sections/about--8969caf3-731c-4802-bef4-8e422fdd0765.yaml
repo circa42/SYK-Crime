@@ -5,6 +5,7 @@ entryTypes:
     uid: 46b76175-241b-4807-a8d1-f474d60252b1 # Singles
 handle: about
 maxAuthors: 1
+minAuthors: 1
 name: About
 previewTargets:
   -

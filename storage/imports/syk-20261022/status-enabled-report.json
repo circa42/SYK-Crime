@@ -1,0 +1,202 @@
+{
+    "enabledCount": 28,
+    "books": [
+        {
+            "id": 17380,
+            "title": "Gone (Gone #1)",
+            "author": "Stacy Claflin",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/17380-gone-gone-1"
+        },
+        {
+            "id": 17425,
+            "title": "Fine Points are Sketchy",
+            "author": "Kathryn Mykel",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/17425-fine-points-are-sketchy"
+        },
+        {
+            "id": 17548,
+            "title": "THE AMBASSADOR'S WIFE (The Inspector Samuel Tay Novels, #1)",
+            "author": "Jake Needham",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/17548-the-ambassadors-wife-the-inspector-samuel-tay-novels-1"
+        },
+        {
+            "id": 17690,
+            "title": "Chasing Nightmares: Book 2: A Lira Somers Mystery Novel",
+            "author": "Liz Bullard",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/17690-chasing-nightmares-book-2-a-lira-somers-mystery-novel"
+        },
+        {
+            "id": 17913,
+            "title": "Violent Echoes (Brooks & Banks #1)",
+            "author": "PJ Mouchet",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/17913-violent-echoes-brooks-banks-1"
+        },
+        {
+            "id": 18145,
+            "title": "BLOOD ON VINES  (The Matakana Series #1)",
+            "author": "Madeleine Eskedahl",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/18145-blood-on-vines-the-matakana-series-1-2"
+        },
+        {
+            "id": 18165,
+            "title": "Red Gate By The Bridge",
+            "author": "Desi Stowe",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/18165-red-gate-by-the-bridge"
+        },
+        {
+            "id": 18555,
+            "title": "A Grave Error [Charlie Kingsley Mysteries]",
+            "author": "Michele Pariza Wacek",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/18555-a-grave-error-charlie-kingsley-mysteries"
+        },
+        {
+            "id": 18592,
+            "title": "You Can Hate Me Later (Alexis Cole #1)",
+            "author": "Natalie Tay",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/18592-you-can-hate-me-later-alexis-cole-1"
+        },
+        {
+            "id": 18740,
+            "title": "Weaponized",
+            "author": "Brian Cotton",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/18740-weaponized"
+        },
+        {
+            "id": 18769,
+            "title": "Last Known Contact",
+            "author": "Phillipa Nefri Clark",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/18769-last-known-contact"
+        },
+        {
+            "id": 18789,
+            "title": "The Last Lies",
+            "author": "C.C. Jameson",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/18789-the-last-lies"
+        },
+        {
+            "id": 18963,
+            "title": "It's Always Sunny in California (Forgotten Ones Series Book #4)",
+            "author": "Nellie K. Neves",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/18963-its-always-sunny-in-california-forgotten-ones-series-book-4"
+        },
+        {
+            "id": 19041,
+            "title": "Dark Betrayal",
+            "author": "Rebecca and Victoria Heap",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/19041-dark-betrayal"
+        },
+        {
+            "id": 21047,
+            "title": "In the Days Before",
+            "author": "Ren\u00e9e Shantel",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/21047-in-the-days-before"
+        },
+        {
+            "id": 21057,
+            "title": "Proven Innocence",
+            "author": "Mary J. Rocco",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/21057-proven-innocence"
+        },
+        {
+            "id": 21145,
+            "title": "The Maltese Attack (One Hundred Years of War  #1)",
+            "author": "Jay Perin",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/21145-the-maltese-attack-one-hundred-years-of-war-1"
+        },
+        {
+            "id": 22179,
+            "title": "What Ianthe Knew",
+            "author": "R.M. Demeester",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/22179-what-ianthe-knew"
+        },
+        {
+            "id": 22229,
+            "title": "Devil\u2019s News",
+            "author": "Isabel Wells",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/22229-devils-news"
+        },
+        {
+            "id": 22354,
+            "title": "The Bones That Speak",
+            "author": "C.S Jean",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/22354-the-bones-that-speak"
+        },
+        {
+            "id": 22454,
+            "title": "Cozy Cat Caper Mystery Box Set: Books 1-3",
+            "author": "Paige Sleuth",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/22454-cozy-cat-caper-mystery-box-set-books-1-3"
+        },
+        {
+            "id": 22630,
+            "title": "Never a Traitor (Defender Sweethearts Book 1)",
+            "author": "Jan Thompson",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/22630-never-a-traitor-defender-sweethearts-book-1"
+        },
+        {
+            "id": 22656,
+            "title": "Shadows",
+            "author": "Renee Marski",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/22656-shadows"
+        },
+        {
+            "id": 22761,
+            "title": "Risky Whiskey (Bohemia Bartenders Mysteries #1)",
+            "author": "Lucy Lakestone",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/22761-risky-whiskey-bohemia-bartenders-mysteries-1"
+        },
+        {
+            "id": 23429,
+            "title": "The Unlikely Murder Club (The Unlikely Murder Club #1)",
+            "author": "Gina X. Grant",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/23429-the-unlikely-murder-club-the-unlikely-murder-club-1"
+        },
+        {
+            "id": 23477,
+            "title": "The Big Bad Wolf",
+            "author": "Nicolette Olivier",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/23477-the-big-bad-wolf"
+        },
+        {
+            "id": 23543,
+            "title": "Murder Under Construction (Detective Leon Peterson Mysteries #1)",
+            "author": "Alex Henry",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/23543-murder-under-construction-detective-leon-peterson-mysteries-1"
+        },
+        {
+            "id": 23956,
+            "title": "Over My Head (Sydney Daniels Mystery Series Book #1)",
+            "author": "Sophie Sterling",
+            "status": "live",
+            "cpUrl": "https://syk.on-forge.com/admin/content/entries/books/23956-over-my-head-sydney-daniels-mystery-series-book-1"
+        }
+    ],
+    "errors": []
+}

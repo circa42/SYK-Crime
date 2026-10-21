@@ -3,11 +3,11 @@
   "prefer-stable": true,
   "require": {
     "barrelstrength/sprout-redirects": "^5.0.9",
-    "craftcms/ckeditor": "^5.4.0",
-    "craftcms/cms": "^5.9.20",
-    "craftcms/feed-me": "6.11.0",
+    "craftcms/ckeditor": "^5.5.0",
+    "craftcms/cms": "^5.11.5.1",
+    "craftcms/feed-me": "^6.13.0.1",
     "craftcms/guest-entries": "4.0.1",
-    "verbb/knock-knock": "3.0.5",
+    "verbb/knock-knock": "^3.0.13",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
@@ -22,7 +22,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "8.2"
+      "php": "8.4"
     }
   },
   "scripts": {
